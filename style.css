@@ -88,7 +88,7 @@ button, input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-darker);
+    background: radial-gradient(circle at center, rgba(18, 13, 43, 0.7) 0%, rgba(11, 7, 30, 0.95) 100%), url('logo_disfrazate_tech.jpg') no-repeat center center / cover;
     overflow: hidden;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
 }
