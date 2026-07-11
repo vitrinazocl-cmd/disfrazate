@@ -1,22 +1,22 @@
-/* Global CSS variables defining the premium Mystical Purple & Gold design system */
+/* Global CSS variables defining the futuristic Neon Purple & Neon Cyan design system */
 :root {
-    --primary: #8b5cf6; /* Modern Purple */
-    --primary-dark: #6d28d9; /* Deep Purple */
-    --primary-glow: rgba(139, 92, 246, 0.4);
+    --primary: #bc3df2; /* Neon Purple / Violet */
+    --primary-dark: #8619b0; /* Darker Purple */
+    --primary-glow: rgba(188, 61, 242, 0.4);
     
-    --accent: #f59e0b; /* Bright Gold */
-    --accent-dark: #d97706; /* Dark Gold */
-    --accent-glow: rgba(245, 158, 11, 0.4);
+    --accent: #00f0ff; /* Neon Cyber Cyan */
+    --accent-dark: #00b8cc; /* Darker Cyan */
+    --accent-glow: rgba(0, 240, 255, 0.4);
     
-    --bg-darker: #0b071e; /* Pure Midnight Purple */
-    --bg-dark: #120d2b; /* Deep Indigo Purple */
-    --bg-card: #1c1543; /* Rich Card Violet */
-    --border-color: #2e2460; /* Dark Violet borders */
+    --bg-darker: #06040d; /* Matte Black Tech Void */
+    --bg-dark: #0c0919; /* Midnight Deep Violet */
+    --bg-card: #130f26; /* Dark Tech Card background */
+    --border-color: #1e183a; /* Circuit Board Borders */
     
     --text-white: #ffffff;
-    --text-light: #f3f4f6;
+    --text-light: #e5e7eb;
     --text-gray: #9ca3af;
-    --text-muted: #6b7280;
+    --text-muted: #4b5563;
     
     --success: #10b981; /* Magic Emerald */
     --danger: #ef4444; /* Blood Red */
