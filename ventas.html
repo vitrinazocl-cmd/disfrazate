@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Ventas - Disfrazate.cl</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@600;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .admin-header {
+            background-color: var(--bg-dark);
+            border-bottom: 2px solid var(--border-color);
+            padding: 15px 0;
+        }
+        .admin-header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .admin-title-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .admin-icon {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: #bg-darker;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+        .admin-title-text h1 {
+            font-family: var(--font-header);
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+        .admin-title-text p {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .btn-back {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background var(--transition-fast);
+        }
+        .btn-back:hover {
+            background: var(--border-color);
+        }
+        .ventas-main {
+            flex: 1;
+            margin-top: 30px;
+        }
+        .dashboard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .orders-table-wrapper {
+            margin-top: 25px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow-x: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .no-orders-box {
+            text-align: center;
+            padding: 60px 40px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .no-orders-box i {
+            margin-bottom: 15px;
+            color: var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Admin Nav Header -->
+    <header class="admin-header">
+        <div class="container admin-header-container">
+            <div class="admin-title-area">
+                <div class="admin-icon" style="color: var(--accent);">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="admin-title-text">
+                    <h1>Dashboard de Ventas</h1>
+                    <p>Métricas Financieras</p>
+                </div>
+            </div>
+            
+            <a href="index.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Volver a la Tienda
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="ventas-main container">
+        
+        <div class="dashboard-controls">
+            <h2 class="section-title">Resumen de Ingresos</h2>
+            <button type="button" class="btn-catalog excel-btn" id="btn-descargar-excel" onclick="triggerExcelDownload()">
+                <i class="fa-solid fa-file-excel"></i> Descargar Reporte Excel
+            </button>
+        </div>
+
+        <!-- Metrics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Ventas Hoy</h3>
+                <div class="value" id="stat-daily">$0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Últimos 7 Días</h3>
+                <div class="value" id="stat-weekly">$0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Este Mes</h3>
+                <div class="value" id="stat-monthly">$0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Este Año</h3>
+                <div class="value" id="stat-yearly">$0</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Historial de Transacciones</h2>
+        
+        <div class="orders-table-wrapper">
+            <table class="pedidos-table" id="ventas-table">
+                <thead>
+                    <tr>
+                        <th>ID Orden</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Productos Vendidos</th>
+                        <th>Total Cobrado</th>
+                    </tr>
+                </thead>
+                <tbody id="ventas-body">
+                    <!-- Dynamic sale log lines -->
+                </tbody>
+            </table>
+            
+            <div class="no-orders-box" id="no-ventas-msg" style="display: none;">
+                <i class="fa-solid fa-receipt fa-3x"></i>
+                <p>No se registran transacciones de venta todavía.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" style="margin-top: 60px;">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Disfrazate.cl - Módulo Financiero Interno.</p>
+        </div>
+    </footer>
+
+    <!-- Scripting sales details -->
+    <script>
+        let globalVentas = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchVentas();
+        });
+
+        async function fetchVentas() {
+            try {
+                const response = await fetch('/api/ventas');
+                const list = await response.json();
+                globalVentas = list;
+                renderVentasTable(list);
+                calculateSalesStats(list);
+            } catch (err) {
+                console.warn("Server API offline, loading from local cache fallback:", err);
+                // Fallback for standalone/client demonstrations
+                const fallbackList = JSON.parse(localStorage.getItem('ventasLocales')) || [];
+                globalVentas = fallbackList;
+                renderVentasTable(fallbackList);
+                calculateSalesStats(fallbackList);
+            }
+        }
+
+        function renderVentasTable(ventas) {
+            const table = document.getElementById('ventas-table');
+            const tbody = document.getElementById('ventas-body');
+            const emptyBox = document.getElementById('no-ventas-msg');
+
+            tbody.innerHTML = '';
+
+            if (ventas.length === 0) {
+                table.style.display = 'none';
+                emptyBox.style.display = 'block';
+                return;
+            }
+
+            table.style.display = 'table';
+            emptyBox.style.display = 'none';
+
+            // Show newest sales on top
+            const reversedSales = [...ventas].reverse();
+
+            reversedSales.forEach(v => {
+                let itemsHtml = '<ul style="margin: 0; padding-left: 15px; font-size: 0.85rem; text-align: left;">';
+                v.items.forEach(item => {
+                    const attr = item.flavor ? ` <span style="color: var(--accent);">(${item.flavor})</span>` : '';
+                    itemsHtml += `<li>${item.quantity}x ${item.name}${attr}</li>`;
+                });
+                itemsHtml += '</ul>';
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${v.id}</strong></td>
+                    <td style="font-size: 0.85rem; color: var(--text-gray);">${v.date}</td>
+                    <td>
+                        <strong>${v.customerName}</strong><br>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">${v.customerAddress}</span>
+                    </td>
+                    <td>${itemsHtml}</td>
+                    <td style="color: var(--success); font-weight: 800; font-size: 1.1rem;">$${v.total.toLocaleString('es-CL')}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function calculateSalesStats(ventas) {
+            let dailyTotal = 0;
+            let weeklyTotal = 0;
+            let monthlyTotal = 0;
+            let yearlyTotal = 0;
+
+            const now = new Date();
+            // Start of today (00:00:00)
+            const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+            // Start of last 7 days (7 days ago)
+            const startOfWeek = now.getTime() - (7 * 24 * 60 * 60 * 1000);
+            
+            const currentMonth = now.getMonth();
+            const currentYear = now.getFullYear();
+
+            ventas.forEach(v => {
+                const total = parseInt(v.total) || 0;
+                
+                // Parse order date
+                let saleDate;
+                if (v.isoDate) {
+                    saleDate = new Date(v.isoDate);
+                } else {
+                    saleDate = new Date(); // Fallback
+                }
+
+                const saleTime = saleDate.getTime();
+
+                // Today
+                if (saleTime >= startOfToday) {
+                    dailyTotal += total;
+                }
+                // Last 7 days
+                if (saleTime >= startOfWeek) {
+                    weeklyTotal += total;
+                }
+                // Current Month
+                if (saleDate.getMonth() === currentMonth && saleDate.getFullYear() === currentYear) {
+                    monthlyTotal += total;
+                }
+                // Current Year
+                if (saleDate.getFullYear() === currentYear) {
+                    yearlyTotal += total;
+                }
+            });
+
+            document.getElementById('stat-daily').textContent = `$${dailyTotal.toLocaleString('es-CL')}`;
+            document.getElementById('stat-weekly').textContent = `$${weeklyTotal.toLocaleString('es-CL')}`;
+            document.getElementById('stat-monthly').textContent = `$${monthlyTotal.toLocaleString('es-CL')}`;
+            document.getElementById('stat-yearly').textContent = `$${yearlyTotal.toLocaleString('es-CL')}`;
+        }
+
+        function triggerExcelDownload() {
+            // Check if server is running by attempting downloading
+            window.location.href = '/api/descargar-excel-ventas';
+            
+            // Set up fallback warning in case download fails
+            setTimeout(() => {
+                // If we are still on the page, the user didn't leave and it might be offline
+                // Let's generate a client-side CSV file download fallback!
+                if (globalVentas.length > 0 && !document.hidden) {
+                    // Simulating CSV download
+                    let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+                    csvContent += "ID Orden,Fecha,Cliente,Dirección,Total Venta\r\n";
+                    globalVentas.forEach(v => {
+                        csvContent += `"${v.id}","${v.date}","${v.customerName}","${v.customerAddress}",${v.total}\r\n`;
+                    });
+                    
+                    const encodedUri = encodeURI(csvContent);
+                    const link = document.createElement("a");
+                    link.setAttribute("href", encodedUri);
+                    link.setAttribute("download", "Reporte_Ventas_Fallback.csv");
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    alert("Servidor desconectado. Se descargó un archivo CSV alternativo con el reporte de ventas.");
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

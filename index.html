@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disfrazate - Tienda de Disfraces y Accesorios</title>
+    <meta name="description" content="La mayor tienda de disfraces en Chile. Disfraces de Halloween, fiestas, cumpleaños, niños y adultos con despacho a todo Santiago.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Landing Page Overlay (Home) -->
+    <div id="landing-overlay" class="landing-overlay">
+        <!-- Magic Particle / Starry Background -->
+        <div class="landing-bg-glow"></div>
+        <div class="landing-particles" id="landing-particles"></div>
+        
+        <div class="landing-content">
+            <div class="landing-card">
+                <div class="magic-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles fa-3x animate-pulse"></i>
+                </div>
+                <h1 class="landing-title">DISFRÁZATE</h1>
+                <p class="landing-subtitle">Portal Mágico & Carnaval de Disfraces</p>
+                <div class="divider"></div>
+                
+                <!-- Visitor Counter -->
+                <div class="visitor-counter-box">
+                    <span class="counter-label"><i class="fa-solid fa-users"></i> VISITAS REGISTRADAS</span>
+                    <div class="flip-counter" id="visitor-flip-counter">
+                        <!-- Digital cards injected by JS -->
+                    </div>
+                </div>
+
+                <div class="landing-actions">
+                    <button type="button" id="btn-entrar" class="btn-primary btn-glow-purple">
+                        <span>INGRESAR A LA TIENDA</span>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </button>
+                </div>
+                
+                <p class="landing-footer-text">Santiago, Chile &bull; Despachos Rápidos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="#" class="logo-link">
+                    <span class="logo-magic"><i class="fa-solid fa-mask"></i></span>
+                    <div class="logo-text">
+                        <h1>DISFRÁZATE</h1>
+                        <p>Tu Imaginación Sin Límites</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-area">
+                <input type="text" id="search-input" placeholder="Busca tu disfraz, máscara o accesorio...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Action Area -->
+            <div class="actions-area">
+                <div class="cart-trigger" id="cart-icon-btn">
+                    <div class="cart-icon-wrapper">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </div>
+                    <span class="action-text">Carro</span>
+                </div>
+
+                <div class="admin-links">
+                    <a href="#" id="admin-login-btn" class="admin-btn" title="Ver Pedidos Pendientes">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span>Pedidos</span>
+                    </a>
+                    <a href="#" id="ventas-login-btn" class="admin-btn sales-btn" title="Ver Historial de Ventas">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Ventas</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="#productos" class="nav-link active" data-category="TODOS">Todos los Disfraces</a>
+            <a href="#productos" class="nav-link" data-category="OFERTAS"><i class="fa-solid fa-tags text-accent"></i> OFERTAS</a>
+            <a href="#productos" class="nav-link" data-category="NIÑOS">NIÑOS</a>
+            <a href="#productos" class="nav-link" data-category="ADULTOS">ADULTOS</a>
+            <a href="#productos" class="nav-link" data-category="ACCESORIOS">ACCESORIOS</a>
+            <a href="#productos" class="nav-link" data-category="CUMPLEAÑOS">CUMPLEAÑOS</a>
+            <a href="#" id="open-contact-btn" class="nav-link contact-link"><i class="fa-solid fa-envelope"></i> CONTACTO</a>
+            <a href="#" id="open-catalog-btn" class="nav-link catalog-link"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO</a>
+        </div>
+    </nav>
+
+    <!-- Delivery Promotional Bar -->
+    <div class="delivery-bar">
+        <div class="delivery-badge">
+            <i class="fa-solid fa-truck-fast"></i> DESPACHOS
+        </div>
+        <marquee scrollamount="6" class="delivery-marquee">
+            <span>🎉 ¡COMPRAS SOBRE $50.000 TIENEN DESPACHO GRATUITO EN TODO SANTIAGO! 🎉</span>
+            <span class="separator">|</span>
+            <span>📍 Zonas de Despacho Diario: Santiago Centro, Providencia, Las Condes, Vitacura, Ñuñoa, Maipú, La Florida ($3.500)</span>
+            <span class="separator">|</span>
+            <span>🕒 Horario de Reparto Express: Recibe tus pedidos de 12:00 a 19:00 hrs.</span>
+            <span class="separator">|</span>
+            <span>⚡ Recuerda: Las compras ingresadas antes de las 13:00 hrs se despachan el mismo día. ⚡</span>
+        </marquee>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="main-body container">
+        
+        <!-- Hero Banner Slideshow -->
+        <section class="hero-slider-section">
+            <div class="slider-wrapper">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Slide 1: Welcome -->
+                    <div class="slide bg-slide-1">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag">NUEVA TEMPORADA</span>
+                            <h2>Fantasía & Terror 2026</h2>
+                            <p>Explora la mayor colección de disfraces premium para todas las edades.</p>
+                            <a href="#productos" class="btn-secondary" onclick="filterCategory('TODOS')">Ver Colección</a>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Kids -->
+                    <div class="slide bg-slide-2">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag">INFANTIL</span>
+                            <h2>Diversión para Niños</h2>
+                            <p>Superhéroes, dinosaurios y princesas mágicas para hacer volar su imaginación.</p>
+                            <a href="#productos" class="btn-secondary" onclick="filterCategory('NIÑOS')">Ver Niños</a>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Accessories -->
+                    <div class="slide bg-slide-3">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-tag">COMPLEMENTOS</span>
+                            <h2>El Toque Final</h2>
+                            <p>Máscaras, varitas, sombreros y maquillaje artístico profesional.</p>
+                            <a href="#productos" class="btn-secondary" onclick="filterCategory('ACCESORIOS')">Ver Accesorios</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow arrow-prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-arrow arrow-next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                
+                <!-- Dots indicators -->
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Listing Section -->
+        <section class="products-section" id="productos">
+            <div class="section-header">
+                <h2 class="section-title" id="productos-title">TODOS LOS PRODUCTOS</h2>
+                
+                <div class="controls-area">
+                    <label for="sort-select"><i class="fa-solid fa-arrow-down-short-wide"></i> Ordenar por:</label>
+                    <select id="sort-select">
+                        <option value="default">Relevancia</option>
+                        <option value="price-asc">Precio: Menor a Mayor</option>
+                        <option value="price-desc">Precio: Mayor a Menor</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid container for products -->
+            <div class="products-grid" id="products-grid">
+                <!-- Products dynamically loaded from JS -->
+            </div>
+
+            <!-- Pagination buttons -->
+            <div id="pagination-controls" class="pagination-container">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Dynamic Visual Catalog Previews -->
+        <section class="visual-catalog-section" id="catalogo-download">
+            <div class="catalog-card">
+                <div class="catalog-info">
+                    <h2>CATÁLOGO DE STOCK ACTUAL</h2>
+                    <p>Descarga o visualiza nuestra base de stock en formato interactivo. Precios al día y disponibilidad en tiempo real.</p>
+                    <div class="catalog-buttons">
+                        <a href="/api/descargar-excel-ventas" class="btn-catalog excel-btn" id="btn-excel-catalog-download" style="display:none;">
+                            <i class="fa-solid fa-file-excel"></i> Descargar Excel Ventas
+                        </a>
+                        <button type="button" class="btn-catalog pdf-btn" id="btn-view-catalog">
+                            <i class="fa-solid fa-eye"></i> Vista Previa del Catálogo PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="catalog-preview-box hidden" id="pdf-preview-box">
+                    <div class="preview-header">
+                        <h3>Visualizador de Catálogo (PDF)</h3>
+                        <button type="button" class="btn-close-preview" id="btn-close-pdf"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="preview-iframe-wrapper">
+                        <!-- Custom placeholder catalog frame or PDF viewer -->
+                        <div class="catalog-pdf-mock">
+                            <i class="fa-solid fa-file-pdf fa-4x text-accent"></i>
+                            <h3>Catálogo Oficial Disfrazate 2026.pdf</h3>
+                            <p>Visualizando stock de disfraces en formato digital.</p>
+                            <span class="mock-badge">24 Páginas &bull; 8.4 MB</span>
+                            <button type="button" class="btn-secondary" onclick="alert('Descargando archivo PDF de catálogo de prueba...')">Descargar Archivo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col col-brand">
+                <h2>Disfrazate.cl</h2>
+                <p>Nuestra misión es llevar magia y diversión a cada rincón de Chile con disfraces innovadores y accesorios únicos. La imaginación no tiene límites.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/56912345678" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#productos" onclick="filterCategory('OFERTAS')">Ofertas Especiales</a></li>
+                    <li><a href="#productos" onclick="filterCategory('NIÑOS')">Colección Infantil</a></li>
+                    <li><a href="#productos" onclick="filterCategory('ADULTOS')">Colección Adultos</a></li>
+                    <li><a href="#productos" onclick="filterCategory('ACCESORIOS')">Accesorios & Maquillaje</a></li>
+                    <li><a href="#productos" onclick="filterCategory('CUMPLEAÑOS')">Artículos de Cumpleaños</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Políticas</h3>
+                <ul>
+                    <li><a href="#" onclick="alert('Términos y condiciones cargados del sistema.')">Términos del Servicio</a></li>
+                    <li><a href="#" onclick="alert('Políticas de privacidad.')">Política de Privacidad</a></li>
+                    <li><a href="#" onclick="alert('Devoluciones válidas dentro de los primeros 10 días.')">Cambios & Devoluciones</a></li>
+                    <li><a href="#" onclick="alert('Despachos a todo Chile a través de Starken o Courier.')">Cobertura de Envío</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Providencia 1240, Oficina 402 - Santiago</p>
+                <p><i class="fa-solid fa-phone"></i> Central: +56 2 2489 1234</p>
+                <p><i class="fa-solid fa-envelope"></i> ventas@disfrazate.cl</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Disfrazate.cl. Todos los derechos reservados. Diseñado por Antigravity AI.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/56912345678" target="_blank" class="whatsapp-btn-float" title="¿Necesitas ayuda? Escríbenos">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Hidden Audio Player (as in reference site) -->
+    <div class="audio-container">
+        <audio id="bg-audio" loop preload="auto">
+            <!-- Using a copyright free mystical fantasy soundtrack as theme -->
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- ==========================================
+         MODALS & OVERLAYS
+         ========================================== -->
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal-overlay hidden">
+        <div class="modal-card cart-modal-card">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-cart-shopping text-accent"></i> Tu Carro de Compras</h2>
+                <button type="button" class="btn-close-modal" id="btn-close-cart"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="cart-body">
+                <div class="cart-items-wrapper" id="cart-items-container">
+                    <!-- Dynamic Cart Items list -->
+                    <p class="empty-cart-msg">Tu carro está vacío.</p>
+                </div>
+                
+                <div class="cart-totals">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal-price">$0</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Despacho:</span>
+                        <span id="cart-shipping-price">$0</span>
+                    </div>
+                    <div class="total-row total-highlight">
+                        <span>Total (IVA inc):</span>
+                        <span id="cart-total-price">$0</span>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form" id="checkout-form-container">
+                    <h3>Datos de Despacho</h3>
+                    
+                    <div class="form-group">
+                        <label for="customer-name">Nombre Completo *</label>
+                        <input type="text" id="customer-name" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-rut">RUT *</label>
+                            <input type="text" id="customer-rut" placeholder="Ej: 12.345.678-9" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">Teléfono *</label>
+                            <input type="tel" id="customer-phone" placeholder="Ej: 987654321" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-commune">Comuna de Despacho *</label>
+                        <select id="customer-commune" required>
+                            <option value="">-- Selecciona Comuna --</option>
+                            <option value="Santiago" data-cost="3500">Santiago Centro ($3.500)</option>
+                            <option value="Providencia" data-cost="3500">Providencia ($3.500)</option>
+                            <option value="Las Condes" data-cost="3500">Las Condes ($3.500)</option>
+                            <option value="Vitacura" data-cost="3500">Vitacura ($3.500)</option>
+                            <option value="Ñuñoa" data-cost="3500">Ñuñoa ($3.500)</option>
+                            <option value="Maipu" data-cost="4000">Maipú ($4.000)</option>
+                            <option value="La Florida" data-cost="4000">La Florida ($4.000)</option>
+                            <option value="Otra" data-cost="5500">Otra Comuna RM ($5.500)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-address">Dirección Exacta (Calle, N°, Dpto) *</label>
+                        <input type="text" id="customer-address" placeholder="Ej: Av. Providencia 1240, Dpto 42" required>
+                    </div>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="legal-checkbox" required>
+                        <span>Acepto los términos del servicio y confirmo que soy mayor de edad.</span>
+                    </label>
+
+                    <button type="button" id="checkout-btn" class="btn-checkout">
+                        <span>PAGAR CON WEBPAY PLUS</span>
+                        <i class="fa-solid fa-credit-card"></i>
+                    </button>
+                    
+                    <p class="restricted-hours-notice" id="time-restriction-msg" style="display: none;">
+                        <i class="fa-solid fa-clock"></i> Compras restringidas temporalmente de 02:00 AM a 06:00 AM por mantención bancaria.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal (For Orders & Sales Dashboards) -->
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="modal-card login-modal-card">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-lock text-accent"></i> Acceso Administrador</h2>
+                <button type="button" class="btn-close-modal" id="btn-close-login"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="login-user">Usuario</label>
+                    <input type="text" id="login-user" placeholder="Nombre de usuario" value="admin">
+                </div>
+                <div class="form-group">
+                    <label for="login-pass">Contraseña</label>
+                    <input type="password" id="login-pass" placeholder="Ingresa contraseña" value="disfrazate123">
+                </div>
+                
+                <button type="button" id="submit-login-btn" class="btn-primary" style="width:100%;">
+                    <span>INICIAR SESIÓN</span>
+                </button>
+                
+                <p id="login-error" class="login-error-msg" style="display: none;">Credenciales incorrectas. Intenta de nuevo.</p>
+                <div style="font-size:12px; color:#888; text-align:center; margin-top:15px;">
+                    Demo Credentials: User: <code>admin</code> | Pass: <code>disfrazate123</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Pack Product Modal (Jaba Mixta equivalent) -->
+    <div id="custom-product-modal" class="modal-overlay hidden">
+        <div class="modal-card custom-pack-modal-card">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-gift text-accent"></i> Arma tu Pack de Accesorios</h2>
+                <button type="button" class="btn-close-modal" id="btn-close-custom"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="custom-pack-desc">Selecciona <strong>exactamente 5 accesorios</strong> del listado para armar tu pack personalizado por solo <strong>$12.990</strong>!</p>
+                
+                <div class="custom-pack-list" id="custom-pack-items">
+                    <!-- Accessory flavors or checkboxes loaded dynamically -->
+                    <div class="pack-option-row">
+                        <span>Sombrero de Mago</span>
+                        <div class="qty-counter">
+                            <button class="qty-btn minus" data-item="mago">-</button>
+                            <input type="number" id="qty-mago" value="0" readonly>
+                            <button class="qty-btn plus" data-item="mago">+</button>
+                        </div>
+                    </div>
+
+                    <div class="pack-option-row">
+                        <span>Varita Mágica con Luz</span>
+                        <div class="qty-counter">
+                            <button class="qty-btn minus" data-item="varita">-</button>
+                            <input type="number" id="qty-varita" value="0" readonly>
+                            <button class="qty-btn plus" data-item="varita">+</button>
+                        </div>
+                    </div>
+
+                    <div class="pack-option-row">
+                        <span>Alas de Hada Brillantes</span>
+                        <div class="qty-counter">
+                            <button class="qty-btn minus" data-item="alas">-</button>
+                            <input type="number" id="qty-alas" value="0" readonly>
+                            <button class="qty-btn plus" data-item="alas">+</button>
+                        </div>
+                    </div>
+
+                    <div class="pack-option-row">
+                        <span>Maquillaje Terror Cremoso</span>
+                        <div class="qty-counter">
+                            <button class="qty-btn minus" data-item="maquillaje">-</button>
+                            <input type="number" id="qty-maquillaje" value="0" readonly>
+                            <button class="qty-btn plus" data-item="maquillaje">+</button>
+                        </div>
+                    </div>
+
+                    <div class="pack-option-row">
+                        <span>Máscara de Payaso Siniestro</span>
+                        <div class="qty-counter">
+                            <button class="qty-btn minus" data-item="mascara">-</button>
+                            <input type="number" id="qty-mascara" value="0" readonly>
+                            <button class="qty-btn plus" data-item="mascara">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-pack-summary">
+                    <span>Total Seleccionados: <strong id="custom-pack-total">0</strong> / 5</span>
+                </div>
+                
+                <button type="button" id="add-custom-pack-btn" class="btn-primary btn-block" disabled style="opacity:0.5; cursor:not-allowed;">
+                    <span>AGREGAR AL CARRO ($12.990)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay hidden">
+        <div class="modal-card contact-modal-card">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-address-book text-accent"></i> Contacto y Sucursal</h2>
+                <button type="button" class="btn-close-modal" id="btn-close-contact"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body contact-body">
+                <div class="contact-methods">
+                    <p><strong><i class="fa-brands fa-whatsapp text-success"></i> WhatsApp Ventas:</strong> <a href="https://wa.me/56912345678" target="_blank">+56 9 1234 5678</a></p>
+                    <p><strong><i class="fa-solid fa-phone text-accent"></i> Teléfono Oficina:</strong> <a href="tel:+56224891234">+56 2 2489 1234</a></p>
+                    <p><strong><i class="fa-solid fa-envelope text-accent"></i> Email:</strong> <a href="mailto:ventas@disfrazate.cl">ventas@disfrazate.cl</a></p>
+                    <p><strong><i class="fa-solid fa-location-dot text-danger"></i> Casa Matriz:</strong> Av. Providencia 1240, Oficina 402 - Providencia, Santiago.</p>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Envíanos un Mensaje Directo</h3>
+                    <input type="text" id="cnt-name" placeholder="Tu Nombre">
+                    <input type="email" id="cnt-email" placeholder="Tu Email">
+                    <textarea id="cnt-msg" placeholder="¿En qué te podemos ayudar?" rows="4"></textarea>
+                    <button type="button" class="btn-primary" onclick="alert('Mensaje enviado. Nos contactaremos a la brevedad.')">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script imports -->
+    <script src="catalogo.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
