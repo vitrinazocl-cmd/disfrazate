@@ -101,10 +101,12 @@
     <!-- Navigation Menu -->
     <nav class="main-nav">
         <div class="container nav-container">
-            <a href="#productos" class="nav-link active" data-category="TODOS">Todos los Disfraces</a>
+            <a href="#productos" class="nav-link active" data-category="TODOS">TODOS LOS DISFRACES</a>
             <a href="#productos" class="nav-link" data-category="OFERTAS"><i class="fa-solid fa-tags text-accent"></i> OFERTAS</a>
-            <a href="#productos" class="nav-link" data-category="NIÑOS">NIÑOS</a>
-            <a href="#productos" class="nav-link" data-category="ADULTOS">ADULTOS</a>
+            <a href="#productos" class="nav-link" data-category="NIÑO">NIÑO</a>
+            <a href="#productos" class="nav-link" data-category="NIÑA">NIÑA</a>
+            <a href="#productos" class="nav-link" data-category="MUJER">MUJER</a>
+            <a href="#productos" class="nav-link" data-category="HOMBRE">HOMBRE</a>
             <a href="#productos" class="nav-link" data-category="ACCESORIOS">ACCESORIOS</a>
             <a href="#productos" class="nav-link" data-category="CUMPLEAÑOS">CUMPLEAÑOS</a>
             <a href="#" id="open-contact-btn" class="nav-link contact-link"><i class="fa-solid fa-envelope"></i> CONTACTO</a>
@@ -131,12 +133,16 @@
     <!-- Main Content Container -->
     <main class="main-body container">
         
-        <!-- Hero Banner Slideshow -->
+        <!-- Hero Banner Section (Single Video Banner) -->
         <section class="hero-slider-section">
             <div class="slider-wrapper">
                 <div class="slider-track" id="sliderTrack">
-                    <!-- Slide 1: Welcome -->
+                    <!-- Slide 1: Welcome (Video Background) -->
                     <div class="slide bg-slide-1">
+                        <video class="slide-video-bg" autoplay loop muted playsinline poster="disfrazate_logo_tech_1783798973176.jpg">
+                            <source src="hero_video.mp4" type="video/mp4">
+                            <source src="videoplayback (11).mp4" type="video/mp4">
+                        </video>
                         <div class="slide-overlay"></div>
                         <div class="slide-content">
                             <span class="slide-tag">NUEVA TEMPORADA</span>
@@ -145,37 +151,6 @@
                             <a href="#productos" class="btn-secondary" onclick="filterCategory('TODOS')">Ver Colección</a>
                         </div>
                     </div>
-                    <!-- Slide 2: Kids -->
-                    <div class="slide bg-slide-2">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-content">
-                            <span class="slide-tag">INFANTIL</span>
-                            <h2>Diversión para Niños</h2>
-                            <p>Superhéroes, dinosaurios y princesas mágicas para hacer volar su imaginación.</p>
-                            <a href="#productos" class="btn-secondary" onclick="filterCategory('NIÑOS')">Ver Niños</a>
-                        </div>
-                    </div>
-                    <!-- Slide 3: Accessories -->
-                    <div class="slide bg-slide-3">
-                        <div class="slide-overlay"></div>
-                        <div class="slide-content">
-                            <span class="slide-tag">COMPLEMENTOS</span>
-                            <h2>El Toque Final</h2>
-                            <p>Máscaras, varitas, sombreros y maquillaje artístico profesional.</p>
-                            <a href="#productos" class="btn-secondary" onclick="filterCategory('ACCESORIOS')">Ver Accesorios</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Navigation Arrows -->
-                <button class="slider-arrow arrow-prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="slider-arrow arrow-next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
-                
-                <!-- Dots indicators -->
-                <div class="slider-dots" id="sliderDots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
                 </div>
             </div>
         </section>
@@ -186,6 +161,15 @@
                 <h2 class="section-title" id="productos-title">TODOS LOS PRODUCTOS</h2>
                 
                 <div class="controls-area">
+                    <div class="view-toggle-group">
+                        <button type="button" id="view-list-btn" class="view-btn active" onclick="switchProductView('list')">
+                            <i class="fa-solid fa-list-ul"></i> Vista Listado
+                        </button>
+                        <button type="button" id="view-grid-btn" class="view-btn" onclick="switchProductView('grid')">
+                            <i class="fa-solid fa-table-cells-large"></i> Vista Tarjetas
+                        </button>
+                    </div>
+
                     <label for="sort-select"><i class="fa-solid fa-arrow-down-short-wide"></i> Ordenar por:</label>
                     <select id="sort-select">
                         <option value="default">Relevancia</option>
@@ -245,54 +229,64 @@
 
     <!-- Global Footer -->
     <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-col col-brand">
-                <h2>Disfrazate.cl</h2>
-                <p>Nuestra misión es llevar magia y diversión a cada rincón de Chile con disfraces innovadores y accesorios únicos. La imaginación no tiene límites.</p>
-                <div class="social-icons">
-                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://wa.me/56912345678" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="container">
+            <div class="footer-purple-card">
+                <div class="footer-grid-container">
+                    <!-- Column 1: Logo & Brand Info -->
+                    <div class="footer-col col-brand">
+                        <div class="footer-logo-badge">
+                            <img src="logo_disfrazate_tech.jpg" alt="Logo Disfrázate">
+                        </div>
+                        <p>La tienda líder en disfraces y accesorios de Chile. Ofrecemos la mayor variedad de disfraces infantiles y de adultos con precios especiales al detalle y al por mayor con despacho a todo Chile.</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://wa.me/56989784973" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                        <div class="footer-ssl-badge">
+                            <i class="fa-solid fa-shield-halved text-accent"></i> Conexión Encriptada SSL / TLS 1.3
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Nosotros -->
+                    <div class="footer-col">
+                        <h3 class="footer-section-title">Nosotros <span class="title-underline"></span></h3>
+                        <ul class="footer-links-list">
+                            <li><a href="#" onclick="alert('Sistema de compra rápida: selecciona tu disfraz, agrega al carro y completa tu pago de forma directa.')">¿Cómo comprar?</a></li>
+                            <li><a href="#" id="footer-catalog-btn"><span class="list-icon-box red-box"></span> Catálogo PDF</a></li>
+                            <li><a href="#" onclick="alert('Medios de Pago: Transferencia Bancaria Directa, WebPay Plus, Débito y Crédito.')">Medios de Pago</a></li>
+                            <li><a href="#" onclick="alert('Despachos a todo Santiago (mismo día comprando antes de las 13:00) y Envíos a Regiones.')">Zonas de Despacho</a></li>
+                            <li><a href="#" id="footer-admin-btn">Acceso Ejecutivo (Admin)</a></li>
+                            <li><a href="#" id="footer-ventas-btn" class="highlight-red"><span class="list-icon-box chart-box">📊</span> Ventas y Pedidos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Contacto y Soporte -->
+                    <div class="footer-col">
+                        <h3 class="footer-section-title">Contacto y Soporte <span class="title-underline"></span></h3>
+                        <ul class="footer-contact-list">
+                            <li><i class="fa-solid fa-phone text-yellow"></i> Llámanos: +56 9 8978 4973</li>
+                            <li><i class="fa-solid fa-envelope text-yellow"></i> ventas@disfrazate.cl</li>
+                            <li><i class="fa-solid fa-envelope text-yellow"></i> contacto@disfrazate.cl</li>
+                            <li><i class="fa-solid fa-location-dot text-yellow"></i> Américo Vespucio 123, Santiago, Chile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom Bar & WhatsApp Transfer Pill -->
+                <div class="footer-bottom-flex">
+                    <p class="copyright-text">&copy; 2026 Disfrázate SpA. Todos los derechos reservados. Portal Operativo encriptado bajo estándares de seguridad.</p>
+                    <a href="https://wa.me/56989784973?text=Hola,%20quisiera%20mas%20informacion%20y%20pago%20con%20transferencia" target="_blank" class="footer-transfer-pill">
+                        <i class="fa-brands fa-whatsapp"></i> Para más info y pago con transferencia acá
+                    </a>
                 </div>
             </div>
-            
-            <div class="footer-col">
-                <h3>Categorías</h3>
-                <ul>
-                    <li><a href="#productos" onclick="filterCategory('OFERTAS')">Ofertas Especiales</a></li>
-                    <li><a href="#productos" onclick="filterCategory('NIÑOS')">Colección Infantil</a></li>
-                    <li><a href="#productos" onclick="filterCategory('ADULTOS')">Colección Adultos</a></li>
-                    <li><a href="#productos" onclick="filterCategory('ACCESORIOS')">Accesorios & Maquillaje</a></li>
-                    <li><a href="#productos" onclick="filterCategory('CUMPLEAÑOS')">Artículos de Cumpleaños</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Políticas</h3>
-                <ul>
-                    <li><a href="#" onclick="alert('Términos y condiciones cargados del sistema.')">Términos del Servicio</a></li>
-                    <li><a href="#" onclick="alert('Políticas de privacidad.')">Política de Privacidad</a></li>
-                    <li><a href="#" onclick="alert('Devoluciones válidas dentro de los primeros 10 días.')">Cambios & Devoluciones</a></li>
-                    <li><a href="#" onclick="alert('Despachos a todo Chile a través de Starken o Courier.')">Cobertura de Envío</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Contacto</h3>
-                <p><i class="fa-solid fa-location-dot"></i> Av. Providencia 1240, Oficina 402 - Santiago</p>
-                <p><i class="fa-solid fa-phone"></i> Central: +56 2 2489 1234</p>
-                <p><i class="fa-solid fa-envelope"></i> ventas@disfrazate.cl</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Disfrazate.cl. Todos los derechos reservados. Diseñado por Antigravity AI.</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/56912345678" target="_blank" class="whatsapp-btn-float" title="¿Necesitas ayuda? Escríbenos">
+    <a href="https://wa.me/56989784973" target="_blank" class="whatsapp-btn-float" title="¿Necesitas ayuda? Escríbenos">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -505,10 +499,10 @@
             
             <div class="modal-body contact-body">
                 <div class="contact-methods">
-                    <p><strong><i class="fa-brands fa-whatsapp text-success"></i> WhatsApp Ventas:</strong> <a href="https://wa.me/56912345678" target="_blank">+56 9 1234 5678</a></p>
-                    <p><strong><i class="fa-solid fa-phone text-accent"></i> Teléfono Oficina:</strong> <a href="tel:+56224891234">+56 2 2489 1234</a></p>
+                    <p><strong><i class="fa-brands fa-whatsapp text-success"></i> WhatsApp Ventas:</strong> <a href="https://wa.me/56989784973" target="_blank">+56 9 8978 4973</a></p>
+                    <p><strong><i class="fa-solid fa-phone text-accent"></i> Teléfono Oficina:</strong> <a href="tel:+56989784973">+56 9 8978 4973</a></p>
                     <p><strong><i class="fa-solid fa-envelope text-accent"></i> Email:</strong> <a href="mailto:ventas@disfrazate.cl">ventas@disfrazate.cl</a></p>
-                    <p><strong><i class="fa-solid fa-location-dot text-danger"></i> Casa Matriz:</strong> Av. Providencia 1240, Oficina 402 - Providencia, Santiago.</p>
+                    <p><strong><i class="fa-solid fa-location-dot text-danger"></i> Casa Matriz:</strong> Américo Vespucio 123, Santiago, Chile</p>
                 </div>
                 
                 <div class="contact-form-wrapper">
@@ -519,7 +513,69 @@
                     <button type="button" class="btn-primary" onclick="alert('Mensaje enviado. Nos contactaremos a la brevedad.')">Enviar Mensaje</button>
                 </div>
             </div>
+    <!-- Product Detail & Full Image Expansion Modal -->
+    <div id="product-detail-modal" class="modal-overlay hidden">
+        <div class="modal-card product-detail-modal-card">
+            <button type="button" class="btn-close-modal" id="btn-close-product-detail"><i class="fa-solid fa-xmark"></i></button>
+            <div class="product-detail-layout">
+                <!-- Left: Full Image View with Zoom -->
+                <div class="detail-image-box">
+                    <span class="detail-oferta-badge" id="modal-detail-badge"><i class="fa-solid fa-fire"></i> Oferta Especial</span>
+                    <img id="modal-detail-img" src="" alt="Imagen Completa del Disfraz" onclick="openFullscreenLightbox(this.src)">
+                    <p class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Haz clic para ver la imagen completa ampliada</p>
+                </div>
+                
+                <!-- Right: Product Information & Cart Action -->
+                <div class="detail-info-box">
+                    <div class="detail-header-tags">
+                        <span class="detail-code-badge" id="modal-detail-code">DIS-0001</span>
+                        <span class="detail-category-badge" id="modal-detail-cat">MUJER</span>
+                    </div>
+                    
+                    <h2 class="detail-title" id="modal-detail-title">Nombre del Disfraz</h2>
+                    
+                    <div class="detail-price-box">
+                        <div class="detail-main-price" id="modal-detail-price">$10.000</div>
+                    </div>
+                    
+                    <div class="detail-option-group">
+                        <label><strong>Selecciona Tu Talla:</strong></label>
+                        <div class="size-buttons-container" id="modal-detail-sizes">
+                            <!-- Size buttons injected by JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="detail-quantity-group">
+                        <label><strong>Cantidad:</strong></label>
+                        <div class="qty-selector">
+                            <button type="button" class="qty-btn" id="detail-qty-minus">-</button>
+                            <input type="number" id="detail-qty-input" value="1" min="1" max="99" readonly>
+                            <button type="button" class="qty-btn" id="detail-qty-plus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-actions">
+                        <button type="button" class="btn-primary btn-add-detail-cart" id="btn-add-detail-cart">
+                            <i class="fa-solid fa-cart-plus"></i> AGREGAR AL CARRO
+                        </button>
+                        <a href="#" target="_blank" class="btn-whatsapp-detail" id="btn-whatsapp-detail">
+                            <i class="fa-brands fa-whatsapp"></i> COMPRAR POR WHATSAPP
+                        </a>
+                    </div>
+                    
+                    <div class="detail-perks">
+                        <p><i class="fa-solid fa-truck-fast text-accent"></i> <strong>Despacho Express:</strong> Mismo día en Santiago</p>
+                        <p><i class="fa-solid fa-shield-halved text-success"></i> <strong>Garantía:</strong> Cambio de talla sin costo</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- Fullscreen Image Lightbox Overlay -->
+    <div id="fullscreen-lightbox" class="lightbox-overlay hidden" onclick="closeFullscreenLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-full-img" src="" alt="Disfraz en pantalla completa">
     </div>
 
     <!-- Script imports -->

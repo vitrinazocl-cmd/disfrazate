@@ -1,9 +1,8 @@
 // Global shop states
 let baseCatalogo = [...catalogoProductos];
 let currentProducts = [...baseCatalogo];
-let currentPage = 1;
-const itemsPerPage = 8; // Ideal count for grid layout
-
+let currentViewMode = 'grid'; // Default grid view matching user screenshot
+const itemsPerPage = 20;
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    if (sliderTrack) {
+    if (sliderTrack && sliderTrack.children.length > 1) {
         startAutoPlay();
         // Pause slider on hover
         sliderTrack.parentElement.addEventListener('mouseenter', stopAutoPlay);
@@ -208,12 +207,39 @@ document.addEventListener('DOMContentLoaded', () => {
             openModal('login-modal');
         });
     }
+    const footerAdminBtn = document.getElementById('footer-admin-btn');
+    if (footerAdminBtn) {
+        footerAdminBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            redirectDashboardUrl = 'pedidos.html';
+            openModal('login-modal');
+        });
+    }
 
     if (ventasLoginBtn) {
         ventasLoginBtn.addEventListener('click', (e) => {
             e.preventDefault();
             redirectDashboardUrl = 'ventas.html';
             openModal('login-modal');
+        });
+    }
+    const footerVentasBtn = document.getElementById('footer-ventas-btn');
+    if (footerVentasBtn) {
+        footerVentasBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            redirectDashboardUrl = 'ventas.html';
+            openModal('login-modal');
+        });
+    }
+
+    const footerCatalogBtn = document.getElementById('footer-catalog-btn');
+    if (footerCatalogBtn) {
+        footerCatalogBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.getElementById('catalogo-download');
+            if (target) {
+                window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+            }
         });
     }
 
@@ -322,7 +348,10 @@ function filterByCategory(category) {
     
     if (category === 'TODOS') {
         currentProducts = [...baseCatalogo];
-        productsTitle.textContent = "TODOS LOS PRODUCTOS";
+        productsTitle.textContent = "TODOS LOS DISFRACES";
+    } else if (category === 'OFERTAS') {
+        currentProducts = baseCatalogo.filter(p => p.category === 'OFERTAS' || p.isOffer || p.price <= 5000);
+        productsTitle.textContent = "OFERTAS Y PROMOCIONES";
     } else {
         currentProducts = baseCatalogo.filter(p => p.category === category);
         productsTitle.textContent = `PRODUCTOS: ${category.toUpperCase()}`;
@@ -349,11 +378,30 @@ function applyOrderingAndRender() {
     renderProductsGrid();
 }
 
+function switchProductView(mode) {
+    currentViewMode = mode;
+    const btnList = document.getElementById('view-list-btn');
+    const btnGrid = document.getElementById('view-grid-btn');
+    if (btnList && btnGrid) {
+        btnList.classList.toggle('active', mode === 'list');
+        btnGrid.classList.toggle('active', mode === 'grid');
+    }
+    renderProductsGrid();
+}
+window.switchProductView = switchProductView;
+
 function renderProductsGrid() {
     const grid = document.getElementById('products-grid');
     if (!grid) return;
 
     grid.innerHTML = '';
+    
+    // Set appropriate container class according to view mode
+    if (currentViewMode === 'list') {
+        grid.className = 'products-list-view';
+    } else {
+        grid.className = 'products-grid';
+    }
 
     if (currentProducts.length === 0) {
         grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-gray); padding: 30px; font-weight: bold;">
@@ -371,79 +419,72 @@ function renderProductsGrid() {
     let html = '';
     paginatedItems.forEach(prod => {
         const priceFormatted = prod.price.toLocaleString('es-CL');
-        // Simulated review ratings for aesthetics
-        const rating = (4.4 + (prod.price % 7) * 0.1).toFixed(1);
-        const reviews = 10 + (prod.price % 33);
-        const hasOldPrice = prod.category === 'OFERTAS';
-        const oldPriceFormatted = hasOldPrice ? Math.floor(prod.price * 1.35).toLocaleString('es-CL') : '';
-        const savingsFormatted = hasOldPrice ? Math.floor(prod.price * 0.35).toLocaleString('es-CL') : '';
+        const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
+        const oldPriceVal = Math.floor(prod.price * 1.30);
+        const oldPriceFormatted = oldPriceVal.toLocaleString('es-CL');
 
-        // Dynamic features dropdown
-        let sizesDropdown = '';
-        if (prod.sizes && prod.sizes.length > 0) {
-            sizesDropdown = `<select class="product-size" style="margin-top: 8px;">
-                ${prod.sizes.map(s => `<option value="${s}">Talla: ${s}</option>`).join('')}
-            </select>`;
-        }
-
-        let flavorsDropdown = '';
-        if (prod.flavors && prod.flavors.length > 0) {
-            flavorsDropdown = `<select class="product-flavor" style="margin-top: 8px;">
-                ${prod.flavors.map(f => `<option value="${f}">${f}</option>`).join('')}
-            </select>`;
-        }
-
-        const isCustomBtn = prod.isCustom 
-            ? `<button class="fb-blue-btn" onclick="openCustomPackModal('${prod.id}')"><i class="fa-solid fa-gift"></i> Armar Pack</button>`
-            : `<button class="fb-blue-btn" onclick="addItemToCartFromCard('${prod.id}', this)"><i class="fa-solid fa-cart-plus"></i> Agregar al Carro</button>`;
-
-        html += `
-        <div class="product-card" data-id="${prod.id}">
-            <div class="product-image-container">
-                <span class="mini-logo-overlay">Disfrazate</span>
-                <img src="${prod.image}" alt="${prod.name}">
-            </div>
-            <div class="product-info-container">
-                ${hasOldPrice ? `<div class="rebaja-badge"><i class="fa-solid fa-arrow-down"></i> Rebaja</div>` : ''}
-                <span class="brand-title">${prod.category}</span>
-                <h3 class="product-title" title="${prod.name}">${prod.name}</h3>
+        if (currentViewMode === 'list') {
+            // LIST VIEW: Small thumbnail box, clean horizontal list row, click to expand
+            html += `
+            <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver fotos completas y comprar">
+                <div class="list-thumb-box">
+                    ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
+                    <img src="${prod.image}" alt="${prod.name}" loading="lazy">
+                    <div class="thumb-zoom-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
                 
-                <div class="rating-container">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                <div class="list-item-info">
+                    <div class="list-item-meta">
+                        <span class="list-code-badge"><i class="fa-solid fa-barcode"></i> CÓD: ${prod.id}</span>
+                        <span class="list-cat-badge">&bull; ${prod.category}</span>
                     </div>
-                    <span class="rating-score">(${rating})</span>
-                    <span class="rating-reviews">${reviews} opiniones</span>
+                    <h3 class="list-item-title">${prod.name}</h3>
+                    <p class="list-item-desc"><i class="fa-solid fa-circle-check text-success"></i> Stock disponible &bull; Envío rápido a todo Santiago</p>
                 </div>
-
-                <div class="price-container">
-                    <div class="main-price">$${priceFormatted}</div>
-                    ${hasOldPrice ? `
-                    <div class="old-price-row">
-                        <span class="old-price">$${oldPriceFormatted}</span>
-                        <span class="savings-badge">Ahorra $${savingsFormatted}</span>
-                    </div>` : ''}
-                </div>
-
-                <div class="action-container">
-                    <div class="form-group-qty-flavor">
-                        ${!prod.isCustom ? `
-                        <div class="qty-row">
-                            <label>CANT:</label>
-                            <input type="number" class="product-qty" min="1" max="20" value="1">
-                        </div>` : ''}
-                        ${sizesDropdown}
-                        ${flavorsDropdown}
+                
+                <div class="list-item-actions">
+                    <div class="list-price-box">
+                        <span class="list-main-price">$${priceFormatted}</span>
                     </div>
-                    ${isCustomBtn}
+                    
+                    <div class="list-btn-row">
+                        <button type="button" class="btn-list-expand" onclick="event.stopPropagation(); openProductDetailModal('${prod.id}')">
+                            <i class="fa-solid fa-expand"></i> Ver / Ampliar
+                        </button>
+                        <button type="button" class="btn-list-cart" title="Agregar al Carro" onclick="event.stopPropagation(); addItemToCartFromCard('${prod.id}', this)">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-        `;
+            </div>`;
+        } else {
+            // GRID VIEW: Compact grid cards showing ONLY the clean price
+            html += `
+            <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
+                <div class="product-image-container">
+                    ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
+                    <img src="${prod.image}" alt="${prod.name}" loading="lazy">
+                    <div class="image-expand-hint">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa
+                    </div>
+                </div>
+                
+                <div class="product-card-body">
+                    <span class="card-brand-subtitle">DISFRÁZATE &bull; ${prod.category}</span>
+                    <h3 class="product-card-title" title="${prod.name}">${prod.name}</h3>
+                    
+                    <div class="card-price-row">
+                        <div class="card-main-price">$${priceFormatted}</div>
+                    </div>
+                    
+                    <button type="button" class="btn-card-buy" onclick="event.stopPropagation(); addItemToCartFromCard('${prod.id}', this)">
+                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carro
+                    </button>
+                </div>
+            </div>`;
+        }
     });
 
     grid.innerHTML = html;
@@ -912,3 +953,124 @@ window.filterCategory = (cat) => {
     }
 };
 window.addItemToCartFromCard = addItemToCartFromCard;
+
+// ==========================================
+// PRODUCT DETAIL & LIGHTBOX EXPANSION MODAL
+// ==========================================
+let currentDetailProduct = null;
+let currentDetailSize = null;
+
+function openProductDetailModal(productId) {
+    const prod = baseCatalogo.find(p => p.id === productId);
+    if (!prod) return;
+
+    currentDetailProduct = prod;
+    
+    const modalImg = document.getElementById('modal-detail-img');
+    const modalCode = document.getElementById('modal-detail-code');
+    const modalCat = document.getElementById('modal-detail-cat');
+    const modalTitle = document.getElementById('modal-detail-title');
+    const modalPrice = document.getElementById('modal-detail-price');
+    const modalOldPriceLine = document.getElementById('modal-detail-old-price-line');
+    const modalOldPrice = document.getElementById('modal-detail-old-price');
+    const modalSavings = document.getElementById('modal-detail-savings');
+    const modalSizes = document.getElementById('modal-detail-sizes');
+    const qtyInput = document.getElementById('detail-qty-input');
+    const whatsappBtn = document.getElementById('btn-whatsapp-detail');
+    const badge = document.getElementById('modal-detail-badge');
+
+    if (qtyInput) qtyInput.value = 1;
+
+    if (modalImg) modalImg.src = prod.image;
+    if (modalCode) modalCode.textContent = prod.id;
+    if (modalCat) modalCat.textContent = prod.category;
+    if (modalTitle) modalTitle.textContent = prod.name;
+    if (modalPrice) modalPrice.innerHTML = `$${prod.price.toLocaleString('es-CL')}`;
+    if (modalOldPriceLine) modalOldPriceLine.style.display = 'none';
+    if (badge) badge.style.display = isOffer ? 'inline-block' : 'none';
+
+    // Populate Size Buttons
+    if (modalSizes) {
+        modalSizes.innerHTML = '';
+        const sizesList = (prod.sizes && prod.sizes.length > 0) ? prod.sizes : ["Estándar"];
+        currentDetailSize = sizesList[0];
+
+        sizesList.forEach((s, idx) => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = `size-btn ${idx === 0 ? 'active' : ''}`;
+            btn.textContent = `Talla ${s}`;
+            btn.onclick = () => {
+                modalSizes.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentDetailSize = s;
+            };
+            modalSizes.appendChild(btn);
+        });
+    }
+
+    // Set WhatsApp Order Link
+    if (whatsappBtn) {
+        const msg = encodeURIComponent(`Hola Disfrázate! Quisiera pedir el disfraz ${prod.name} (Código ${prod.id}) en Talla ${currentDetailSize || 'Estándar'}.`);
+        whatsappBtn.href = `https://wa.me/56989784973?text=${msg}`;
+    }
+
+    openModal('product-detail-modal');
+}
+
+function openFullscreenLightbox(imgSrc) {
+    const lightbox = document.getElementById('fullscreen-lightbox');
+    const fullImg = document.getElementById('lightbox-full-img');
+    if (lightbox && fullImg) {
+        fullImg.src = imgSrc;
+        lightbox.classList.remove('hidden');
+    }
+}
+
+function closeFullscreenLightbox() {
+    const lightbox = document.getElementById('fullscreen-lightbox');
+    if (lightbox) {
+        lightbox.classList.add('hidden');
+    }
+}
+
+window.openProductDetailModal = openProductDetailModal;
+window.openFullscreenLightbox = openFullscreenLightbox;
+window.closeFullscreenLightbox = closeFullscreenLightbox;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnCloseDetail = document.getElementById('btn-close-product-detail');
+    if (btnCloseDetail) btnCloseDetail.addEventListener('click', () => closeModal('product-detail-modal'));
+
+    document.getElementById('detail-qty-minus')?.addEventListener('click', () => {
+        const input = document.getElementById('detail-qty-input');
+        if (input && parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    });
+
+    document.getElementById('detail-qty-plus')?.addEventListener('click', () => {
+        const input = document.getElementById('detail-qty-input');
+        if (input && parseInt(input.value) < 99) {
+            input.value = parseInt(input.value) + 1;
+        }
+    });
+
+    document.getElementById('btn-add-detail-cart')?.addEventListener('click', () => {
+        if (!currentDetailProduct) return;
+        const qty = parseInt(document.getElementById('detail-qty-input')?.value || 1);
+        
+        addToCart({
+            id: currentDetailProduct.id,
+            name: currentDetailProduct.name,
+            price: currentDetailProduct.price,
+            image: currentDetailProduct.image,
+            category: currentDetailProduct.category,
+            size: currentDetailSize || 'Estándar',
+            qty: qty
+        });
+
+        closeModal('product-detail-modal');
+        openModal('cart-modal');
+    });
+});
