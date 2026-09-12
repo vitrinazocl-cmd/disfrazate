@@ -10,7 +10,198 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Local Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260912_5">
+    <style>
+    /* Guaranteed 4-Column Compact Grid & Image Constraints */
+    #products-grid,
+    .products-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        margin-bottom: 24px !important;
+        width: 100% !important;
+    }
+
+    #products-grid.products-sections-wrapper,
+    .products-sections-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 35px !important;
+    }
+
+    .category-row-section {
+        width: 100% !important;
+        display: block !important;
+        margin-bottom: 35px !important;
+    }
+
+    .category-row-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 16px !important;
+        border-bottom: 2px solid rgba(139, 92, 246, 0.25) !important;
+        width: 100% !important;
+    }
+
+    .category-row-title {
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin: 0 !important;
+    }
+
+    .see-category-link {
+        color: #00f0ff !important;
+        font-size: 0.9rem !important;
+        font-weight: 800 !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        cursor: pointer !important;
+    }
+
+    .product-card {
+        background: #120e26 !important;
+        border: 1px solid rgba(139, 92, 246, 0.25) !important;
+        border-radius: 14px !important;
+        overflow: hidden !important;
+        cursor: pointer !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        width: 100% !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4) !important;
+        position: relative !important;
+    }
+
+    .product-image-container {
+        position: relative !important;
+        width: 100% !important;
+        height: 165px !important;
+        max-height: 165px !important;
+        background: #ffffff !important;
+        overflow: hidden !important;
+        border-bottom: 1px solid rgba(139, 92, 246, 0.15) !important;
+        padding: 8px !important;
+    }
+
+    .product-image-container img {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 90% !important;
+        max-height: 90% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .card-oferta-badge {
+        position: absolute !important;
+        top: 10px !important;
+        left: 10px !important;
+        background: #e11d48 !important;
+        color: #ffffff !important;
+        font-size: 0.72rem !important;
+        font-weight: 800 !important;
+        padding: 3px 9px !important;
+        border-radius: 6px !important;
+        z-index: 2 !important;
+    }
+
+    .product-card-body {
+        padding: 12px 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+        background: #120e26 !important;
+        color: #ffffff !important;
+    }
+
+    .card-category-cyan {
+        color: #e11d48 !important;
+        font-size: 0.75rem !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        margin-bottom: 4px !important;
+        display: block !important;
+    }
+
+    .product-card-title {
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 0.92rem !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+        height: 2.3rem !important;
+        overflow: hidden !important;
+    }
+
+    .card-badge-subtitle {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        font-size: 0.72rem !important;
+        color: #f59e0b !important;
+        font-weight: 700 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .card-price-display {
+        font-family: 'Outfit', sans-serif !important;
+        font-size: 1.35rem !important;
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        margin-bottom: 10px !important;
+    }
+
+    .btn-card-buy-purple {
+        background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%) !important;
+        color: #ffffff !important;
+        border: none !important;
+        padding: 8px 12px !important;
+        border-radius: 8px !important;
+        font-size: 0.8rem !important;
+        font-weight: 800 !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin-top: auto !important;
+    }
+
+    @media (max-width: 992px) {
+        #products-grid.products-grid,
+        .category-row-section .products-grid,
+        .products-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        }
+    }
+
+    @media (max-width: 640px) {
+        #products-grid.products-grid,
+        .category-row-section .products-grid,
+        .products-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+        .product-image-container {
+            height: 140px !important;
+            max-height: 140px !important;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -570,7 +761,7 @@
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js"></script>
-    <script src="script.js"></script>
+    <script src="catalogo.js?v=20260912_5"></script>
+    <script src="script.js?v=20260912_5"></script>
 </body>
 </html>

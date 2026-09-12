@@ -2,7 +2,7 @@
 let baseCatalogo = [...catalogoProductos];
 let currentProducts = [...baseCatalogo];
 let currentViewMode = 'grid'; // Default grid view matching user screenshot
-const itemsPerPage = 20;
+const itemsPerPage = 24;
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -343,21 +343,65 @@ document.addEventListener('DOMContentLoaded', () => {
 // STORE CORE FUNCTIONS
 // ==========================================
 
+let activeCategory = 'TODOS';
+
+function buildCompactCardHtml(prod) {
+    const priceFormatted = prod.price.toLocaleString('es-CL');
+    const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
+    const sizesList = (prod.sizes && prod.sizes.length > 0) ? prod.sizes : ["Estándar"];
+    const mainSize = sizesList[0];
+
+    return `
+    <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
+        <div class="product-image-container">
+            ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
+            <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+            <div class="image-expand-hint">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa
+            </div>
+        </div>
+        
+        <div class="product-card-body">
+            <span class="card-category-cyan">${prod.category}</span>
+            <h3 class="product-card-title" title="${prod.name}">${prod.name}</h3>
+            
+            <div class="card-badge-subtitle">
+                <i class="fa-solid fa-star"></i> MEJOR PRECIO &bull; Talla ${mainSize}
+            </div>
+            
+            <div class="card-price-display">$${priceFormatted}</div>
+            
+            <button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); addItemWithDetailsFromCard('${prod.id}', this)">
+                <i class="fa-solid fa-cart-plus"></i> Agregar al Carro
+            </button>
+        </div>
+    </div>`;
+}
+
 function filterByCategory(category) {
+    activeCategory = category;
     const productsTitle = document.getElementById('productos-title');
     
+    // Update active state in nav container
+    document.querySelectorAll('.nav-container .nav-link').forEach(link => {
+        if (link.getAttribute('data-category') === category) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
     if (category === 'TODOS') {
         currentProducts = [...baseCatalogo];
-        productsTitle.textContent = "TODOS LOS DISFRACES";
+        if (productsTitle) productsTitle.textContent = "TODOS LOS DISFRACES";
     } else if (category === 'OFERTAS') {
         currentProducts = baseCatalogo.filter(p => p.category === 'OFERTAS' || p.isOffer || p.price <= 5000);
-        productsTitle.textContent = "OFERTAS Y PROMOCIONES";
+        if (productsTitle) productsTitle.textContent = "OFERTAS Y PROMOCIONES";
     } else {
         currentProducts = baseCatalogo.filter(p => p.category === category);
-        productsTitle.textContent = `PRODUCTOS: ${category.toUpperCase()}`;
+        if (productsTitle) productsTitle.textContent = `DISFRACES: ${category.toUpperCase()}`;
     }
 
-    // Reset pagination to page 1
     currentPage = 1;
     applyOrderingAndRender();
 }
@@ -371,7 +415,6 @@ function applyOrderingAndRender() {
         } else if (value === 'price-desc') {
             currentProducts.sort((a, b) => b.price - a.price);
         } else {
-            // Relevancy (Default original layout order)
             currentProducts.sort((a, b) => a.id.localeCompare(b.id));
         }
     }
@@ -389,14 +432,52 @@ function switchProductView(mode) {
     renderProductsGrid();
 }
 window.switchProductView = switchProductView;
+window.filterByCategory = filterByCategory;
 
 function renderProductsGrid() {
     const grid = document.getElementById('products-grid');
     if (!grid) return;
 
-    grid.innerHTML = '';
-    
-    // Set appropriate container class according to view mode
+    const searchInput = document.getElementById('search-input');
+    const isSearching = searchInput && searchInput.value.trim().length > 0;
+
+    // IF in "TODOS" mode and NOT searching: Render grouped 4-card rows per category (superahorraya style)
+    if (activeCategory === 'TODOS' && !isSearching && currentViewMode === 'grid') {
+        grid.className = 'products-sections-wrapper';
+        
+        const sections = [
+            { id: 'OFERTAS', title: 'OFERTAS DESTACADAS', icon: 'fa-fire', filter: p => p.isOffer || p.price <= 5000 },
+            { id: 'NIÑO', title: 'DISFRACES DE NIÑO', icon: 'fa-child', filter: p => p.category === 'NIÑO' },
+            { id: 'NIÑA', title: 'DISFRACES DE NIÑA', icon: 'fa-child-dress', filter: p => p.category === 'NIÑA' },
+            { id: 'MUJER', title: 'DISFRACES DE MUJER', icon: 'fa-user-nurse', filter: p => p.category === 'MUJER' },
+            { id: 'HOMBRE', title: 'DISFRACES DE HOMBRE', icon: 'fa-user-tie', filter: p => p.category === 'HOMBRE' }
+        ];
+
+        let html = '';
+        sections.forEach(sec => {
+            const items = baseCatalogo.filter(sec.filter).slice(0, 4);
+            if (items.length === 0) return;
+
+            const cardsHtml = items.map(prod => buildCompactCardHtml(prod)).join('');
+
+            html += `
+            <div class="category-row-section">
+                <div class="category-row-header">
+                    <h3 class="category-row-title"><i class="fa-solid ${sec.icon} text-accent"></i> ${sec.title}</h3>
+                    <a href="#productos" onclick="event.preventDefault(); filterByCategory('${sec.id}')" class="see-category-link">Ver todos <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="products-grid">
+                    ${cardsHtml}
+                </div>
+            </div>`;
+        });
+
+        grid.innerHTML = html;
+        renderPagination(0);
+        return;
+    }
+
+    // Single Category or Search Grid / List View
     if (currentViewMode === 'list') {
         grid.className = 'products-list-view';
     } else {
@@ -411,25 +492,20 @@ function renderProductsGrid() {
         return;
     }
 
-    // Paginate slice
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedItems = currentProducts.slice(startIndex, endIndex);
 
     let html = '';
     paginatedItems.forEach(prod => {
-        const priceFormatted = prod.price.toLocaleString('es-CL');
-        const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
-        const oldPriceVal = Math.floor(prod.price * 1.30);
-        const oldPriceFormatted = oldPriceVal.toLocaleString('es-CL');
-
         if (currentViewMode === 'list') {
-            // LIST VIEW: Small thumbnail box, clean horizontal list row, click to expand
+            const priceFormatted = prod.price.toLocaleString('es-CL');
+            const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
             html += `
             <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver fotos completas y comprar">
                 <div class="list-thumb-box">
                     ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
-                    <img src="${prod.image}" alt="${prod.name}" loading="lazy">
+                    <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
                     <div class="thumb-zoom-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
@@ -460,50 +536,7 @@ function renderProductsGrid() {
                 </div>
             </div>`;
         } else {
-            // GRID VIEW: Original Dark Neon Tech Product Cards (Matching Reference Screenshot)
-            const sizesList = (prod.sizes && prod.sizes.length > 0) ? prod.sizes : ["S", "M", "L", "XL", "Estándar"];
-            const sizesOptionsHtml = sizesList.map(s => `<option value="${s}">Talla: ${s}</option>`).join('');
-            const ratingVal = (4.7 + (prod.id.charCodeAt(prod.id.length - 1) % 3) * 0.1).toFixed(1);
-            const reviewCount = 20 + (prod.id.charCodeAt(prod.id.length - 1) * 3) % 30;
-
-            html += `
-            <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
-                <div class="product-image-container">
-                    ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
-                    <img src="${prod.image}" alt="${prod.name}" loading="lazy">
-                    <div class="image-expand-hint">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa
-                    </div>
-                </div>
-                
-                <div class="product-card-body">
-                    <span class="card-category-cyan">${prod.category}</span>
-                    <h3 class="product-card-title" title="${prod.name}">${prod.name}</h3>
-                    
-                    <div class="card-rating">
-                        <span class="stars-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-                        <span class="rating-num">(${ratingVal})</span>
-                        <span class="reviews-count">${reviewCount} opiniones</span>
-                    </div>
-                    
-                    <div class="card-price-display">$${priceFormatted}</div>
-                    
-                    <div class="card-qty-row">
-                        <span class="qty-label">CANT:</span>
-                        <input type="number" value="1" min="1" max="99" class="card-qty-input" id="qty-input-${prod.id}" onclick="event.stopPropagation()">
-                    </div>
-                    
-                    <div class="card-size-select-box">
-                        <select class="card-size-select" id="size-select-${prod.id}" onclick="event.stopPropagation()">
-                            ${sizesOptionsHtml}
-                        </select>
-                    </div>
-                    
-                    <button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); addItemWithDetailsFromCard('${prod.id}', this)">
-                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carro
-                    </button>
-                </div>
-            </div>`;
+            html += buildCompactCardHtml(prod);
         }
     });
 
@@ -1025,13 +1058,20 @@ function openProductDetailModal(productId) {
 
     if (qtyInput) qtyInput.value = 1;
 
-    if (modalImg) modalImg.src = prod.image;
+    if (modalImg) {
+        modalImg.src = prod.highResImage || prod.image;
+        modalImg.onerror = function() {
+            this.onerror = null;
+            this.src = prod.image || 'logo_disfrazate_tech.jpg';
+        };
+    }
     if (modalCode) modalCode.textContent = prod.id;
     if (modalCat) modalCat.textContent = prod.category;
     if (modalTitle) modalTitle.textContent = prod.name;
     if (modalPrice) modalPrice.innerHTML = `$${prod.price.toLocaleString('es-CL')}`;
     if (modalOldPriceLine) modalOldPriceLine.style.display = 'none';
-    if (badge) badge.style.display = isOffer ? 'inline-block' : 'none';
+    const isProdOffer = prod.isOffer || prod.category === 'OFERTAS' || prod.price <= 5000;
+    if (badge) badge.style.display = isProdOffer ? 'inline-block' : 'none';
 
     // Populate Size Buttons
     if (modalSizes) {
