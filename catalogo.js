@@ -1,141 +1,119 @@
 const catalogoProductos = [
     {
-        "id": "OF-TERROR",
-        "name": "Combo Terror Completo (Disfraz Calavera + Maquillaje)",
-        "price": 14990,
-        "category": "OFERTAS",
-        "image": "DIS-0058.jpg",
+        "id": "DIS-0001",
+        "name": "CHINA",
+        "price": 5000,
+        "category": "MUJER",
+        "image": "DIS-0001.jpg",
         "sizes": [
             "S",
             "M",
             "L"
         ],
-        "flavors": [
-            "Estilo Catrina",
-            "Estilo Esqueleto"
-        ]
-    },
-    {
-        "id": "OF-VENECIANA",
-        "name": "Pack 3 Máscaras Venecianas Premium (Glitter)",
-        "price": 8990,
-        "category": "OFERTAS",
-        "image": "DIS-0025.jpg",
-        "flavors": [
-            "Surtido Dorado",
-            "Surtido Plateado",
-            "Surtido Multicolor"
-        ]
-    },
-    {
-        "id": "OF-CAPAMAGICA",
-        "name": "Capa Mágica de Terciopelo con Capucha",
-        "price": 7990,
-        "category": "OFERTAS",
-        "image": "DIS-0019.jpg",
-        "flavors": [
-            "Negro Místico",
-            "Rojo Vampiro",
-            "Púrpura Bruja"
-        ]
-    },
-    {
-        "id": "DIS-0001",
-        "name": "Disfraz Tradicional Oriental China",
-        "price": 5000,
-        "category": "MUJER",
-        "image": "DIS-0001.jpg",
-        "sizes": [
-            "S"
-        ],
         "isOffer": true
     },
     {
         "id": "DIS-0002",
-        "name": "Disfraz Rey del Rock Elvis Presley",
+        "name": "ELVIS",
         "price": 10000,
         "category": "HOMBRE",
         "image": "DIS-0002.jpg",
         "sizes": [
+            "L",
             "XL"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0003",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 10000,
         "category": "HOMBRE",
         "image": "DIS-0003.jpg",
         "sizes": [
+            "L",
             "XL"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0004",
-        "name": "Top Peto Estilo K-Pop",
+        "name": "PETO KPOP",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0004.jpg",
         "sizes": [
-            "S"
+            "S",
+            "M",
+            "L"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0005",
-        "name": "Polera Corsario Pirata",
+        "name": "POLERA PIRATA",
         "price": 7000,
         "category": "HOMBRE",
         "image": "DIS-0005.jpg",
         "sizes": [
+            "L",
             "XL"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0006",
-        "name": "Pantalón Estilo Hippie Vintage",
+        "name": "PANTALON HIPIE",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0006.jpg",
         "sizes": [
+            "L",
             "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0007",
-        "name": "Falda Tutú Blanco Ballet & Fiesta",
+        "name": "TUTO BLANCO",
         "price": 4000,
         "category": "MUJER",
         "image": "DIS-0007.jpg",
         "sizes": [
-            "S"
+            "S",
+            "M",
+            "L"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0008",
-        "name": "Disfraz Guerrera Artemisia 300",
+        "name": "ARTEMISIA 300",
         "price": 10000,
         "category": "MUJER",
         "image": "DIS-0008.jpg",
         "sizes": [
+            "L",
             "XL"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0009",
-        "name": "Disfraz Tradicional Alemana Oktoberfest",
+        "name": "ALEMANA",
         "price": 7000,
         "category": "MUJER",
         "image": "DIS-0009.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0010",
-        "name": "Vestido Princesa Mágica Rosado",
+        "name": "PRINCESA ROSADO",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0010.jpg",
@@ -146,59 +124,71 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0011",
-        "name": "Disfraz Pirata del Caribe",
+        "name": "PIRATA",
         "price": 7000,
         "category": "HOMBRE",
         "image": "DIS-0011.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0012",
-        "name": "Vestido Princesa Mágica Celeste",
+        "name": "PRINCESA CELESTE",
         "price": 7000,
         "category": "MUJER",
         "image": "DIS-0012.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0013",
-        "name": "Polera Corsaria Pirata Mujer",
+        "name": "POLERA PIRATA M",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0013.jpg",
         "sizes": [
-            "S"
+            "S",
+            "M",
+            "L"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0014",
-        "name": "Camisa Temática Calabaza Halloween",
+        "name": "CAMISA CALAZA",
         "price": 7000,
         "category": "HOMBRE",
         "image": "DIS-0014.jpg",
         "sizes": [
-            "L"
-        ]
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0015",
-        "name": "Falda Elegante Negra Gótica",
+        "name": "FALDA NEGRA",
         "price": 4000,
         "category": "MUJER",
         "image": "DIS-0015.jpg",
         "sizes": [
-            "M"
+            "M",
+            "L",
+            "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0016",
-        "name": "Vestido Princesa Cenicienta de Cuento",
+        "name": "CENICIENTA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0016.jpg",
@@ -209,17 +199,20 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0017",
-        "name": "Disfraz Flapper Charleston Años 20",
+        "name": "CHARLESTON",
         "price": 7000,
         "category": "MUJER",
         "image": "DIS-0017.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0018",
-        "name": "Vestido Temático Película Coco",
+        "name": "VESTIDO COCO",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0018.jpg",
@@ -230,48 +223,43 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0019",
-        "name": "Poncho Místico Halloween",
+        "name": "PONCHO",
         "price": 4000,
         "category": "HOMBRE",
         "image": "DIS-0019.jpg",
         "sizes": [
+            "L",
             "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0020",
-        "name": "Chaqueta Larga Negra Vampiro/Gótico",
+        "name": "CHAQUETON NEGRO",
         "price": 7000,
         "category": "HOMBRE",
         "image": "DIS-0020.jpg",
         "sizes": [
-            "L"
-        ]
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0021",
-        "name": "Disfraz de Reclusa Prisionera",
+        "name": "RECLUSA",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0021.jpg",
         "sizes": [
-            "L"
-        ]
-    },
-    {
-        "id": "DIS-0022",
-        "name": "Disfraz Máscara Scary Movie Scream",
-        "price": 8000,
-        "category": "HOMBRE",
-        "image": "DIS-0022.jpg",
-        "sizes": [
-            "S"
-        ]
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0023",
-        "name": "Vestido Tradicional Flamenca Española",
+        "name": "ESPAÑOLA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0023.jpg",
@@ -282,38 +270,46 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0024",
-        "name": "Disfraz Bruja Malvada de las Sombras",
+        "name": "BRUJA MALVADA",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0024.jpg",
         "sizes": [
-            "S-M"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0025",
-        "name": "Falda Tutú Multicolores Neón",
+        "name": "TUTO COLOR",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0025.jpg",
         "sizes": [
-            "M"
+            "M",
+            "L",
+            "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0026",
-        "name": "Vestido Hippie Psicodélico Años 70",
+        "name": "VESTIDO HIPIE",
         "price": 7000,
         "category": "MUJER",
         "image": "DIS-0026.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0027",
-        "name": "Disfraz Ladybug Heroína",
+        "name": "LADY BOG",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0027.jpg",
@@ -324,7 +320,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0028",
-        "name": "Vestido Princesa Cenicienta de Cuento",
+        "name": "CENICIENTA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0028.jpg",
@@ -335,7 +331,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0029",
-        "name": "Vestido de Flamenco Español",
+        "name": "FLAMENCO",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0029.jpg",
@@ -346,7 +342,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0030",
-        "name": "Vestido Princesa Cenicienta de Cuento",
+        "name": "CENICIENTA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0030.jpg",
@@ -357,48 +353,58 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0031",
-        "name": "Vestido Maternidad Temático",
+        "name": "VESTIDO MATERNAL",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0031.jpg",
         "sizes": [
+            "L",
             "XL"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0032",
-        "name": "Malla Entera Negra Profesional",
+        "name": "MALLA NEGRA",
         "price": 7000,
         "category": "MUJER",
         "image": "DIS-0032.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0033",
-        "name": "Disfraz Tigresa Salvaje",
+        "name": "TIGRESA",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0033.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0034",
-        "name": "Polera Temática Roja",
+        "name": "POLERA ROJA",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0034.jpg",
         "sizes": [
-            "M-L"
+            "M",
+            "L",
+            "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0035",
-        "name": "Disfraz Infantil Peppa Pig",
+        "name": "PEPPA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0035.jpg",
@@ -409,7 +415,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0036",
-        "name": "Disfraz Frutillita Dulce Infantil",
+        "name": "FRUTILLITA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0036.jpg",
@@ -420,7 +426,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0037",
-        "name": "Disfraz Brujita Encantada",
+        "name": "BRUJITA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0037.jpg",
@@ -431,7 +437,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0038",
-        "name": "Vestido Princesa Elsa Frozen",
+        "name": "ELSA FROZEN",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0038.jpg",
@@ -442,7 +448,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0039",
-        "name": "Vestido Princesa Mágica Rosado",
+        "name": "PRINCESA ROSADO",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0039.jpg",
@@ -453,7 +459,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0040",
-        "name": "Vestido Princesa Cenicienta de Cuento",
+        "name": "CENICIENTA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0040.jpg",
@@ -464,17 +470,18 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0041",
-        "name": "Disfraz Transformers Autobot",
+        "name": "TRANSFORMERS",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0041.jpg",
         "sizes": [
             "6"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0042",
-        "name": "Disfraz de Dinosaurio T-Rex",
+        "name": "DINOSAURIO",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0042.jpg",
@@ -485,77 +492,90 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0043",
-        "name": "Disfraz Halloween",
+        "name": "HALLOWEEN",
         "price": 10000,
         "category": "MUJER",
         "image": "DIS-0043.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0044",
-        "name": "Disfraz Capitán América Vengadores",
+        "name": "CAPITAN AMERICA",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0044.jpg",
         "sizes": [
             "8"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0045",
-        "name": "Disfraz Hechicera Bruja de la Noche",
+        "name": "BRUJA",
         "price": 10000,
         "category": "MUJER",
         "image": "DIS-0045.jpg",
         "sizes": [
-            "M-L"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0046",
-        "name": "Disfraz Muñeco Diabólico Chucky",
+        "name": "CHUKY",
         "price": 10000,
         "category": "NIÑO",
         "image": "DIS-0046.jpg",
         "sizes": [
             "8"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0047",
-        "name": "Disfraz Transformers Autobot",
+        "name": "TRANSFORMERS",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0047.jpg",
         "sizes": [
             "4"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0048",
-        "name": "Disfraz Hechicera Bruja de la Noche",
+        "name": "BRUJA",
         "price": 10000,
         "category": "MUJER",
         "image": "DIS-0048.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0049",
-        "name": "Disfraz Oficial de Táctico SWAT",
+        "name": "SWAT",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0049.jpg",
         "sizes": [
             "7"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0050",
-        "name": "Disfraz Guerrero Mortal Kombat",
+        "name": "MORTAL COMBALL",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0050.jpg",
@@ -566,17 +586,18 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0051",
-        "name": "Disfraz Spiderman Versión Niña",
+        "name": "SPIDERMAN NIÑA",
         "price": 7000,
         "category": "NIÑA",
         "image": "DIS-0051.jpg",
         "sizes": [
             "4"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0052",
-        "name": "Vestido Princesa Sirenita del Mar",
+        "name": "SIRENITA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0052.jpg",
@@ -587,7 +608,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0053",
-        "name": "Disfraz Reina Cleopatra de Egipto",
+        "name": "CLEOPATRA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0053.jpg",
@@ -598,37 +619,40 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0054",
-        "name": "Disfraz Catrina Calavera de la Muerte",
+        "name": "CALAVERA",
         "price": 8000,
         "category": "NIÑO",
         "image": "DIS-0054.jpg",
         "sizes": [
             "8"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0055",
-        "name": "Disfraz Hulk El Hombre Increíble",
+        "name": "HULK",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0055.jpg",
         "sizes": [
             "4"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0056",
-        "name": "Disfraz Payasita Multicolor",
+        "name": "PAYASITA",
         "price": 10000,
         "category": "NIÑA",
         "image": "DIS-0056.jpg",
         "sizes": [
             "12"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0057",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0057.jpg",
@@ -639,28 +663,33 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0058",
-        "name": "Máscara & Disfraz Calavera Cráneo",
+        "name": "CALAVERA CARA",
         "price": 8000,
         "category": "HOMBRE",
         "image": "DIS-0058.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0059",
-        "name": "Disfraz Traje Futurista Cyberpunk",
+        "name": "FUTURISTA",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0059.jpg",
         "sizes": [
-            "S"
+            "S",
+            "M",
+            "L"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0060",
-        "name": "Disfraz Porista Cheearleader Zombie",
+        "name": "PORISTA ZOMBIE",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0060.jpg",
@@ -671,7 +700,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0061",
-        "name": "Disfraz Porista Cheearleader Zombie",
+        "name": "PORISTA ZOMBIE",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0061.jpg",
@@ -682,27 +711,31 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0062",
-        "name": "Disfraz Escolar Madeline",
+        "name": "MADELINE",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0062.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0063",
-        "name": "Disfraz Harley Quinn Villana",
+        "name": "HARLEY QUEEN",
         "price": 8000,
         "category": "NIÑA",
         "image": "DIS-0063.jpg",
         "sizes": [
             "10"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0064",
-        "name": "Disfraz Soldado Militar Táctico",
+        "name": "MILITAR",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0064.jpg",
@@ -713,7 +746,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0065",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0065.jpg",
@@ -724,17 +757,20 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0066",
-        "name": "Disfraz Power Ranger Guerrero",
+        "name": "POWER RANGERS",
         "price": 8000,
         "category": "HOMBRE",
         "image": "DIS-0066.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0067",
-        "name": "Disfraz Ladybug Heroína",
+        "name": "LADY BOG",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0067.jpg",
@@ -745,7 +781,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0068",
-        "name": "Disfraz Caminante Zombie Infectado",
+        "name": "ZOMBIE2",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0068.jpg",
@@ -756,7 +792,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0069",
-        "name": "Disfraz Princesa Jazmín / Aladdín",
+        "name": "ALADIN",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0069.jpg",
@@ -767,48 +803,55 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0070",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0070.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0071",
-        "name": "Túnica Mística Mago / Fantasma",
+        "name": "TUNICA",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0071.jpg",
         "sizes": [
             "6"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0072",
-        "name": "Disfraz Transformers Autobot",
+        "name": "TRANSFORMERS",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0072.jpg",
         "sizes": [
             "4"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0073",
-        "name": "Polera Formal con Corbata Temática",
+        "name": "POLERA CORBATA",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0073.jpg",
         "sizes": [
-            "M"
+            "M",
+            "L",
+            "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0074",
-        "name": "Disfraz Bruja Esmeralda Verde",
+        "name": "BRUJAVERDE",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0074.jpg",
@@ -819,7 +862,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0075",
-        "name": "Disfraz Traje Futurista Cyberpunk",
+        "name": "FUTURISTA",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0075.jpg",
@@ -830,7 +873,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0076",
-        "name": "Disfraz Sonic El Erizo Veloz",
+        "name": "SONIC",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0076.jpg",
@@ -841,7 +884,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0077",
-        "name": "Vestido Princesa Anna Frozen",
+        "name": "ANA FROZEN",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0077.jpg",
@@ -852,7 +895,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0078",
-        "name": "Disfraz Diosa Griega de Olimpo",
+        "name": "GRIEGA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0078.jpg",
@@ -863,17 +906,20 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0079",
-        "name": "Disfraz Alicia en el País de las Maravillas",
+        "name": "ALICIA",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0079.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0080",
-        "name": "Disfraz Halloween",
+        "name": "HALLOWEEN",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0080.jpg",
@@ -884,17 +930,18 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0081",
-        "name": "Disfraz Pantera Negra Avengers",
+        "name": "PANTERA ADVENGERS",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0081.jpg",
         "sizes": [
             "12"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0082",
-        "name": "Disfraz Hulk El Hombre Increíble",
+        "name": "HULK",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0082.jpg",
@@ -905,37 +952,40 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0083",
-        "name": "Disfraz Soldado Militar Táctico",
+        "name": "MILITAR",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0083.jpg",
         "sizes": [
             "12"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0084",
-        "name": "Disfraz Spiderman Traje Negro",
+        "name": "SPIDERMAN NEGRO",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0084.jpg",
         "sizes": [
             "8"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0085",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0085.jpg",
         "sizes": [
             "7"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0086",
-        "name": "Disfraz Super Mario Bros",
+        "name": "MARIO",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0086.jpg",
@@ -946,7 +996,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0087",
-        "name": "Disfraz Descendientes 4 Disney",
+        "name": "DESCENDIENTES4",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0087.jpg",
@@ -957,7 +1007,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0088",
-        "name": "Disfraz Patrulla Canina Paw Patrol",
+        "name": "PAW CONTROL",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0088.jpg",
@@ -968,27 +1018,31 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0089",
-        "name": "Disfraz de Monja Gótica",
+        "name": "MONJA",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0089.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0090",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0090.jpg",
         "sizes": [
             "14"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0091",
-        "name": "Disfraz de Monito Infantil",
+        "name": "MONITO",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0091.jpg",
@@ -999,17 +1053,18 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0092",
-        "name": "Disfraz Spiderman Hombre Araña",
+        "name": "SPIDERMAN",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0092.jpg",
         "sizes": [
             "2"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0093",
-        "name": "Disfraz Luigi Super Mario",
+        "name": "LUIGUI",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0093.jpg",
@@ -1020,17 +1075,20 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0094",
-        "name": "Disfraz Bruja Naranja Halloween",
+        "name": "BRUJA NARANJA",
         "price": 10000,
         "category": "MUJER",
         "image": "DIS-0094.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0095",
-        "name": "Disfraz Héroes en Pijamas (PJ Masks)",
+        "name": "HEROES PIJAMA",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0095.jpg",
@@ -1041,7 +1099,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0096",
-        "name": "Disfraz Personaje Minecraft",
+        "name": "MINECRAF",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0096.jpg",
@@ -1052,7 +1110,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0097",
-        "name": "Túnica Mística Mago / Fantasma",
+        "name": "TUNICA",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0097.jpg",
@@ -1063,38 +1121,29 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0098",
-        "name": "Disfraz Chewbacca Star Wars",
+        "name": "CHUBACA",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0098.jpg",
         "sizes": [
             "8"
-        ]
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0099",
-        "name": "Disfraz de Esqueleto Brillante",
+        "name": "ESQUELETO",
         "price": 7000,
         "category": "NIÑO",
         "image": "DIS-0099.jpg",
         "sizes": [
             "10"
-        ]
-    },
-    {
-        "id": "DIS-0100",
-        "name": "Disfraz Power Ranger Guerrero",
-        "price": 5000,
-        "category": "NIÑO",
-        "image": "DIS-0100.jpg",
-        "sizes": [
-            "8"
         ],
-        "isOffer": true
+        "isOffer": false
     },
     {
         "id": "DIS-0101",
-        "name": "Disfraz Star Wars Caballero Galáctico",
+        "name": "STARWARS",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0101.jpg",
@@ -1105,27 +1154,33 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0102",
-        "name": "Vestido Princesa Encantada",
+        "name": "PRINCESA",
         "price": 8000,
         "category": "MUJER",
         "image": "DIS-0102.jpg",
         "sizes": [
-            "S"
-        ]
+            "S",
+            "M",
+            "L"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0103",
-        "name": "Disfraz Estilo Jamaica Rasta",
+        "name": "JAMAICA",
         "price": 7000,
         "category": "MUJER",
         "image": "DIS-0103.jpg",
         "sizes": [
-            "M"
-        ]
+            "M",
+            "L",
+            "XL"
+        ],
+        "isOffer": false
     },
     {
         "id": "DIS-0104",
-        "name": "Disfraz Maestro Jedi Star Wars",
+        "name": "JEDI STARWARS",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0104.jpg",
@@ -1136,7 +1191,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0105",
-        "name": "Disfraz de Tigre Felino",
+        "name": "TIGRE",
         "price": 5000,
         "category": "NIÑO",
         "image": "DIS-0105.jpg",
@@ -1147,7 +1202,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0106",
-        "name": "Vestido Tradicional Flamenca Española",
+        "name": "ESPAÑOLA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0106.jpg",
@@ -1158,7 +1213,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0107",
-        "name": "Vestido Princesa Encantada",
+        "name": "PRINCESA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0107.jpg",
@@ -1169,7 +1224,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0108",
-        "name": "Disfraz Hechicera Bruja de la Noche",
+        "name": "BRUJA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0108.jpg",
@@ -1180,7 +1235,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0109",
-        "name": "Disfraz Payasita Multicolor",
+        "name": "PAYASITA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0109.jpg",
@@ -1191,7 +1246,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0110",
-        "name": "Disfraz Monster High Estudiante",
+        "name": "MOSTERHIGH",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0110.jpg",
@@ -1202,7 +1257,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0111",
-        "name": "Vestido Princesa Anna Frozen",
+        "name": "ANA FROZEN",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0111.jpg",
@@ -1213,7 +1268,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0112",
-        "name": "Disfraz de Muñeca de Trapo",
+        "name": "MUÑECA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0112.jpg",
@@ -1224,7 +1279,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0113",
-        "name": "Vestido Princesa Mágica Rosado",
+        "name": "PRINCESA ROSADO",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0113.jpg",
@@ -1235,7 +1290,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0114",
-        "name": "Vestido de Flamenco Español",
+        "name": "FLAMENCO",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0114.jpg",
@@ -1246,18 +1301,20 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0115",
-        "name": "Disfraz Pirata del Caribe",
+        "name": "PIRATA",
         "price": 5000,
         "category": "MUJER",
         "image": "DIS-0115.jpg",
         "sizes": [
-            "M"
+            "M",
+            "L",
+            "XL"
         ],
         "isOffer": true
     },
     {
         "id": "DIS-0116",
-        "name": "Vestido Princesa Encantada",
+        "name": "PRINCESA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0116.jpg",
@@ -1268,7 +1325,7 @@ const catalogoProductos = [
     },
     {
         "id": "DIS-0117",
-        "name": "Vestido Princesa Sirenita del Mar",
+        "name": "SIRENITA",
         "price": 5000,
         "category": "NIÑA",
         "image": "DIS-0117.jpg",
@@ -1276,57 +1333,5 @@ const catalogoProductos = [
             "8"
         ],
         "isOffer": true
-    },
-    {
-        "id": "DIS-0118",
-        "name": "Disfraz Hechicera Bruja de la Noche",
-        "price": 5000,
-        "category": "NIÑA",
-        "image": "DIS-0118.jpg",
-        "sizes": [
-            "6"
-        ],
-        "isOffer": true
-    },
-    {
-        "id": "ACC-SOMBRERO",
-        "name": "Sombrero de Mago Clásico Terciopelo",
-        "price": 4500,
-        "category": "ACCESORIOS",
-        "image": "DIS-0007.jpg",
-        "sizes": [
-            "Estándar"
-        ]
-    },
-    {
-        "id": "ACC-MAQUILLAJE",
-        "name": "Set de Maquillaje Cremoso Profesional 12 Colores",
-        "price": 7500,
-        "category": "ACCESORIOS",
-        "image": "DIS-0025.jpg",
-        "sizes": [
-            "Estándar"
-        ]
-    },
-    {
-        "id": "BD-SETDINO",
-        "name": "Mega Set de Decoración Cumpleaños Dinosaurio",
-        "price": 8990,
-        "category": "CUMPLEAÑOS",
-        "image": "DIS-0042.jpg",
-        "sizes": [
-            "Set 10 Personas",
-            "Set 20 Personas"
-        ]
-    },
-    {
-        "id": "BD-GLOBOS",
-        "name": "Globos de Helio Temáticos Gigantes",
-        "price": 3990,
-        "category": "CUMPLEAÑOS",
-        "image": "DIS-0039.jpg",
-        "sizes": [
-            "Set 5 Unidades"
-        ]
     }
 ];

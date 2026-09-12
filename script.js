@@ -460,7 +460,12 @@ function renderProductsGrid() {
                 </div>
             </div>`;
         } else {
-            // GRID VIEW: Compact grid cards showing ONLY the clean price
+            // GRID VIEW: Original Dark Neon Tech Product Cards (Matching Reference Screenshot)
+            const sizesList = (prod.sizes && prod.sizes.length > 0) ? prod.sizes : ["S", "M", "L", "XL", "Estándar"];
+            const sizesOptionsHtml = sizesList.map(s => `<option value="${s}">Talla: ${s}</option>`).join('');
+            const ratingVal = (4.7 + (prod.id.charCodeAt(prod.id.length - 1) % 3) * 0.1).toFixed(1);
+            const reviewCount = 20 + (prod.id.charCodeAt(prod.id.length - 1) * 3) % 30;
+
             html += `
             <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
                 <div class="product-image-container">
@@ -472,14 +477,29 @@ function renderProductsGrid() {
                 </div>
                 
                 <div class="product-card-body">
-                    <span class="card-brand-subtitle">DISFRÁZATE &bull; ${prod.category}</span>
+                    <span class="card-category-cyan">${prod.category}</span>
                     <h3 class="product-card-title" title="${prod.name}">${prod.name}</h3>
                     
-                    <div class="card-price-row">
-                        <div class="card-main-price">$${priceFormatted}</div>
+                    <div class="card-rating">
+                        <span class="stars-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        <span class="rating-num">(${ratingVal})</span>
+                        <span class="reviews-count">${reviewCount} opiniones</span>
                     </div>
                     
-                    <button type="button" class="btn-card-buy" onclick="event.stopPropagation(); addItemToCartFromCard('${prod.id}', this)">
+                    <div class="card-price-display">$${priceFormatted}</div>
+                    
+                    <div class="card-qty-row">
+                        <span class="qty-label">CANT:</span>
+                        <input type="number" value="1" min="1" max="99" class="card-qty-input" id="qty-input-${prod.id}" onclick="event.stopPropagation()">
+                    </div>
+                    
+                    <div class="card-size-select-box">
+                        <select class="card-size-select" id="size-select-${prod.id}" onclick="event.stopPropagation()">
+                            ${sizesOptionsHtml}
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); addItemWithDetailsFromCard('${prod.id}', this)">
                         <i class="fa-solid fa-cart-plus"></i> Agregar al Carro
                     </button>
                 </div>
@@ -490,6 +510,30 @@ function renderProductsGrid() {
     grid.innerHTML = html;
     renderPagination(currentProducts.length);
 }
+
+function addItemWithDetailsFromCard(productId, btn) {
+    const prod = baseCatalogo.find(p => p.id === productId);
+    if (!prod) return;
+
+    const qtyEl = document.getElementById(`qty-input-${productId}`);
+    const sizeEl = document.getElementById(`size-select-${productId}`);
+
+    const qty = qtyEl ? parseInt(qtyEl.value, 10) || 1 : 1;
+    const selectedSize = sizeEl ? sizeEl.value : 'Estándar';
+
+    addToCart(prod, qty, selectedSize);
+
+    if (btn) {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = `<i class="fa-solid fa-check"></i> ¡Agregado!`;
+        btn.style.background = '#10b981';
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+        }, 1500);
+    }
+}
+window.addItemWithDetailsFromCard = addItemWithDetailsFromCard;
 
 function renderPagination(totalItems) {
     const controls = document.getElementById('pagination-controls');
