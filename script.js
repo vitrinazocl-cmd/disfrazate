@@ -6,11 +6,24 @@ const itemsPerPage = 24;
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on initial page load and disable automatic browser scroll restoration
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     // --- 1. ENTER OVERLAY & AUDIO CONTROLLER ---
     const landingOverlay = document.getElementById('landing-overlay');
     const btnEntrar = document.getElementById('btn-entrar');
     const bgAudio = document.getElementById('bg-audio');
     let hasPlayedOnce = false;
+
+    // Lock body scroll while landing overlay is active
+    if (landingOverlay && landingOverlay.style.display !== 'none') {
+        document.body.style.overflow = 'hidden';
+    }
 
     if (bgAudio) {
         bgAudio.volume = 0.5;
@@ -30,13 +43,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnEntrar && landingOverlay) {
         btnEntrar.addEventListener('click', () => {
             landingOverlay.classList.add('fade-out');
+            document.body.style.overflow = '';
             
+            // Immediately scroll to the top of the page
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+
             if (bgAudio && !hasPlayedOnce && bgAudio.paused) {
                 bgAudio.play().catch(err => console.log('Audio play on enter blocked:', err));
             }
             
             setTimeout(() => {
                 landingOverlay.style.display = 'none';
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
             }, 800);
         });
     }
