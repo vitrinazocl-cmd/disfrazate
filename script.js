@@ -10,15 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const landingOverlay = document.getElementById('landing-overlay');
     const btnEntrar = document.getElementById('btn-entrar');
     const bgAudio = document.getElementById('bg-audio');
+    let hasPlayedOnce = false;
+
+    if (bgAudio) {
+        bgAudio.volume = 0.5;
+        bgAudio.loop = false; // Ensure track plays only once
+
+        // Automatically mute audio once it finishes playing one full time
+        bgAudio.addEventListener('ended', () => {
+            hasPlayedOnce = true;
+            bgAudio.muted = true;
+            bgAudio.pause();
+        });
+
+        // Attempt automatic playback on initial load
+        bgAudio.play().catch(err => console.log('Initial autoplay pending user interaction:', err));
+    }
 
     if (btnEntrar && landingOverlay) {
         btnEntrar.addEventListener('click', () => {
             landingOverlay.classList.add('fade-out');
             
-            // Fades audio in and starts play loop
-            if (bgAudio) {
-                bgAudio.volume = 0.4;
-                bgAudio.play().catch(err => console.log('Audio autoplay blocked:', err));
+            if (bgAudio && !hasPlayedOnce && bgAudio.paused) {
+                bgAudio.play().catch(err => console.log('Audio play on enter blocked:', err));
             }
             
             setTimeout(() => {
@@ -27,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Force play audio on click anywhere if it got blocked by browsers
+    // Force play audio on first user click if autoplay was blocked by browser
     document.body.addEventListener('click', () => {
-        if (bgAudio && bgAudio.paused && !landingOverlay.style.display) {
-            bgAudio.play().catch(e => console.log('Audio block override unsuccessful:', e));
+        if (bgAudio && !hasPlayedOnce && bgAudio.paused) {
+            bgAudio.play().catch(e => console.log('Audio playback request denied:', e));
         }
     }, { once: true });
 
