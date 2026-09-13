@@ -376,7 +376,10 @@ function buildCompactCardHtml(prod) {
         </div>
         
         <div class="product-card-body">
-            <span class="card-category-cyan">${prod.category}</span>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span class="card-category-cyan">${prod.category}</span>
+                <span style="font-size: 0.75rem; font-weight: bold; color: var(--accent-cyan); background: rgba(0, 240, 255, 0.12); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(0, 240, 255, 0.3);"><i class="fa-solid fa-barcode"></i> ${prod.id}</span>
+            </div>
             <h3 class="product-card-title" title="${prod.name}">${prod.name}</h3>
             
             <div class="card-badge-subtitle">
