@@ -256,8 +256,8 @@ const catalogoProductos = [
         "name": "Scary Movie",
         "price": 8000,
         "category": "HOMBRE",
-        "image": "catalogo final/DIS-0023.jpg",
-        "highResImage": "DIS-0023.jpg",
+        "image": "catalogo final/DIS-0022.jpg",
+        "highResImage": "DIS-0022.jpg",
         "sizes": [
             "S"
         ],
@@ -268,8 +268,8 @@ const catalogoProductos = [
         "name": "Española",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0024.jpg",
-        "highResImage": "DIS-0024.jpg",
+        "image": "catalogo final/DIS-0023.jpg",
+        "highResImage": "DIS-0023.jpg",
         "sizes": [
             "6"
         ],
@@ -280,8 +280,8 @@ const catalogoProductos = [
         "name": "Bruja Malvada",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0025.jpg",
-        "highResImage": "DIS-0025.jpg",
+        "image": "catalogo final/DIS-0024.jpg",
+        "highResImage": "DIS-0024.jpg",
         "sizes": [
             "S-M"
         ],
@@ -292,8 +292,8 @@ const catalogoProductos = [
         "name": "Tuto Color",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0026.jpg",
-        "highResImage": "DIS-0026.jpg",
+        "image": "catalogo final/DIS-0025.jpg",
+        "highResImage": "DIS-0025.jpg",
         "sizes": [
             "M"
         ],
@@ -304,8 +304,8 @@ const catalogoProductos = [
         "name": "Vestido Hipie",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0027.jpg",
-        "highResImage": "DIS-0027.jpg",
+        "image": "catalogo final/DIS-0026.jpg",
+        "highResImage": "DIS-0026.jpg",
         "sizes": [
             "M"
         ],
@@ -316,8 +316,8 @@ const catalogoProductos = [
         "name": "Lady Bog",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0028.jpg",
-        "highResImage": "DIS-0028.jpg",
+        "image": "catalogo final/DIS-0027.jpg",
+        "highResImage": "DIS-0027.jpg",
         "sizes": [
             "4"
         ],
@@ -328,8 +328,8 @@ const catalogoProductos = [
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0029.jpg",
-        "highResImage": "DIS-0029.jpg",
+        "image": "catalogo final/DIS-0028.jpg",
+        "highResImage": "DIS-0028.jpg",
         "sizes": [
             "12"
         ],
@@ -340,8 +340,8 @@ const catalogoProductos = [
         "name": "Flamenco",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0030.jpg",
-        "highResImage": "DIS-0030.jpg",
+        "image": "catalogo final/DIS-0029.jpg",
+        "highResImage": "DIS-0029.jpg",
         "sizes": [
             "4"
         ],
@@ -352,8 +352,8 @@ const catalogoProductos = [
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0031.jpg",
-        "highResImage": "DIS-0031.jpg",
+        "image": "catalogo final/DIS-0030.jpg",
+        "highResImage": "DIS-0030.jpg",
         "sizes": [
             "3"
         ],
@@ -364,8 +364,8 @@ const catalogoProductos = [
         "name": "Vestido Maternal",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0032.jpg",
-        "highResImage": "DIS-0032.jpg",
+        "image": "catalogo final/DIS-0031.jpg",
+        "highResImage": "DIS-0031.jpg",
         "sizes": [
             "XL"
         ],
@@ -376,8 +376,8 @@ const catalogoProductos = [
         "name": "Malla Negra",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0033.jpg",
-        "highResImage": "DIS-0033.jpg",
+        "image": "catalogo final/DIS-0032.jpg",
+        "highResImage": "DIS-0032.jpg",
         "sizes": [
             "M"
         ],
@@ -388,8 +388,8 @@ const catalogoProductos = [
         "name": "Tigresa",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0034.jpg",
-        "highResImage": "DIS-0034.jpg",
+        "image": "catalogo final/DIS-0033.jpg",
+        "highResImage": "DIS-0033.jpg",
         "sizes": [
             "M"
         ],
@@ -400,8 +400,8 @@ const catalogoProductos = [
         "name": "Polera Roja",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0035.jpg",
-        "highResImage": "DIS-0035.jpg",
+        "image": "catalogo final/DIS-0034.jpg",
+        "highResImage": "DIS-0034.jpg",
         "sizes": [
             "M-L"
         ],
@@ -412,8 +412,8 @@ const catalogoProductos = [
         "name": "Peppa",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0036.jpg",
-        "highResImage": "DIS-0036.jpg",
+        "image": "catalogo final/DIS-0035.jpg",
+        "highResImage": "DIS-0035.jpg",
         "sizes": [
             "2"
         ],
@@ -424,8 +424,8 @@ const catalogoProductos = [
         "name": "Frutillita",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0037.jpg",
-        "highResImage": "DIS-0037.jpg",
+        "image": "catalogo final/DIS-0036.jpg",
+        "highResImage": "DIS-0036.jpg",
         "sizes": [
             "2"
         ],
@@ -436,8 +436,8 @@ const catalogoProductos = [
         "name": "Brujita",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0038.jpg",
-        "highResImage": "DIS-0038.jpg",
+        "image": "catalogo final/DIS-0037.jpg",
+        "highResImage": "DIS-0037.jpg",
         "sizes": [
             "4"
         ],
@@ -448,8 +448,8 @@ const catalogoProductos = [
         "name": "Elsa Frozen",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0039.jpg",
-        "highResImage": "DIS-0039.jpg",
+        "image": "catalogo final/DIS-0038.jpg",
+        "highResImage": "DIS-0038.jpg",
         "sizes": [
             "6"
         ],
@@ -460,8 +460,8 @@ const catalogoProductos = [
         "name": "Princesa Rosado",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0040.jpg",
-        "highResImage": "DIS-0040.jpg",
+        "image": "catalogo final/DIS-0039.jpg",
+        "highResImage": "DIS-0039.jpg",
         "sizes": [
             "3"
         ],
@@ -472,8 +472,8 @@ const catalogoProductos = [
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0041.jpg",
-        "highResImage": "DIS-0041.jpg",
+        "image": "catalogo final/DIS-0040.jpg",
+        "highResImage": "DIS-0040.jpg",
         "sizes": [
             "6"
         ],
@@ -484,8 +484,8 @@ const catalogoProductos = [
         "name": "Transformers",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0042.jpg",
-        "highResImage": "DIS-0042.jpg",
+        "image": "catalogo final/DIS-0041.jpg",
+        "highResImage": "DIS-0041.jpg",
         "sizes": [
             "6"
         ],
@@ -496,8 +496,8 @@ const catalogoProductos = [
         "name": "Dinosaurio",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0043.jpg",
-        "highResImage": "DIS-0043.jpg",
+        "image": "catalogo final/DIS-0042.jpg",
+        "highResImage": "DIS-0042.jpg",
         "sizes": [
             "6"
         ],
@@ -508,8 +508,8 @@ const catalogoProductos = [
         "name": "Halloween",
         "price": 10000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0044.jpg",
-        "highResImage": "DIS-0044.jpg",
+        "image": "catalogo final/DIS-0043.jpg",
+        "highResImage": "DIS-0043.jpg",
         "sizes": [
             "M"
         ],
@@ -520,8 +520,8 @@ const catalogoProductos = [
         "name": "Capitan America",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0045.jpg",
-        "highResImage": "DIS-0045.jpg",
+        "image": "catalogo final/DIS-0044.jpg",
+        "highResImage": "DIS-0044.jpg",
         "sizes": [
             "8"
         ],
@@ -532,8 +532,8 @@ const catalogoProductos = [
         "name": "Bruja",
         "price": 10000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0046.jpg",
-        "highResImage": "DIS-0046.jpg",
+        "image": "catalogo final/DIS-0045.jpg",
+        "highResImage": "DIS-0045.jpg",
         "sizes": [
             "M-L"
         ],
@@ -544,8 +544,8 @@ const catalogoProductos = [
         "name": "Chuky",
         "price": 10000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0047.jpg",
-        "highResImage": "DIS-0047.jpg",
+        "image": "catalogo final/DIS-0046.jpg",
+        "highResImage": "DIS-0046.jpg",
         "sizes": [
             "8"
         ],
@@ -556,8 +556,8 @@ const catalogoProductos = [
         "name": "Transformers",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0042.jpg",
-        "highResImage": "DIS-0042.jpg",
+        "image": "catalogo final/DIS-0047 - transformer.jpg",
+        "highResImage": "DIS-0047 - transformer.jpg",
         "sizes": [
             "4"
         ],
@@ -568,8 +568,8 @@ const catalogoProductos = [
         "name": "Bruja",
         "price": 10000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0048.jpg",
-        "highResImage": "DIS-0048.jpg",
+        "image": "catalogo final/DIS-0048 (2).jpg",
+        "highResImage": "DIS-0048 (2).jpg",
         "sizes": [
             "S"
         ],
@@ -808,8 +808,8 @@ const catalogoProductos = [
         "name": "Zombie2",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0068.jpg",
-        "highResImage": "DIS-0068.jpg",
+        "image": "catalogo final/DIS-0068 - zombie.jpg",
+        "highResImage": "DIS-0068 - zombie.jpg",
         "sizes": [
             "12"
         ],
@@ -820,8 +820,8 @@ const catalogoProductos = [
         "name": "Aladin",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0069.jpg",
-        "highResImage": "DIS-0069.jpg",
+        "image": "catalogo final/DIS-0069 (2).jpg",
+        "highResImage": "DIS-0069 (2).jpg",
         "sizes": [
             "5"
         ],
@@ -832,8 +832,8 @@ const catalogoProductos = [
         "name": "Starwars",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0070.jpg",
-        "highResImage": "DIS-0070.jpg",
+        "image": "catalogo final/DIS-0070 (2).jpg",
+        "highResImage": "DIS-0070 (2).jpg",
         "sizes": [
             "M"
         ],
@@ -844,8 +844,8 @@ const catalogoProductos = [
         "name": "Tunica",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0071.jpg",
-        "highResImage": "DIS-0071.jpg",
+        "image": "catalogo final/DIS-0071 (2).jpg",
+        "highResImage": "DIS-0071 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -856,8 +856,8 @@ const catalogoProductos = [
         "name": "Transformers",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0072.jpg",
-        "highResImage": "DIS-0072.jpg",
+        "image": "catalogo final/DIS-0072 (2).jpg",
+        "highResImage": "DIS-0072 (2).jpg",
         "sizes": [
             "4"
         ],
@@ -868,8 +868,8 @@ const catalogoProductos = [
         "name": "Polera Corbata",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0073.jpg",
-        "highResImage": "DIS-0073.jpg",
+        "image": "catalogo final/DIS-0073 (2).jpg",
+        "highResImage": "DIS-0073 (2).jpg",
         "sizes": [
             "M"
         ],
@@ -880,8 +880,8 @@ const catalogoProductos = [
         "name": "Brujaverde",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0074.jpg",
-        "highResImage": "DIS-0074.jpg",
+        "image": "catalogo final/DIS-0074 (2).jpg",
+        "highResImage": "DIS-0074 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -892,8 +892,8 @@ const catalogoProductos = [
         "name": "Futurista",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0075.jpg",
-        "highResImage": "DIS-0075.jpg",
+        "image": "catalogo final/DIS-0075 (2).jpg",
+        "highResImage": "DIS-0075 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -904,8 +904,8 @@ const catalogoProductos = [
         "name": "Sonic",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0076.jpg",
-        "highResImage": "DIS-0076.jpg",
+        "image": "catalogo final/DIS-0076 (2).jpg",
+        "highResImage": "DIS-0076 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -916,8 +916,8 @@ const catalogoProductos = [
         "name": "Ana Frozen",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0077.jpg",
-        "highResImage": "DIS-0077.jpg",
+        "image": "catalogo final/DIS-0077 (2).jpg",
+        "highResImage": "DIS-0077 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -928,8 +928,8 @@ const catalogoProductos = [
         "name": "Griega",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0078.jpg",
-        "highResImage": "DIS-0078.jpg",
+        "image": "catalogo final/DIS-0078 (2).jpg",
+        "highResImage": "DIS-0078 (2).jpg",
         "sizes": [
             "10"
         ],
@@ -940,8 +940,8 @@ const catalogoProductos = [
         "name": "Alicia",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0079.jpg",
-        "highResImage": "DIS-0079.jpg",
+        "image": "catalogo final/DIS-0079 (2).jpg",
+        "highResImage": "DIS-0079 (2).jpg",
         "sizes": [
             "S"
         ],
@@ -952,8 +952,8 @@ const catalogoProductos = [
         "name": "Halloween",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0080.jpg",
-        "highResImage": "DIS-0080.jpg",
+        "image": "catalogo final/DIS-0080 (2).jpg",
+        "highResImage": "DIS-0080 (2).jpg",
         "sizes": [
             "2"
         ],
@@ -964,8 +964,8 @@ const catalogoProductos = [
         "name": "Pantera Advengers",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0081.jpg",
-        "highResImage": "DIS-0081.jpg",
+        "image": "catalogo final/DIS-0081 (2).jpg",
+        "highResImage": "DIS-0081 (2).jpg",
         "sizes": [
             "12"
         ],
@@ -976,8 +976,8 @@ const catalogoProductos = [
         "name": "Hulk",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0082.jpg",
-        "highResImage": "DIS-0082.jpg",
+        "image": "catalogo final/DIS-0082 (2).jpg",
+        "highResImage": "DIS-0082 (2).jpg",
         "sizes": [
             "4"
         ],
@@ -988,8 +988,8 @@ const catalogoProductos = [
         "name": "Militar",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0083.jpg",
-        "highResImage": "DIS-0083.jpg",
+        "image": "catalogo final/DIS-0083 (2).jpg",
+        "highResImage": "DIS-0083 (2).jpg",
         "sizes": [
             "12"
         ],
@@ -1000,8 +1000,8 @@ const catalogoProductos = [
         "name": "Spiderman Negro",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0084.jpg",
-        "highResImage": "DIS-0084.jpg",
+        "image": "catalogo final/DIS-0084 (2).jpg",
+        "highResImage": "DIS-0084 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -1012,8 +1012,8 @@ const catalogoProductos = [
         "name": "Starwars",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0085.jpg",
-        "highResImage": "DIS-0085.jpg",
+        "image": "catalogo final/DIS-0085 (2).jpg",
+        "highResImage": "DIS-0085 (2).jpg",
         "sizes": [
             "7"
         ],
@@ -1024,8 +1024,8 @@ const catalogoProductos = [
         "name": "Mario",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0086.jpg",
-        "highResImage": "DIS-0086.jpg",
+        "image": "catalogo final/DIS-0086 (2).jpg",
+        "highResImage": "DIS-0086 (2).jpg",
         "sizes": [
             "5"
         ],
@@ -1036,8 +1036,8 @@ const catalogoProductos = [
         "name": "Descendientes4",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0087.jpg",
-        "highResImage": "DIS-0087.jpg",
+        "image": "catalogo final/DIS-0087 (2).jpg",
+        "highResImage": "DIS-0087 (2).jpg",
         "sizes": [
             "4"
         ],
@@ -1048,8 +1048,8 @@ const catalogoProductos = [
         "name": "Paw Control",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0088.jpg",
-        "highResImage": "DIS-0088.jpg",
+        "image": "catalogo final/DIS-0088 (2).jpg",
+        "highResImage": "DIS-0088 (2).jpg",
         "sizes": [
             "3"
         ],
@@ -1060,8 +1060,8 @@ const catalogoProductos = [
         "name": "Monja",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0089.jpg",
-        "highResImage": "DIS-0089.jpg",
+        "image": "catalogo final/DIS-0089 (2).jpg",
+        "highResImage": "DIS-0089 (2).jpg",
         "sizes": [
             "S"
         ],
@@ -1072,8 +1072,8 @@ const catalogoProductos = [
         "name": "Starwars",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0090.jpg",
-        "highResImage": "DIS-0090.jpg",
+        "image": "catalogo final/DIS-0090 (2).jpg",
+        "highResImage": "DIS-0090 (2).jpg",
         "sizes": [
             "14"
         ],
@@ -1084,8 +1084,8 @@ const catalogoProductos = [
         "name": "Monito",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0091.jpg",
-        "highResImage": "DIS-0091.jpg",
+        "image": "catalogo final/DIS-0091 (2).jpg",
+        "highResImage": "DIS-0091 (2).jpg",
         "sizes": [
             "2"
         ],
@@ -1096,8 +1096,8 @@ const catalogoProductos = [
         "name": "Spiderman",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0092.jpg",
-        "highResImage": "DIS-0092.jpg",
+        "image": "catalogo final/DIS-0092 (2).jpg",
+        "highResImage": "DIS-0092 (2).jpg",
         "sizes": [
             "2"
         ],
@@ -1108,8 +1108,8 @@ const catalogoProductos = [
         "name": "Luigui",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0093.jpg",
-        "highResImage": "DIS-0093.jpg",
+        "image": "catalogo final/DIS-0093 (2).jpg",
+        "highResImage": "DIS-0093 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -1120,8 +1120,8 @@ const catalogoProductos = [
         "name": "Bruja Naranja",
         "price": 10000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0094.jpg",
-        "highResImage": "DIS-0094.jpg",
+        "image": "catalogo final/DIS-0094 (2).jpg",
+        "highResImage": "DIS-0094 (2).jpg",
         "sizes": [
             "M"
         ],
@@ -1132,8 +1132,8 @@ const catalogoProductos = [
         "name": "Heroes Pijama",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0095.jpg",
-        "highResImage": "DIS-0095.jpg",
+        "image": "catalogo final/DIS-0095 (2).jpg",
+        "highResImage": "DIS-0095 (2).jpg",
         "sizes": [
             "4"
         ],
@@ -1144,8 +1144,8 @@ const catalogoProductos = [
         "name": "Minecraf",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0096.jpg",
-        "highResImage": "DIS-0096.jpg",
+        "image": "catalogo final/DIS-0096 (2).jpg",
+        "highResImage": "DIS-0096 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -1156,8 +1156,8 @@ const catalogoProductos = [
         "name": "Tunica",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0097.jpg",
-        "highResImage": "DIS-0097.jpg",
+        "image": "catalogo final/DIS-0097 (2).jpg",
+        "highResImage": "DIS-0097 (2).jpg",
         "sizes": [
             "10"
         ],
@@ -1168,8 +1168,8 @@ const catalogoProductos = [
         "name": "Chubaca",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0098.jpg",
-        "highResImage": "DIS-0098.jpg",
+        "image": "catalogo final/DIS-0098 (2).jpg",
+        "highResImage": "DIS-0098 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -1180,8 +1180,8 @@ const catalogoProductos = [
         "name": "Esqueleto",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0099.jpg",
-        "highResImage": "DIS-0099.jpg",
+        "image": "catalogo final/DIS-0099 (2).jpg",
+        "highResImage": "DIS-0099 (2).jpg",
         "sizes": [
             "10"
         ],
@@ -1192,8 +1192,8 @@ const catalogoProductos = [
         "name": "Power Rangers",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-00100.jpg",
-        "highResImage": "DIS-00100.jpg",
+        "image": "catalogo final/DIS-0100.jpg",
+        "highResImage": "DIS-0100.jpg",
         "sizes": [
             "8"
         ],
@@ -1204,8 +1204,8 @@ const catalogoProductos = [
         "name": "Starwars",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0101.jpg",
-        "highResImage": "DIS-0101.jpg",
+        "image": "catalogo final/DIS-00101.jpg",
+        "highResImage": "DIS-00101.jpg",
         "sizes": [
             "3"
         ],
@@ -1216,8 +1216,8 @@ const catalogoProductos = [
         "name": "Princesa",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0102.jpg",
-        "highResImage": "DIS-0102.jpg",
+        "image": "catalogo final/DIS-0102 (2).jpg",
+        "highResImage": "DIS-0102 (2).jpg",
         "sizes": [
             "S"
         ],
@@ -1228,8 +1228,8 @@ const catalogoProductos = [
         "name": "Jamaica",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0103.jpg",
-        "highResImage": "DIS-0103.jpg",
+        "image": "catalogo final/DIS-0103 (2).jpg",
+        "highResImage": "DIS-0103 (2).jpg",
         "sizes": [
             "M"
         ],
@@ -1240,8 +1240,8 @@ const catalogoProductos = [
         "name": "Jedi Starwars",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0104.jpg",
-        "highResImage": "DIS-0104.jpg",
+        "image": "catalogo final/DIS-0104 (2).jpg",
+        "highResImage": "DIS-0104 (2).jpg",
         "sizes": [
             "14"
         ],
@@ -1252,8 +1252,8 @@ const catalogoProductos = [
         "name": "Tigre",
         "price": 5000,
         "category": "NIÑO",
-        "image": "catalogo final/DIS-0105.jpg",
-        "highResImage": "DIS-0105.jpg",
+        "image": "catalogo final/DIS-0105 (2).jpg",
+        "highResImage": "DIS-0105 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -1264,8 +1264,8 @@ const catalogoProductos = [
         "name": "Española",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0106.jpg",
-        "highResImage": "DIS-0106.jpg",
+        "image": "catalogo final/DIS-0106 (2).jpg",
+        "highResImage": "DIS-0106 (2).jpg",
         "sizes": [
             "12"
         ],
@@ -1276,8 +1276,8 @@ const catalogoProductos = [
         "name": "Princesa",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0107.jpg",
-        "highResImage": "DIS-0107.jpg",
+        "image": "catalogo final/DIS-0107 (2).jpg",
+        "highResImage": "DIS-0107 (2).jpg",
         "sizes": [
             "10"
         ],
@@ -1288,8 +1288,8 @@ const catalogoProductos = [
         "name": "Bruja",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0108.jpg",
-        "highResImage": "DIS-0108.jpg",
+        "image": "catalogo final/DIS-0108 (2).jpg",
+        "highResImage": "DIS-0108 (2).jpg",
         "sizes": [
             "4"
         ],
@@ -1300,8 +1300,8 @@ const catalogoProductos = [
         "name": "Payasita",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0109.jpg",
-        "highResImage": "DIS-0109.jpg",
+        "image": "catalogo final/DIS-0109 (2).jpg",
+        "highResImage": "DIS-0109 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -1312,8 +1312,8 @@ const catalogoProductos = [
         "name": "Mosterhigh",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0110.jpg",
-        "highResImage": "DIS-0110.jpg",
+        "image": "catalogo final/DIS-0110 (2).jpg",
+        "highResImage": "DIS-0110 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -1324,8 +1324,8 @@ const catalogoProductos = [
         "name": "Ana Frozen",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0111.jpg",
-        "highResImage": "DIS-0111.jpg",
+        "image": "catalogo final/DIS-0111 (2).jpg",
+        "highResImage": "DIS-0111 (2).jpg",
         "sizes": [
             "2"
         ],
@@ -1336,8 +1336,8 @@ const catalogoProductos = [
         "name": "Muñeca",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0112.jpg",
-        "highResImage": "DIS-0112.jpg",
+        "image": "catalogo final/DIS-0112 (2).jpg",
+        "highResImage": "DIS-0112 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -1348,8 +1348,8 @@ const catalogoProductos = [
         "name": "Princesa Rosado",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0113.jpg",
-        "highResImage": "DIS-0113.jpg",
+        "image": "catalogo final/DIS-0113 (2).jpg",
+        "highResImage": "DIS-0113 (2).jpg",
         "sizes": [
             "6"
         ],
@@ -1360,8 +1360,8 @@ const catalogoProductos = [
         "name": "Flamenco",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0114.jpg",
-        "highResImage": "DIS-0114.jpg",
+        "image": "catalogo final/DIS-0114 (2).jpg",
+        "highResImage": "DIS-0114 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -1372,8 +1372,8 @@ const catalogoProductos = [
         "name": "Pirata",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo final/DIS-0115.jpg",
-        "highResImage": "DIS-0115.jpg",
+        "image": "catalogo final/DIS-0115 (2).jpg",
+        "highResImage": "DIS-0115 (2).jpg",
         "sizes": [
             "M"
         ],
@@ -1384,8 +1384,8 @@ const catalogoProductos = [
         "name": "Princesa",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0116.jpg",
-        "highResImage": "DIS-0116.jpg",
+        "image": "catalogo final/DIS-0116 (2).jpg",
+        "highResImage": "DIS-0116 (2).jpg",
         "sizes": [
             "10"
         ],
@@ -1396,8 +1396,8 @@ const catalogoProductos = [
         "name": "Sirenita",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo final/DIS-0117.jpg",
-        "highResImage": "DIS-0117.jpg",
+        "image": "catalogo final/DIS-0117 (2).jpg",
+        "highResImage": "DIS-0117 (2).jpg",
         "sizes": [
             "8"
         ],
@@ -1408,8 +1408,8 @@ const catalogoProductos = [
         "name": "Bruja",
         "price": 5000,
         "category": "NIÑA",
-        "image": "",
-        "highResImage": "",
+        "image": "catalogo final/DIS-0118.jpg",
+        "highResImage": "DIS-0118.jpg",
         "sizes": [
             "6"
         ],
