@@ -239,7 +239,7 @@
                 </div>
 
                 <div class="landing-actions">
-                    <button type="button" id="btn-entrar" class="btn-primary btn-glow-purple">
+                    <button type="button" id="btn-entrar" onclick="var o=document.getElementById('landing-overlay'); if(o){ o.classList.add('fade-out'); o.style.display='none'; } document.body.style.overflow='auto'; window.scrollTo(0,0);" class="btn-primary btn-glow-purple">
                         <span>INGRESAR A LA TIENDA</span>
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                     </button>

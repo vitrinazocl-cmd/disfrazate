@@ -43,9 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnEntrar && landingOverlay) {
         btnEntrar.addEventListener('click', () => {
             landingOverlay.classList.add('fade-out');
-            document.body.style.overflow = '';
+            landingOverlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
             
-            // Immediately scroll to the top of the page
+            // Immediately scroll to top
             window.scrollTo(0, 0);
             document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
@@ -53,13 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (bgAudio && !hasPlayedOnce && bgAudio.paused) {
                 bgAudio.play().catch(err => console.log('Audio play on enter blocked:', err));
             }
-            
-            setTimeout(() => {
-                landingOverlay.style.display = 'none';
-                window.scrollTo(0, 0);
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }, 800);
         });
     }
 
