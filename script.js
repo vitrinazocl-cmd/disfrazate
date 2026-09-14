@@ -1,8 +1,3 @@
-// Global shop states
-let baseCatalogo = [...catalogoProductos];
-let currentProducts = [...baseCatalogo];
-let currentViewMode = 'grid'; // Default grid view matching user screenshot
-const itemsPerPage = 24;
 // Global Function to Enter Store from Welcome Screen
 window.entrarATienda = function() {
     const landingOverlay = document.getElementById('landing-overlay');
@@ -10,11 +5,10 @@ window.entrarATienda = function() {
         landingOverlay.classList.add('fade-out');
         landingOverlay.style.opacity = '0';
         landingOverlay.style.pointerEvents = 'none';
-        setTimeout(() => {
-            landingOverlay.style.display = 'none';
-        }, 300);
+        landingOverlay.style.setProperty('display', 'none', 'important');
     }
     document.body.style.overflow = 'auto';
+    document.body.style.setProperty('overflow', 'auto', 'important');
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
@@ -25,7 +19,18 @@ window.entrarATienda = function() {
     }
 };
 
+// Global shop states (safely initialized)
+let baseCatalogo = (typeof catalogoProductos !== 'undefined' && Array.isArray(catalogoProductos)) ? [...catalogoProductos] : [];
+let currentProducts = [...baseCatalogo];
+let currentViewMode = 'grid'; // Default grid view matching user screenshot
+const itemsPerPage = 24;
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
 document.addEventListener('DOMContentLoaded', () => {
+    if ((!baseCatalogo || baseCatalogo.length === 0) && typeof catalogoProductos !== 'undefined') {
+        baseCatalogo = [...catalogoProductos];
+        currentProducts = [...baseCatalogo];
+    }
     // Force scroll to top on initial page load and disable automatic browser scroll restoration
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';

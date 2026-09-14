@@ -207,7 +207,27 @@
             max-height: 140px !important;
         }
     }
-    </style>
+    <script>
+    function entrarATienda() {
+        var overlay = document.getElementById('landing-overlay');
+        if (overlay) {
+            overlay.classList.add('fade-out');
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+            overlay.style.setProperty('display', 'none', 'important');
+        }
+        document.body.style.overflow = 'auto';
+        document.body.style.setProperty('overflow', 'auto', 'important');
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        
+        var audio = document.getElementById('bg-audio');
+        if (audio && audio.paused) {
+            audio.play().catch(function(e){ console.log(e); });
+        }
+    }
+    </script>
 </head>
 <body>
 
