@@ -12,8 +12,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static frontend files
-app.use(express.static(__dirname));
+// Serve static frontend files with aggressive cache headers for images and assets
+app.use(express.static(__dirname, {
+    maxAge: '1y',
+    setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.webp') || filePath.endsWith('.jpg') || filePath.endsWith('.png') || filePath.endsWith('.mp4') || filePath.endsWith('.css') || filePath.endsWith('.js')) {
+            res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+    }
+}));
 
 // DB File Paths
 const PEDIDOS_FILE = path.join(__dirname, 'pedidos.json');

@@ -381,17 +381,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let activeCategory = 'TODOS';
 
-function buildCompactCardHtml(prod) {
+function buildCompactCardHtml(prod, index = 0) {
     const priceFormatted = prod.price.toLocaleString('es-CL');
     const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
     const sizesList = (prod.sizes && prod.sizes.length > 0) ? prod.sizes : ["Estándar"];
     const mainSize = sizesList[0];
+    const isPriority = index < 8;
+    const loadingAttr = isPriority ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
 
     return `
     <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
         <div class="product-image-container">
             ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
-            <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+            <img src="${prod.image}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; if(this.src.includes('.webp')){ this.src=this.src.replace('.webp','.jpg'); } else { this.src='logo_disfrazate_tech.jpg'; }">
             <div class="image-expand-hint">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa
             </div>
@@ -415,6 +417,7 @@ function buildCompactCardHtml(prod) {
             </button>
         </div>
     </div>`;
+}
 }
 
 function filterByCategory(category) {
@@ -497,7 +500,7 @@ function renderProductsGrid() {
             const items = baseCatalogo.filter(sec.filter).slice(0, 4);
             if (items.length === 0) return;
 
-            const cardsHtml = items.map(prod => buildCompactCardHtml(prod)).join('');
+            const cardsHtml = items.map((prod, idx) => buildCompactCardHtml(prod, idx)).join('');
 
             html += `
             <div class="category-row-section">
@@ -536,15 +539,16 @@ function renderProductsGrid() {
     const paginatedItems = currentProducts.slice(startIndex, endIndex);
 
     let html = '';
-    paginatedItems.forEach(prod => {
+    paginatedItems.forEach((prod, idx) => {
         if (currentViewMode === 'list') {
             const priceFormatted = prod.price.toLocaleString('es-CL');
             const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
+            const loadingAttr = idx < 8 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
             html += `
             <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver fotos completas y comprar">
                 <div class="list-thumb-box">
                     ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
-                    <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+                    <img src="${prod.image}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; if(this.src.includes('.webp')){ this.src=this.src.replace('.webp','.jpg'); } else { this.src='logo_disfrazate_tech.jpg'; }">
                     <div class="thumb-zoom-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
@@ -575,7 +579,7 @@ function renderProductsGrid() {
                 </div>
             </div>`;
         } else {
-            html += buildCompactCardHtml(prod);
+            html += buildCompactCardHtml(prod, idx);
         }
     });
 
