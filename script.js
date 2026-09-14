@@ -1,36 +1,11 @@
-// Global Function to Enter Store from Welcome Screen
-window.entrarATienda = function() {
-    const landingOverlay = document.getElementById('landing-overlay');
-    if (landingOverlay) {
-        landingOverlay.classList.add('fade-out');
-        landingOverlay.style.opacity = '0';
-        landingOverlay.style.pointerEvents = 'none';
-        landingOverlay.style.setProperty('display', 'none', 'important');
-    }
-    document.body.style.overflow = 'auto';
-    document.body.style.setProperty('overflow', 'auto', 'important');
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-
-    const bgAudio = document.getElementById('bg-audio');
-    if (bgAudio && bgAudio.paused) {
-        bgAudio.play().catch(err => console.log('Audio playback blocked:', err));
-    }
-};
-
-// Global shop states (safely initialized)
-let baseCatalogo = (typeof catalogoProductos !== 'undefined' && Array.isArray(catalogoProductos)) ? [...catalogoProductos] : [];
+// Global shop states
+let baseCatalogo = [...catalogoProductos];
 let currentProducts = [...baseCatalogo];
 let currentViewMode = 'grid'; // Default grid view matching user screenshot
 const itemsPerPage = 24;
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
-    if ((!baseCatalogo || baseCatalogo.length === 0) && typeof catalogoProductos !== 'undefined') {
-        baseCatalogo = [...catalogoProductos];
-        currentProducts = [...baseCatalogo];
-    }
     // Force scroll to top on initial page load and disable automatic browser scroll restoration
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
@@ -66,7 +41,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (btnEntrar && landingOverlay) {
-        btnEntrar.addEventListener('click', window.entrarATienda);
+        btnEntrar.addEventListener('click', () => {
+            landingOverlay.classList.add('fade-out');
+            document.body.style.overflow = '';
+            
+            // Immediately scroll to the top of the page
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+
+            if (bgAudio && !hasPlayedOnce && bgAudio.paused) {
+                bgAudio.play().catch(err => console.log('Audio play on enter blocked:', err));
+            }
+            
+            setTimeout(() => {
+                landingOverlay.style.display = 'none';
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }, 800);
+        });
     }
 
     // Force play audio on first user click if autoplay was blocked by browser

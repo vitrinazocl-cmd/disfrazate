@@ -1,4 +1,4 @@
-const CACHE_NAME = 'disfrazate-cache-v3';
+const CACHE_NAME = 'disfrazate-cache-v1';
 
 const PRECACHE_ASSETS = [
     './',
