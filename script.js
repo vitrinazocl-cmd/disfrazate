@@ -3,7 +3,27 @@ let baseCatalogo = [...catalogoProductos];
 let currentProducts = [...baseCatalogo];
 let currentViewMode = 'grid'; // Default grid view matching user screenshot
 const itemsPerPage = 24;
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+// Global Function to Enter Store from Welcome Screen
+window.entrarATienda = function() {
+    const landingOverlay = document.getElementById('landing-overlay');
+    if (landingOverlay) {
+        landingOverlay.classList.add('fade-out');
+        landingOverlay.style.opacity = '0';
+        landingOverlay.style.pointerEvents = 'none';
+        setTimeout(() => {
+            landingOverlay.style.display = 'none';
+        }, 300);
+    }
+    document.body.style.overflow = 'auto';
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    const bgAudio = document.getElementById('bg-audio');
+    if (bgAudio && bgAudio.paused) {
+        bgAudio.play().catch(err => console.log('Audio playback blocked:', err));
+    }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
     // Force scroll to top on initial page load and disable automatic browser scroll restoration
@@ -41,26 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (btnEntrar && landingOverlay) {
-        btnEntrar.addEventListener('click', () => {
-            landingOverlay.classList.add('fade-out');
-            document.body.style.overflow = '';
-            
-            // Immediately scroll to the top of the page
-            window.scrollTo(0, 0);
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-
-            if (bgAudio && !hasPlayedOnce && bgAudio.paused) {
-                bgAudio.play().catch(err => console.log('Audio play on enter blocked:', err));
-            }
-            
-            setTimeout(() => {
-                landingOverlay.style.display = 'none';
-                window.scrollTo(0, 0);
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }, 800);
-        });
+        btnEntrar.addEventListener('click', window.entrarATienda);
     }
 
     // Force play audio on first user click if autoplay was blocked by browser
