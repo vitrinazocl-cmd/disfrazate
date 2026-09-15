@@ -1,7 +1,9 @@
 // Global shop states
-let baseCatalogo = [...catalogoProductos];
+let baseCatalogo = (typeof catalogoProductos !== 'undefined' && Array.isArray(catalogoProductos)) ? [...catalogoProductos] : [];
 let currentProducts = [...baseCatalogo];
-let currentViewMode = 'grid'; // Default grid view matching user screenshot
+let currentViewMode = 'grid';
+let currentPage = 1;
+let activeCategory = 'TODOS';
 const itemsPerPage = 24;
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -373,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // STORE CORE FUNCTIONS
 // ==========================================
 
-let activeCategory = 'TODOS';
+// activeCategory already declared on line 6
 
 function buildCompactCardHtml(prod, index = 0) {
     const priceFormatted = prod.price.toLocaleString('es-CL');
@@ -382,12 +384,13 @@ function buildCompactCardHtml(prod, index = 0) {
     const mainSize = sizesList[0];
     const isPriority = index < 8;
     const loadingAttr = isPriority ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
+    const imgSrc = encodeURI(prod.image);
 
     return `
     <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
         <div class="product-image-container">
             ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
-            <img src="${prod.image}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; if(this.src.includes('.webp')){ this.src=this.src.replace('.webp','.jpg'); } else { this.src='logo_disfrazate_tech.jpg'; }">
+            <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
             <div class="image-expand-hint">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa
             </div>
@@ -412,30 +415,52 @@ function buildCompactCardHtml(prod, index = 0) {
         </div>
     </div>`;
 }
-}
 
-function matchCategory(productCategory, targetCategory) {
-    if (!productCategory || !targetCategory) return false;
-    const p = String(productCategory).toUpperCase().trim();
-    const t = String(targetCategory).toUpperCase().trim();
-    
-    if (p === t) return true;
-    
-    if (t === 'NIÑO' || t === 'NINO') {
-        return p.includes('NIÑO') || p.includes('NINO') || (p.includes('NI') && p.includes('O'));
+function matchCategory(product, targetCategory) {
+    if (!product || !targetCategory) return false;
+
+    function norm(str) {
+        return String(str).toUpperCase().trim()
+            .replace(/Ñ/g, 'N')
+            .replace(/\uFFFD/g, 'N')
+            .replace(/[ÁÀÄÂ]/g, 'A')
+            .replace(/[ÉÈËÊ]/g, 'E')
+            .replace(/[ÍÌÏÎ]/g, 'I')
+            .replace(/[ÓÒÖÔ]/g, 'O')
+            .replace(/[ÚÙÜÛ]/g, 'U');
     }
-    if (t === 'NIÑA' || t === 'NINA') {
-        return p.includes('NIÑA') || p.includes('NINA') || (p.includes('NI') && p.includes('A'));
+
+    const cat = typeof product === 'string' ? norm(product) : norm(product.category || '');
+    const name = typeof product === 'object' ? norm(product.name || '') : '';
+    const t = norm(targetCategory);
+
+    if (cat === t) return true;
+
+    if (t === 'NINO') {
+        return cat === 'NINO' || (cat.indexOf('NI') >= 0 && cat.endsWith('O'));
     }
-    
-    return p.includes(t) || t.includes(p);
+    if (t === 'NINA') {
+        return cat === 'NINA' || (cat.indexOf('NI') >= 0 && cat.endsWith('A'));
+    }
+    if (t === 'ACCESORIOS') {
+        const accKw = ['PETO', 'POLERA', 'MASCARA', 'GORRO', 'ALAS', 'CAPA', 'CORONA', 'SOMBRERO', 'VARITA', 'PELUCA', 'GUANTES', 'CINTILLO', 'TUNICA', 'ESQUELETO', 'SCARY', 'HUESO', 'ACCESORIO'];
+        return cat === 'ACCESORIOS' || accKw.some(kw => name.includes(kw));
+    }
+    if (t === 'CUMPLEANOS') {
+        const bdayKw = ['PRINCESA', 'PAYASITA', 'MUÑECA', 'ELSA', 'ANA', 'MARIO', 'SONIC', 'FLAMENCO', 'MARIPOSA', 'HEROES', 'MINECRAF', 'FROZEN', 'DISNEY', 'FIESTA', 'CUMPLEAÑOS'];
+        return cat === 'CUMPLEANOS' || bdayKw.some(kw => name.includes(norm(kw)));
+    }
+
+    return cat.indexOf(t) >= 0 || t.indexOf(cat) >= 0;
 }
 
 function filterByCategory(category) {
+    if ((!baseCatalogo || baseCatalogo.length === 0) && typeof catalogoProductos !== 'undefined') {
+        baseCatalogo = [...catalogoProductos];
+    }
     activeCategory = category;
     const productsTitle = document.getElementById('productos-title');
     
-    // Update active state in nav container
     document.querySelectorAll('.nav-container .nav-link').forEach(link => {
         if (link.getAttribute('data-category') === category) {
             link.classList.add('active');
@@ -451,8 +476,8 @@ function filterByCategory(category) {
         currentProducts = baseCatalogo.filter(p => p.category === 'OFERTAS' || p.isOffer || p.price <= 5000);
         if (productsTitle) productsTitle.textContent = "OFERTAS Y PROMOCIONES";
     } else {
-        currentProducts = baseCatalogo.filter(p => matchCategory(p.category, category));
-        if (productsTitle) productsTitle.textContent = `DISFRACES: ${category.toUpperCase()}`;
+        currentProducts = baseCatalogo.filter(p => matchCategory(p, category));
+        if (productsTitle) productsTitle.textContent = "DISFRACES: " + category.toUpperCase();
     }
 
     currentPage = 1;
@@ -488,56 +513,23 @@ window.switchProductView = switchProductView;
 window.filterByCategory = filterByCategory;
 
 function renderProductsGrid() {
+    if ((!baseCatalogo || baseCatalogo.length === 0) && typeof catalogoProductos !== 'undefined') {
+        baseCatalogo = [...catalogoProductos];
+    }
+    if ((!currentProducts || currentProducts.length === 0) && activeCategory === 'TODOS') {
+        currentProducts = [...baseCatalogo];
+    }
     const grid = document.getElementById('products-grid');
     if (!grid) return;
 
     const searchInput = document.getElementById('search-input');
     const isSearching = searchInput && searchInput.value.trim().length > 0;
 
-    // IF in "TODOS" mode and NOT searching: Render grouped 4-card rows per category (superahorraya style)
-    if (activeCategory === 'TODOS' && !isSearching && currentViewMode === 'grid') {
-        grid.className = 'products-sections-wrapper';
-        
-        const sections = [
-            { id: 'OFERTAS', title: 'OFERTAS DESTACADAS', icon: 'fa-fire', filter: p => p.isOffer || p.price <= 5000 },
-            { id: 'NIÑO', title: 'DISFRACES DE NIÑO', icon: 'fa-child', filter: p => matchCategory(p.category, 'NIÑO') },
-            { id: 'NIÑA', title: 'DISFRACES DE NIÑA', icon: 'fa-child-dress', filter: p => matchCategory(p.category, 'NIÑA') },
-            { id: 'MUJER', title: 'DISFRACES DE MUJER', icon: 'fa-user-nurse', filter: p => matchCategory(p.category, 'MUJER') },
-            { id: 'HOMBRE', title: 'DISFRACES DE HOMBRE', icon: 'fa-user-tie', filter: p => matchCategory(p.category, 'HOMBRE') }
-        ];
-
-        let html = '';
-        sections.forEach(sec => {
-            const items = baseCatalogo.filter(sec.filter).slice(0, 4);
-            if (items.length === 0) return;
-
-            const cardsHtml = items.map((prod, idx) => buildCompactCardHtml(prod, idx)).join('');
-
-            html += `
-            <div class="category-row-section">
-                <div class="category-row-header">
-                    <h3 class="category-row-title"><i class="fa-solid ${sec.icon} text-accent"></i> ${sec.title}</h3>
-                    <a href="#productos" onclick="event.preventDefault(); filterByCategory('${sec.id}')" class="see-category-link">Ver todos <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-                <div class="products-grid">
-                    ${cardsHtml}
-                </div>
-            </div>`;
-        });
-
-        if (html.trim().length > 0) {
-            grid.innerHTML = html;
-            renderPagination(0);
-            return;
-        }
+    if (activeCategory === 'TODOS' && !isSearching) {
+        currentProducts = [...baseCatalogo];
     }
 
-    // Single Category or Search Grid / List View
-    if (currentViewMode === 'list') {
-        grid.className = 'products-list-view';
-    } else {
-        grid.className = 'products-grid';
-    }
+    grid.className = (currentViewMode === 'list') ? 'products-list-view' : 'products-grid';
 
     if (currentProducts.length === 0) {
         grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-gray); padding: 30px; font-weight: bold;">
@@ -557,11 +549,12 @@ function renderProductsGrid() {
             const priceFormatted = prod.price.toLocaleString('es-CL');
             const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
             const loadingAttr = idx < 8 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
+            const imgSrc = encodeURI(prod.image);
             html += `
             <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver fotos completas y comprar">
                 <div class="list-thumb-box">
                     ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
-                    <img src="${prod.image}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; if(this.src.includes('.webp')){ this.src=this.src.replace('.webp','.jpg'); } else { this.src='logo_disfrazate_tech.jpg'; }">
+                    <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
                     <div class="thumb-zoom-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
@@ -1039,18 +1032,24 @@ function initializeVisitorCounter() {
     }
 
     // Call server counter first, with local storage fallback
-    fetch('/api/visitas/up')
-        .then(res => res.json())
-        .then(data => {
-            renderCounterDigits(data.count);
-        })
-        .catch(err => {
-            console.warn("Server counter offline, running client fallback count:", err);
-            let clientCount = parseInt(localStorage.getItem('disfrazate_visits_count')) || 2332;
-            clientCount++;
-            localStorage.setItem('disfrazate_visits_count', clientCount);
-            renderCounterDigits(clientCount);
-        });
+    if (window.location.protocol === 'file:') {
+        let clientCount = parseInt(localStorage.getItem('disfrazate_visits_count')) || 2332;
+        clientCount++;
+        localStorage.setItem('disfrazate_visits_count', clientCount);
+        renderCounterDigits(clientCount);
+    } else {
+        fetch('/api/visitas/up')
+            .then(res => res.json())
+            .then(data => {
+                renderCounterDigits(data.count);
+            })
+            .catch(err => {
+                let clientCount = parseInt(localStorage.getItem('disfrazate_visits_count')) || 2332;
+                clientCount++;
+                localStorage.setItem('disfrazate_visits_count', clientCount);
+                renderCounterDigits(clientCount);
+            });
+    }
 }
 
 

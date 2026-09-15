@@ -208,11 +208,12 @@
         }
     }
     </style>
-</head>
+    <!-- Core Catalog Data -->
+    </head>
 <body>
 
     <!-- Landing Page Overlay (Home) -->
-    <div id="landing-overlay" class="landing-overlay">
+    <div id="landing-overlay" class="landing-overlay" style="display:none !important;">
         <!-- Magic Particle / Starry Background -->
         <div class="landing-bg-glow"></div>
         <div class="landing-particles" id="landing-particles"></div>
@@ -298,16 +299,16 @@
     <!-- Navigation Menu -->
     <nav class="main-nav">
         <div class="container nav-container">
-            <a href="#productos" class="nav-link active" data-category="TODOS">TODOS LOS DISFRACES</a>
-            <a href="#productos" class="nav-link" data-category="OFERTAS"><i class="fa-solid fa-tags text-accent"></i> OFERTAS</a>
-            <a href="#productos" class="nav-link" data-category="NIÑO">NIÑO</a>
-            <a href="#productos" class="nav-link" data-category="NIÑA">NIÑA</a>
-            <a href="#productos" class="nav-link" data-category="MUJER">MUJER</a>
-            <a href="#productos" class="nav-link" data-category="HOMBRE">HOMBRE</a>
-            <a href="#productos" class="nav-link" data-category="ACCESORIOS">ACCESORIOS</a>
-            <a href="#productos" class="nav-link" data-category="CUMPLEAÑOS">CUMPLEAÑOS</a>
-            <a href="#" id="open-contact-btn" class="nav-link contact-link"><i class="fa-solid fa-envelope"></i> CONTACTO</a>
-            <a href="#" id="open-catalog-btn" class="nav-link catalog-link"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO</a>
+            <a href="#productos" class="nav-link active" data-category="TODOS" onclick="event.preventDefault(); filterByCategory('TODOS');">TODOS LOS DISFRACES</a>
+            <a href="#productos" class="nav-link" data-category="OFERTAS" onclick="event.preventDefault(); filterByCategory('OFERTAS');"><i class="fa-solid fa-tags text-accent"></i> OFERTAS</a>
+            <a href="#productos" class="nav-link" data-category="NIÑO" onclick="event.preventDefault(); filterByCategory('NIÑO');">NIÑO</a>
+            <a href="#productos" class="nav-link" data-category="NIÑA" onclick="event.preventDefault(); filterByCategory('NIÑA');">NIÑA</a>
+            <a href="#productos" class="nav-link" data-category="MUJER" onclick="event.preventDefault(); filterByCategory('MUJER');">MUJER</a>
+            <a href="#productos" class="nav-link" data-category="HOMBRE" onclick="event.preventDefault(); filterByCategory('HOMBRE');">HOMBRE</a>
+            <a href="#productos" class="nav-link" data-category="ACCESORIOS" onclick="event.preventDefault(); filterByCategory('ACCESORIOS');">ACCESORIOS</a>
+            <a href="#productos" class="nav-link" data-category="CUMPLEAÑOS" onclick="event.preventDefault(); filterByCategory('CUMPLEAÑOS');">CUMPLEAÑOS</a>
+            <a href="#" id="open-contact-btn" class="nav-link contact-link" onclick="event.preventDefault(); openModal('contact-modal');"><i class="fa-solid fa-envelope"></i> CONTACTO</a>
+            <a href="#" id="open-catalog-btn" class="nav-link catalog-link" onclick="event.preventDefault(); var t=document.getElementById('catalogo-download'); if(t) window.scrollTo({top:t.offsetTop-100,behavior:'smooth'});"><i class="fa-solid fa-file-pdf"></i> CATÁLOGO</a>
         </div>
     </nav>
 
@@ -371,6 +372,45 @@
             <div class="products-grid" id="products-grid">
                 <!-- Products dynamically loaded from JS -->
             </div>
+            <script>
+(function() {
+    function renderImmediateStore() {
+        var grid = document.getElementById('products-grid');
+        if (!grid) return;
+        if (typeof catalogoProductos !== 'undefined' && Array.isArray(catalogoProductos) && catalogoProductos.length > 0) {
+            var items = catalogoProductos.slice(0, 24);
+            var html = '';
+            for (var i = 0; i < items.length; i++) {
+                var p = items[i];
+                var priceFormatted = (p.price || 0).toLocaleString('es-CL');
+                var isOffer = p.category === 'OFERTAS' || p.isOffer || p.price <= 5000;
+                var mainSize = (p.sizes && p.sizes.length > 0) ? p.sizes[0] : 'Estándar';
+                var imgSrc = encodeURI(p.image);
+                html += '<div class="product-card" onclick="if(window.openProductDetailModal) window.openProductDetailModal(\' + p.id + \')">' +
+                    '<div class="product-image-container">' +
+                        (isOffer ? '<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>' : '') +
+                        '<img src="' + imgSrc + '" alt="' + p.name + '" decoding="async" onerror="this.onerror=null; this.src=\'logo_disfrazate_tech.jpg\';">' +
+                        '<div class="image-expand-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa</div>' +
+                    '</div>' +
+                    '<div class="product-card-body">' +
+                        '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">' +
+                            '<span class="card-category-cyan">' + p.category + '</span>' +
+                            '<span style="font-size: 0.75rem; font-weight: bold; color: var(--accent-cyan); background: rgba(0, 240, 255, 0.12); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(0, 240, 255, 0.3);"><i class="fa-solid fa-barcode"></i> ' + p.id + '</span>' +
+                        '</div>' +
+                        '<h3 class="product-card-title" title="' + p.name + '">' + p.name + '</h3>' +
+                        '<div class="card-badge-subtitle"><i class="fa-solid fa-star"></i> MEJOR PRECIO &bull; Talla ' + mainSize + '</div>' +
+                        '<div class="card-price-display">$' + priceFormatted + '</div>' +
+                        '<button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); if(window.addItemWithDetailsFromCard) window.addItemWithDetailsFromCard(\' + p.id + \', this)"><i class="fa-solid fa-cart-plus"></i> Agregar al Carro</button>' +
+                    '</div>' +
+                '</div>';
+            }
+            grid.innerHTML = html;
+        }
+    }
+    renderImmediateStore();
+    document.addEventListener('DOMContentLoaded', renderImmediateStore);
+})();
+</script>
 
             <!-- Pagination buttons -->
             <div id="pagination-controls" class="pagination-container">
@@ -766,10 +806,10 @@
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js?v=20260914_opt"></script>
-    <script src="script.js?v=20260914_opt"></script>
+    <script src="catalogo.js"></script>
+    <script src="script.js"></script>
     <script>
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('./sw.js').catch(err => console.log('ServiceWorker registration failed:', err));
         });
