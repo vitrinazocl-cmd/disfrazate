@@ -414,6 +414,23 @@ function buildCompactCardHtml(prod, index = 0) {
 }
 }
 
+function matchCategory(productCategory, targetCategory) {
+    if (!productCategory || !targetCategory) return false;
+    const p = String(productCategory).toUpperCase().trim();
+    const t = String(targetCategory).toUpperCase().trim();
+    
+    if (p === t) return true;
+    
+    if (t === 'NIÑO' || t === 'NINO') {
+        return p.includes('NIÑO') || p.includes('NINO') || (p.includes('NI') && p.includes('O'));
+    }
+    if (t === 'NIÑA' || t === 'NINA') {
+        return p.includes('NIÑA') || p.includes('NINA') || (p.includes('NI') && p.includes('A'));
+    }
+    
+    return p.includes(t) || t.includes(p);
+}
+
 function filterByCategory(category) {
     activeCategory = category;
     const productsTitle = document.getElementById('productos-title');
@@ -434,7 +451,7 @@ function filterByCategory(category) {
         currentProducts = baseCatalogo.filter(p => p.category === 'OFERTAS' || p.isOffer || p.price <= 5000);
         if (productsTitle) productsTitle.textContent = "OFERTAS Y PROMOCIONES";
     } else {
-        currentProducts = baseCatalogo.filter(p => p.category === category);
+        currentProducts = baseCatalogo.filter(p => matchCategory(p.category, category));
         if (productsTitle) productsTitle.textContent = `DISFRACES: ${category.toUpperCase()}`;
     }
 
@@ -483,10 +500,10 @@ function renderProductsGrid() {
         
         const sections = [
             { id: 'OFERTAS', title: 'OFERTAS DESTACADAS', icon: 'fa-fire', filter: p => p.isOffer || p.price <= 5000 },
-            { id: 'NIÑO', title: 'DISFRACES DE NIÑO', icon: 'fa-child', filter: p => p.category === 'NIÑO' },
-            { id: 'NIÑA', title: 'DISFRACES DE NIÑA', icon: 'fa-child-dress', filter: p => p.category === 'NIÑA' },
-            { id: 'MUJER', title: 'DISFRACES DE MUJER', icon: 'fa-user-nurse', filter: p => p.category === 'MUJER' },
-            { id: 'HOMBRE', title: 'DISFRACES DE HOMBRE', icon: 'fa-user-tie', filter: p => p.category === 'HOMBRE' }
+            { id: 'NIÑO', title: 'DISFRACES DE NIÑO', icon: 'fa-child', filter: p => matchCategory(p.category, 'NIÑO') },
+            { id: 'NIÑA', title: 'DISFRACES DE NIÑA', icon: 'fa-child-dress', filter: p => matchCategory(p.category, 'NIÑA') },
+            { id: 'MUJER', title: 'DISFRACES DE MUJER', icon: 'fa-user-nurse', filter: p => matchCategory(p.category, 'MUJER') },
+            { id: 'HOMBRE', title: 'DISFRACES DE HOMBRE', icon: 'fa-user-tie', filter: p => matchCategory(p.category, 'HOMBRE') }
         ];
 
         let html = '';
@@ -508,9 +525,11 @@ function renderProductsGrid() {
             </div>`;
         });
 
-        grid.innerHTML = html;
-        renderPagination(0);
-        return;
+        if (html.trim().length > 0) {
+            grid.innerHTML = html;
+            renderPagination(0);
+            return;
+        }
     }
 
     // Single Category or Search Grid / List View
