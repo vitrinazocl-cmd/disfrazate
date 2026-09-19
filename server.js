@@ -14,9 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Serve static frontend files with aggressive cache headers for images and assets
 app.use(express.static(__dirname, {
-    maxAge: '1y',
     setHeaders: (res, filePath) => {
-        if (filePath.endsWith('.webp') || filePath.endsWith('.jpg') || filePath.endsWith('.png') || filePath.endsWith('.mp4') || filePath.endsWith('.css') || filePath.endsWith('.js')) {
+        if (filePath.endsWith('.js') || filePath.endsWith('.json') || filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-cache, must-revalidate');
+        } else if (filePath.endsWith('.webp') || filePath.endsWith('.jpg') || filePath.endsWith('.png') || filePath.endsWith('.mp4') || filePath.endsWith('.css')) {
             res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
         }
     }

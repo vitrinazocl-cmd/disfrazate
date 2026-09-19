@@ -1,10 +1,10 @@
-const CACHE_NAME = 'disfrazate-cache-v7';
+const CACHE_NAME = 'disfrazate-cache-v8';
 
 const PRECACHE_ASSETS = [
     './',
     './index.html',
-    './catalogo.js',
-    './script.js',
+    './catalogo.js?v=3.0',
+    './script.js?v=3.0',
     './style.css',
     './logo_disfrazate_tech.jpg'
 ];
@@ -33,10 +33,25 @@ self.addEventListener('activate', (event) => {
     );
 });
 
-// Fetch Event (Cache First for Catalog Images)
+// Fetch Event
 self.addEventListener('fetch', (event) => {
     const requestUrl = new URL(event.request.url);
 
+    // Network-First for JS and catalog data to ensure live updates
+    if (requestUrl.pathname.endsWith('catalogo.js') || requestUrl.pathname.endsWith('.json')) {
+        event.respondWith(
+            fetch(event.request).then((networkResponse) => {
+                if (networkResponse && networkResponse.status === 200) {
+                    const responseClone = networkResponse.clone();
+                    caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+                }
+                return networkResponse;
+            }).catch(() => caches.match(event.request))
+        );
+        return;
+    }
+
+    // Cache-First for catalog images
     if (requestUrl.pathname.includes('/catalogo') || event.request.destination === 'image') {
         event.respondWith(
             caches.open(CACHE_NAME).then((cache) => {
@@ -60,3 +75,4 @@ self.addEventListener('fetch', (event) => {
         fetch(event.request).catch(() => caches.match(event.request))
     );
 });
+
