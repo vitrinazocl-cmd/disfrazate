@@ -29,13 +29,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (bgAudio) {
         bgAudio.volume = 0.5;
-        bgAudio.loop = false; // Ensure track plays only once
+        bgAudio.loop = false;
+        let audioTimer = null;
 
-        // Automatically mute audio once it finishes playing one full time
+        function stopAndMuteAudio() {
+            if (bgAudio) {
+                bgAudio.muted = true;
+                bgAudio.pause();
+                try { bgAudio.currentTime = 0; } catch(e) {}
+            }
+        }
+
+        // Stop and mute audio after exactly 30 seconds
+        bgAudio.addEventListener('play', () => {
+            if (!audioTimer) {
+                audioTimer = setTimeout(() => {
+                    stopAndMuteAudio();
+                }, 30000);
+            }
+        });
+
+        bgAudio.addEventListener('timeupdate', () => {
+            if (bgAudio.currentTime >= 30) {
+                stopAndMuteAudio();
+            }
+        });
+
         bgAudio.addEventListener('ended', () => {
-            hasPlayedOnce = true;
-            bgAudio.muted = true;
-            bgAudio.pause();
+            stopAndMuteAudio();
         });
 
         // Attempt automatic playback on initial load
