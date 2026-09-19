@@ -1148,6 +1148,22 @@ function openProductDetailModal(productId) {
         });
     }
 
+    // Supermarket Style Interactive Hover Zoom Lens
+    const imgBox = modalImg ? modalImg.closest('.detail-image-box') : null;
+    if (imgBox && modalImg) {
+        modalImg.style.transform = 'scale(1)';
+        imgBox.onmousemove = function(e) {
+            const rect = imgBox.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            modalImg.style.transformOrigin = `${x}% ${y}%`;
+            modalImg.style.transform = 'scale(2.2)';
+        };
+        imgBox.onmouseleave = function() {
+            modalImg.style.transform = 'scale(1)';
+        };
+    }
+
     // Set WhatsApp Order Link
     if (whatsappBtn) {
         const msg = encodeURIComponent(`Hola Disfrázate! Quisiera pedir el disfraz ${prod.name} (Código ${prod.id}) en Talla ${currentDetailSize || 'Estándar'}.`);

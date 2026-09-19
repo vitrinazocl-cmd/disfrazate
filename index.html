@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Local Stylesheet & Catalog Data -->
     <link rel="stylesheet" href="style.css?v=20260914_opt">
-    <script src="catalogo.js?v=8.0"></script>
+    <script src="catalogo.js?v=9.0"></script>
     <script>
     window.openFullscreenLightbox = function(productOrId, optionalImgSrc) {
         var prod = null;
@@ -830,11 +830,11 @@
         <div class="modal-card product-detail-modal-card">
             <button type="button" class="btn-close-modal" id="btn-close-product-detail"><i class="fa-solid fa-xmark"></i></button>
             <div class="product-detail-layout">
-                <!-- Left: Full Image View with Zoom -->
+                <!-- Left: Full Image View with Supermarket Zoom -->
                 <div class="detail-image-box">
                     <span class="detail-oferta-badge" id="modal-detail-badge"><i class="fa-solid fa-fire"></i> Oferta Especial</span>
                     <img id="modal-detail-img" src="" alt="Imagen Completa del Disfraz" onclick="openFullscreenLightbox(this.src)">
-                    <p class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Haz clic para ver la imagen completa ampliada</p>
+                    <div class="zoom-hint-banner"><i class="fa-solid fa-magnifying-glass-plus"></i> Pasa el cursor para Lupa Supermercado / Clic para Pantalla Completa</div>
                 </div>
                 
                 <!-- Right: Product Information & Cart Action -->
@@ -914,8 +914,8 @@
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js?v=8.0"></script>
-    <script src="script.js?v=8.0"></script>
+    <script src="catalogo.js?v=9.0"></script>
+    <script src="script.js?v=9.0"></script>
     <script>
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
         window.addEventListener('load', () => {
