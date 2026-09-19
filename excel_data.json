@@ -1,0 +1,1871 @@
+[
+  {
+    "CODIGO": "DIS-0001",
+    "DESCRIPCION": "CHINA",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0002",
+    "DESCRIPCION": "ELVIS",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0003",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0004",
+    "DESCRIPCION": "PETO KPOP",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0005",
+    "DESCRIPCION": "POLERA PIRATA",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0006",
+    "DESCRIPCION": "PANTALON HIPIE",
+    "TALLA": "XL",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0007",
+    "DESCRIPCION": "TUTU BLANCO",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 4000
+  },
+  {
+    "CODIGO": "DIS-0008",
+    "DESCRIPCION": "ARTEMISIA 300",
+    "TALLA": "XL",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0009",
+    "DESCRIPCION": "ALEMANA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0010",
+    "DESCRIPCION": "PRINCESA ROSADO",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0011",
+    "DESCRIPCION": "PIRATA",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0012",
+    "DESCRIPCION": "PRINCESA CELESTE",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0013",
+    "DESCRIPCION": "POLERA PIRATA M",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0014",
+    "DESCRIPCION": "CAMISA CALAZA",
+    "TALLA": "L",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0015",
+    "DESCRIPCION": "FALDA NEGRA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 4000
+  },
+  {
+    "CODIGO": "DIS-0016",
+    "DESCRIPCION": "CENICIENTA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0017",
+    "DESCRIPCION": "CHARLESTON",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0018",
+    "DESCRIPCION": "VESTIDO COCO",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0019",
+    "DESCRIPCION": "PONCHO",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 4000
+  },
+  {
+    "CODIGO": "DIS-0020",
+    "DESCRIPCION": "CHAQUETON NEGRO",
+    "TALLA": "L",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0021",
+    "DESCRIPCION": "RECLUSA",
+    "TALLA": "L",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0022",
+    "DESCRIPCION": "SCARY MOVIE",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0023",
+    "DESCRIPCION": "ESPAÑOLA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0024",
+    "DESCRIPCION": "BRUJA MALVADA",
+    "TALLA": "S-M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0025",
+    "DESCRIPCION": "TUTU COLOR",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0026",
+    "DESCRIPCION": "VESTIDO HIPIE",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0027",
+    "DESCRIPCION": "LADY BOG",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0028",
+    "DESCRIPCION": "CENICIENTA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0029",
+    "DESCRIPCION": "FLAMENCO",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0030",
+    "DESCRIPCION": "CENICIENTA",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0031",
+    "DESCRIPCION": "VESTIDO MATERNAL",
+    "TALLA": "XL",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0032",
+    "DESCRIPCION": "MALLA NEGRA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0033",
+    "DESCRIPCION": "TIGRESA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0034",
+    "DESCRIPCION": "POLERA ROJA",
+    "TALLA": "M-L",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0035",
+    "DESCRIPCION": "PEPPA",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0036",
+    "DESCRIPCION": "FRUTILLITA",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0037",
+    "DESCRIPCION": "BRUJITA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0038",
+    "DESCRIPCION": "ELSA FROZEN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0039",
+    "DESCRIPCION": "PRINCESA ROSADO",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0040",
+    "DESCRIPCION": "CENICIENTA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0041",
+    "DESCRIPCION": "TRANSFORMERS",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0042",
+    "DESCRIPCION": "DINOSAURIO",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0043",
+    "DESCRIPCION": "HALLOWEEN",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0044",
+    "DESCRIPCION": "CAPITAN AMERICA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0045",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "M-L",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0046",
+    "DESCRIPCION": "CHUKY",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0047",
+    "DESCRIPCION": "TRANSFORMERS",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0048",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0049",
+    "DESCRIPCION": "SWAT",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0050",
+    "DESCRIPCION": "MORTAL COMBALL",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0051",
+    "DESCRIPCION": "SPIDERMAN NIÑA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0052",
+    "DESCRIPCION": "SIRENITA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0053",
+    "DESCRIPCION": "CLEOPATRA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0054",
+    "DESCRIPCION": "CALAVERA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0055",
+    "DESCRIPCION": "HULK",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0056",
+    "DESCRIPCION": "PAYASITA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0057",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "16",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0058",
+    "DESCRIPCION": "CALAVERA CARA",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0059",
+    "DESCRIPCION": "FUTURISTA",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0060",
+    "DESCRIPCION": "PORISTA ZOMBIE",
+    "TALLA": "14",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0061",
+    "DESCRIPCION": "PORISTA ZOMBIE",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0062",
+    "DESCRIPCION": "MADELINE",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0063",
+    "DESCRIPCION": "HARLEY QUEEN",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0064",
+    "DESCRIPCION": "MILITAR",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0065",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0066",
+    "DESCRIPCION": "POWER RANGERS",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0067",
+    "DESCRIPCION": "LADY BOG",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0068",
+    "DESCRIPCION": "ZOMBIE2",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0069",
+    "DESCRIPCION": "ALADIN",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0070",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0071",
+    "DESCRIPCION": "TUNICA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0072",
+    "DESCRIPCION": "TRANSFORMERS",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0073",
+    "DESCRIPCION": "POLERA CORBATA",
+    "TALLA": "M",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0074",
+    "DESCRIPCION": "BRUJAVERDE",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0075",
+    "DESCRIPCION": "FUTURISTA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0076",
+    "DESCRIPCION": "SONIC",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0077",
+    "DESCRIPCION": "ANA FROZEN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0078",
+    "DESCRIPCION": "GRIEGA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0079",
+    "DESCRIPCION": "ALICIA",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0080",
+    "DESCRIPCION": "HALLOWEEN",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0081",
+    "DESCRIPCION": "PANTERA ADVENGERS",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0082",
+    "DESCRIPCION": "HULK",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0083",
+    "DESCRIPCION": "MILITAR",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0084",
+    "DESCRIPCION": "SPIDERMAN NEGRO",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0085",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0086",
+    "DESCRIPCION": "MARIO",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0087",
+    "DESCRIPCION": "DESCENDIENTES",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0088",
+    "DESCRIPCION": "PAW CONTROL",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0089",
+    "DESCRIPCION": "MONJA",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0090",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "14",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0091",
+    "DESCRIPCION": "MONITO",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0092",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0093",
+    "DESCRIPCION": "LUIGUI",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0094",
+    "DESCRIPCION": "BRUJA NARANJA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0095",
+    "DESCRIPCION": "HEROES PIJAMA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0096",
+    "DESCRIPCION": "MINECRAF",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0097",
+    "DESCRIPCION": "TUNICA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0098",
+    "DESCRIPCION": "CHUBACA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0099",
+    "DESCRIPCION": "ESQUELETO",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0100",
+    "DESCRIPCION": "POWER RANGERS",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0101",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0102",
+    "DESCRIPCION": "PRINCESA",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0103",
+    "DESCRIPCION": "JAMAICA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0104",
+    "DESCRIPCION": "JEDI STARWARS",
+    "TALLA": "14",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0105",
+    "DESCRIPCION": "TIGRE",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0106",
+    "DESCRIPCION": "ESPAÑOLA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0107",
+    "DESCRIPCION": "PRINCESA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0108",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0109",
+    "DESCRIPCION": "PAYASITA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0110",
+    "DESCRIPCION": "MOSTERHIGH",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0111",
+    "DESCRIPCION": "ANA FROZEN",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0112",
+    "DESCRIPCION": "MUÑECA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0113",
+    "DESCRIPCION": "PRINCESA ROSADO",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0114",
+    "DESCRIPCION": "FLAMENCO",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0115",
+    "DESCRIPCION": "PIRATA",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0116",
+    "DESCRIPCION": "PRINCESA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0117",
+    "DESCRIPCION": "SIRENITA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0118",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0119",
+    "DESCRIPCION": "MARIO",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0120",
+    "DESCRIPCION": "ESQUELETO MOICANO",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0121",
+    "DESCRIPCION": "CAPITAN AMERICA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0122",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0123",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0124",
+    "DESCRIPCION": "SPIDERMAN NEGRO",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0125",
+    "DESCRIPCION": "MASTER CHIEF",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0126",
+    "DESCRIPCION": "JAKE PIRATA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0127",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0128",
+    "DESCRIPCION": "TUNICA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0129",
+    "DESCRIPCION": "TRAJE AMARILLOS",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0130",
+    "DESCRIPCION": "BATMAN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0131",
+    "DESCRIPCION": "TRANSFORMERS",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0132",
+    "DESCRIPCION": "STAR TREK",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0133",
+    "DESCRIPCION": "SPIDERMAN NEGRO",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0134",
+    "DESCRIPCION": "SUPERMAN",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0135",
+    "DESCRIPCION": "FLASH",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0136",
+    "DESCRIPCION": "SPIDERMAN NEGRO",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0137",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0138",
+    "DESCRIPCION": "EXTRAÑO MUNDO DE JACK",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0139",
+    "DESCRIPCION": "WOLVERINE",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0140",
+    "DESCRIPCION": "IROMAN",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0141",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0142",
+    "DESCRIPCION": "HULK",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0143",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0144",
+    "DESCRIPCION": "TRANSFORMERS",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0145",
+    "DESCRIPCION": "PANTERA ADVENGERS",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0146",
+    "DESCRIPCION": "MORTAL COMBALL",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0147",
+    "DESCRIPCION": "MINECRAF",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0148",
+    "DESCRIPCION": "MARIPOSA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0149",
+    "DESCRIPCION": "ANT-MAN",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0150",
+    "DESCRIPCION": "SCARY MOVIE GRIS",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0151",
+    "DESCRIPCION": "SPIDEY",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0152",
+    "DESCRIPCION": "VESTIDO GRIS",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0153",
+    "DESCRIPCION": "PANTERA ADVENGERS",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0154",
+    "DESCRIPCION": "SCARY MOVIE BLACK",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0155",
+    "DESCRIPCION": "POWER RANGERS",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0156",
+    "DESCRIPCION": "HEROES PIJAMA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 4000
+  },
+  {
+    "CODIGO": "DIS-0157",
+    "DESCRIPCION": "HUESITO",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0158",
+    "DESCRIPCION": "ABUELO",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0159",
+    "DESCRIPCION": "MANDALORIAN",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0160",
+    "DESCRIPCION": "ANA FROZEN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0161",
+    "DESCRIPCION": "BATMAN",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0162",
+    "DESCRIPCION": "ALIENS",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0163",
+    "DESCRIPCION": "MARIPOSA",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0164",
+    "DESCRIPCION": "ALTA MONTANA",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 4000
+  },
+  {
+    "CODIGO": "DIS-0165",
+    "DESCRIPCION": "BATMAN",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0166",
+    "DESCRIPCION": "SPIDERMAN NEGRO",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0167",
+    "DESCRIPCION": "CAPITAN AMERICA",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0168",
+    "DESCRIPCION": "FORNITE",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0169",
+    "DESCRIPCION": "ESQUELETO",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0170",
+    "DESCRIPCION": "CAPITAN AMERICA",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0171",
+    "DESCRIPCION": "POWER RANGERS",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0172",
+    "DESCRIPCION": "STARWARS",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0173",
+    "DESCRIPCION": "SUPERMAN",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0174",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0175",
+    "DESCRIPCION": "ELSA FROZEN",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 4000
+  },
+  {
+    "CODIGO": "DIS-0176",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0177",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0178",
+    "DESCRIPCION": "CAPITAN AMERICA",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0179",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0180",
+    "DESCRIPCION": "SONIC AMARILLO",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0181",
+    "DESCRIPCION": "ZOMBIE ALIEN",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0182",
+    "DESCRIPCION": "NINJA",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0183",
+    "DESCRIPCION": "ENTRENANDO A TU DRAGON",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0184",
+    "DESCRIPCION": "PRINCESA PINK",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0185",
+    "DESCRIPCION": "EZRA STAR WARS",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0186",
+    "DESCRIPCION": "VESTIDO HALLOWEEN",
+    "TALLA": "L",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0187",
+    "DESCRIPCION": "VESTIDO NEGRO Y ROJO",
+    "TALLA": "XL",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0188",
+    "DESCRIPCION": "MINECRAF",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0189",
+    "DESCRIPCION": "NINJA",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0190",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0191",
+    "DESCRIPCION": "DESCENDIENTES",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0192",
+    "DESCRIPCION": "BLUE",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0193",
+    "DESCRIPCION": "NINJA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0194",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0195",
+    "DESCRIPCION": "TRANSFORMERS",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0196",
+    "DESCRIPCION": "NINJA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0197",
+    "DESCRIPCION": "MONJE CAFÉ",
+    "TALLA": "L",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0198",
+    "DESCRIPCION": "BRUJA GOTICO",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0199",
+    "DESCRIPCION": "HARRY POTTER",
+    "TALLA": "M",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0200",
+    "DESCRIPCION": "FANTASMA",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0201",
+    "DESCRIPCION": "BLUE",
+    "TALLA": "L",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0202",
+    "DESCRIPCION": "ELEFANTE MARINP",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0203",
+    "DESCRIPCION": "CICLISTA",
+    "TALLA": "S",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0204",
+    "DESCRIPCION": "GRIEGO",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0205",
+    "DESCRIPCION": "PAYASO",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0206",
+    "DESCRIPCION": "ELSA FROZEN",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0207",
+    "DESCRIPCION": "PRINCESA ROJA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0208",
+    "DESCRIPCION": "LEOPARDO COLORES",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0209",
+    "DESCRIPCION": "MULAN",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0210",
+    "DESCRIPCION": "ESQUELETO COLORES",
+    "TALLA": "6",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0211",
+    "DESCRIPCION": "PRINCESA ROJA",
+    "TALLA": "16",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0212",
+    "DESCRIPCION": "PRINCESA ARABE",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0213",
+    "DESCRIPCION": "CAPITAN PIRATA",
+    "TALLA": "L",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0214",
+    "DESCRIPCION": "SERPIENTE",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0215",
+    "DESCRIPCION": "SHIMMER",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0216",
+    "DESCRIPCION": "PIRATA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0217",
+    "DESCRIPCION": "VESTIDO NEGRO",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0218",
+    "DESCRIPCION": "FORNITE",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0219",
+    "DESCRIPCION": "MOSTER HIGH",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0220",
+    "DESCRIPCION": "SPIDERMAN",
+    "TALLA": "8",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0221",
+    "DESCRIPCION": "PIRATA",
+    "TALLA": "2",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0222",
+    "DESCRIPCION": "TUNICA NEGRA",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0223",
+    "DESCRIPCION": "MARIPOSA",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0224",
+    "DESCRIPCION": "CAPITAN AMERICA",
+    "TALLA": "4",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0225",
+    "DESCRIPCION": "VAMPIRA GOTICA",
+    "TALLA": "XL",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0226",
+    "DESCRIPCION": "TIBURON",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0227",
+    "DESCRIPCION": "ELSA FROZEN",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0228",
+    "DESCRIPCION": "HALO",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0229",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0230",
+    "DESCRIPCION": "BEETLEJUICE",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0231",
+    "DESCRIPCION": "TUNICA NEGRA",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0232",
+    "DESCRIPCION": "SUB ZERO",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0233",
+    "DESCRIPCION": "MARIPOSA",
+    "TALLA": "10",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0234",
+    "DESCRIPCION": "SACERDOTE",
+    "TALLA": "12",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0235",
+    "DESCRIPCION": "SHARPEY",
+    "TALLA": "7",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0236",
+    "DESCRIPCION": "REO",
+    "TALLA": "L",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0237",
+    "DESCRIPCION": "VIUDA NEGRA",
+    "TALLA": "14",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0238",
+    "DESCRIPCION": "BRUJA",
+    "TALLA": "3",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0239",
+    "DESCRIPCION": "ANA FROZEN",
+    "TALLA": "5",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 5000
+  },
+  {
+    "CODIGO": "DIS-0240",
+    "DESCRIPCION": "SPIDERMAN MUJER",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑA",
+    "VALOR ": 8000
+  },
+  {
+    "CODIGO": "DIS-0241",
+    "DESCRIPCION": "HALO",
+    "TALLA": "10",
+    "CATEGORIA": "NIÑO",
+    "VALOR ": 6000
+  },
+  {
+    "CODIGO": "DIS-0242",
+    "DESCRIPCION": "MONJE CAFÉ",
+    "TALLA": "XL",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0243",
+    "DESCRIPCION": "BAILARINA AZUL",
+    "TALLA": "M",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0244",
+    "DESCRIPCION": "CHUKY",
+    "TALLA": "S",
+    "CATEGORIA": "MUJER",
+    "VALOR ": 10000
+  },
+  {
+    "CODIGO": "DIS-0245",
+    "DESCRIPCION": "MALLA NEGRA",
+    "TALLA": "M",
+    "CATEGORIA": "HOMBRE",
+    "VALOR ": 7000
+  },
+  {
+    "CODIGO": "DIS-0246",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0247",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0248",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0249",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0250",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0251",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0252",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0253",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0254",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0255",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0256",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0257",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0258",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0259",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0260",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0261",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0262",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0263",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0264",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0265",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0266",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  },
+  {
+    "CODIGO": "DIS-0267",
+    "DESCRIPCION": "nan",
+    "TALLA": "nan",
+    "CATEGORIA": "NAN",
+    "VALOR ": 0
+  }
+]
