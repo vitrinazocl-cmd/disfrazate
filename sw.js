@@ -1,10 +1,10 @@
-const CACHE_NAME = 'disfrazate-cache-v11';
+const CACHE_NAME = 'disfrazate-cache-v12';
 
 const PRECACHE_ASSETS = [
     './',
     './index.html',
-    './catalogo.js?v=6.0',
-    './script.js?v=6.0',
+    './catalogo.js?v=7.0',
+    './script.js?v=7.0',
     './style.css',
     './logo_disfrazate_tech.jpg'
 ];

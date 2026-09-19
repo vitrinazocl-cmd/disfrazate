@@ -17,7 +17,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Local Stylesheet & Catalog Data -->
     <link rel="stylesheet" href="style.css?v=20260914_opt">
-    <script src="catalogo.js?v=6.0"></script>
+    <script src="catalogo.js?v=7.0"></script>
+    <script>
+    window.openFullscreenLightbox = function(productOrId, optionalImgSrc) {
+        var prod = null;
+        var list = (typeof catalogoProductos !== 'undefined') ? catalogoProductos : (typeof baseCatalogo !== 'undefined' ? baseCatalogo : []);
+        if (typeof productOrId === 'object' && productOrId !== null) {
+            prod = productOrId;
+        } else if (typeof productOrId === 'string') {
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].id === productOrId || list[i].image === productOrId) {
+                    prod = list[i];
+                    break;
+                }
+            }
+        }
+
+        var lightbox = document.getElementById('fullscreen-lightbox');
+        var fullImg = document.getElementById('lightbox-full-img');
+        var titleEl = document.getElementById('lightbox-title');
+        var codeEl = document.getElementById('lightbox-code');
+        var catEl = document.getElementById('lightbox-cat');
+        var priceEl = document.getElementById('lightbox-price');
+        var sizeEl = document.getElementById('lightbox-size');
+        var btnCart = document.getElementById('lightbox-btn-cart');
+        var btnWa = document.getElementById('lightbox-btn-wa');
+
+        if (!lightbox || !fullImg) return;
+
+        var imgSrc = optionalImgSrc || (prod ? (prod.highResImage || prod.image) : (typeof productOrId === 'string' ? productOrId : 'logo_disfrazate_tech.jpg'));
+        fullImg.src = imgSrc;
+        fullImg.onerror = function() {
+            this.onerror = null;
+            this.src = (prod && prod.image) ? prod.image : 'logo_disfrazate_tech.jpg';
+        };
+
+        if (prod) {
+            if (titleEl) titleEl.textContent = prod.name;
+            if (codeEl) codeEl.textContent = 'CÓD: ' + prod.id;
+            if (catEl) catEl.textContent = prod.category;
+            if (priceEl) priceEl.textContent = '$' + (prod.price || 0).toLocaleString('es-CL');
+            var mainSize = (prod.sizes && prod.sizes.length > 0) ? prod.sizes[0] : 'Estándar';
+            if (sizeEl) sizeEl.textContent = 'Talla ' + mainSize;
+
+            if (btnCart) {
+                btnCart.onclick = function(e) {
+                    if (e) e.stopPropagation();
+                    if (typeof addToCart === 'function') {
+                        addToCart({
+                            id: prod.id,
+                            name: prod.name,
+                            price: prod.price,
+                            image: prod.image,
+                            category: prod.category,
+                            size: mainSize,
+                            qty: 1
+                        });
+                        window.closeFullscreenLightbox();
+                        if (typeof openModal === 'function') openModal('cart-modal');
+                    }
+                };
+            }
+
+            if (btnWa) {
+                var msg = encodeURIComponent('Hola Disfrázate! Quisiera pedir el disfraz ' + prod.name + ' (Código ' + prod.id + ') en Talla ' + mainSize + '.');
+                btnWa.href = 'https://wa.me/56989784973?text=' + msg;
+            }
+        } else {
+            if (titleEl) titleEl.textContent = 'Disfraz en Pantalla Completa';
+        }
+
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeFullscreenLightbox = function() {
+        var lightbox = document.getElementById('fullscreen-lightbox');
+        if (lightbox) {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    };
+    window.openProductDetailModal = function(id) {
+        window.openFullscreenLightbox(id);
+    };
+    </script>
     <style>
     /* Guaranteed 4-Column Compact Grid & Image Constraints */
     #products-grid,
@@ -830,8 +914,8 @@
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js?v=6.0"></script>
-    <script src="script.js?v=6.0"></script>
+    <script src="catalogo.js?v=7.0"></script>
+    <script src="script.js?v=7.0"></script>
     <script>
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
         window.addEventListener('load', () => {

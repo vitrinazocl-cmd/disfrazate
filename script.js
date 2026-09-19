@@ -1093,10 +1093,8 @@ let currentDetailProduct = null;
 let currentDetailSize = null;
 
 function openProductDetailModal(productId) {
-    const prod = baseCatalogo.find(p => p.id === productId);
-    if (!prod) return;
-
-    currentDetailProduct = prod;
+    openFullscreenLightbox(productId);
+}
     
     const modalImg = document.getElementById('modal-detail-img');
     const modalCode = document.getElementById('modal-detail-code');
