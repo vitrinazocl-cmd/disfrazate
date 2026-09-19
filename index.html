@@ -386,11 +386,11 @@
                 var isOffer = p.category === 'OFERTAS' || p.isOffer || p.price <= 5000;
                 var mainSize = (p.sizes && p.sizes.length > 0) ? p.sizes[0] : 'Estándar';
                 var imgSrc = encodeURI(p.image);
-                html += '<div class="product-card" onclick="if(window.openProductDetailModal) window.openProductDetailModal(\' + p.id + \')">' +
-                    '<div class="product-image-container">' +
+                html += '<div class="product-card" onclick="if(window.openProductDetailModal) window.openProductDetailModal(\'' + p.id + '\')">' +
+                    '<div class="product-image-container" onclick="event.stopPropagation(); if(window.openFullscreenLightbox) window.openFullscreenLightbox(\'' + imgSrc + '\', \'' + p.name.replace(/'/g, "\\'") + '\')" title="Clic para agrandar foto">' +
                         (isOffer ? '<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>' : '') +
                         '<img src="' + imgSrc + '" alt="' + p.name + '" decoding="async" onerror="this.onerror=null; this.src=\'logo_disfrazate_tech.jpg\';">' +
-                        '<div class="image-expand-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa</div>' +
+                        '<div class="image-expand-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ver Foto Agrandada</div>' +
                     '</div>' +
                     '<div class="product-card-body">' +
                         '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">' +
@@ -801,13 +801,19 @@
 
     <!-- Fullscreen Image Lightbox Overlay -->
     <div id="fullscreen-lightbox" class="lightbox-overlay hidden" onclick="closeFullscreenLightbox()">
-        <button class="lightbox-close">&times;</button>
-        <img id="lightbox-full-img" src="" alt="Disfraz en pantalla completa">
+        <button class="lightbox-close" onclick="closeFullscreenLightbox()">&times;</button>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-full-img" src="" alt="Disfraz en pantalla completa" onclick="closeFullscreenLightbox()">
+            <div id="lightbox-title-bar" class="lightbox-title-bar">
+                <span id="lightbox-title"></span>
+                <span class="lightbox-hint"><i class="fa-solid fa-compress"></i> Haz clic en cualquier lugar para cerrar</span>
+            </div>
+        </div>
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js?v=3.0"></script>
-    <script src="script.js?v=3.0"></script>
+    <script src="catalogo.js?v=4.0"></script>
+    <script src="script.js?v=4.0"></script>
     <script>
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
         window.addEventListener('load', () => {

@@ -388,11 +388,11 @@ function buildCompactCardHtml(prod, index = 0) {
 
     return `
     <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
-        <div class="product-image-container">
+        <div class="product-image-container" onclick="event.stopPropagation(); openFullscreenLightbox('${imgSrc}', '${prod.name.replace(/'/g, "\\'")}')" title="Clic para agrandar foto">
             ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
             <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
             <div class="image-expand-hint">
-                <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Imagen Completa
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Foto Agrandada
             </div>
         </div>
         
@@ -551,8 +551,8 @@ function renderProductsGrid() {
             const loadingAttr = idx < 8 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
             const imgSrc = encodeURI(prod.image);
             html += `
-            <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver fotos completas y comprar">
-                <div class="list-thumb-box">
+            <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver detalles y comprar">
+                <div class="list-thumb-box" onclick="event.stopPropagation(); openFullscreenLightbox('${imgSrc}', '${prod.name.replace(/'/g, "\\'")}')" title="Clic para agrandar foto">
                     ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
                     <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
                     <div class="thumb-zoom-overlay">
@@ -1157,11 +1157,15 @@ function openProductDetailModal(productId) {
     openModal('product-detail-modal');
 }
 
-function openFullscreenLightbox(imgSrc) {
+function openFullscreenLightbox(imgSrc, title = '') {
     const lightbox = document.getElementById('fullscreen-lightbox');
     const fullImg = document.getElementById('lightbox-full-img');
+    const titleEl = document.getElementById('lightbox-title');
     if (lightbox && fullImg) {
         fullImg.src = imgSrc;
+        if (titleEl) {
+            titleEl.textContent = title;
+        }
         lightbox.classList.remove('hidden');
     }
 }
