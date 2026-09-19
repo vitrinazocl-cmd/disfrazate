@@ -2836,8 +2836,14 @@ button, input, select, textarea {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .detail-image-box {
+        min-height: 400px;
+        padding: 8px;
+    }
     .detail-image-box img {
-        max-height: 280px;
+        max-height: 68vh !important;
+        width: 100% !important;
+        object-fit: contain !important;
     }
 }
 
