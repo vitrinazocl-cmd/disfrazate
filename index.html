@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Local Stylesheet & Catalog Data -->
     <link rel="stylesheet" href="style.css?v=20260914_opt">
-    <script src="catalogo.js?v=7.0"></script>
+    <script src="catalogo.js?v=8.0"></script>
     <script>
     window.openFullscreenLightbox = function(productOrId, optionalImgSrc) {
         var prod = null;
@@ -471,8 +471,8 @@
                 var isOffer = p.category === 'OFERTAS' || p.isOffer || p.price <= 5000;
                 var mainSize = (p.sizes && p.sizes.length > 0) ? p.sizes[0] : 'Estándar';
                 var imgSrc = encodeURI(p.image);
-                html += '<div class="product-card" onclick="if(window.openFullscreenLightbox) window.openFullscreenLightbox(\'' + p.id + '\')" title="Haz clic para ver foto agrandada">' +
-                    '<div class="product-image-container">' +
+                html += '<div class="product-card" onclick="if(window.openProductDetailModal) window.openProductDetailModal(\'' + p.id + '\')">' +
+                    '<div class="product-image-container" onclick="event.stopPropagation(); if(window.openFullscreenLightbox) window.openFullscreenLightbox(\'' + p.id + '\')" title="Haz clic para agrandar foto">' +
                         (isOffer ? '<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>' : '') +
                         '<img src="' + imgSrc + '" alt="' + p.name + '" decoding="async" onerror="this.onerror=null; this.src=\'logo_disfrazate_tech.jpg\';">' +
                         '<div class="image-expand-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ver Foto Agrandada</div>' +
@@ -485,7 +485,7 @@
                         '<h3 class="product-card-title" title="' + p.name + '">' + p.name + '</h3>' +
                         '<div class="card-badge-subtitle"><i class="fa-solid fa-star"></i> MEJOR PRECIO &bull; Talla ' + mainSize + '</div>' +
                         '<div class="card-price-display">$' + priceFormatted + '</div>' +
-                        '<button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); if(window.addItemWithDetailsFromCard) window.addItemWithDetailsFromCard(\' + p.id + \', this)"><i class="fa-solid fa-cart-plus"></i> Agregar al Carro</button>' +
+                        '<button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); if(window.addItemWithDetailsFromCard) window.addItemWithDetailsFromCard(\'' + p.id + '\', this)"><i class="fa-solid fa-cart-plus"></i> Agregar al Carro</button>' +
                     '</div>' +
                 '</div>';
             }
@@ -914,8 +914,8 @@
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js?v=7.0"></script>
-    <script src="script.js?v=7.0"></script>
+    <script src="catalogo.js?v=8.0"></script>
+    <script src="script.js?v=8.0"></script>
     <script>
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
         window.addEventListener('load', () => {
