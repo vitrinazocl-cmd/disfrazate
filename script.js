@@ -387,8 +387,8 @@ function buildCompactCardHtml(prod, index = 0) {
     const imgSrc = encodeURI(prod.image);
 
     return `
-    <div class="product-card" onclick="openProductDetailModal('${prod.id}')">
-        <div class="product-image-container" onclick="event.stopPropagation(); openFullscreenLightbox('${imgSrc}', '${prod.name.replace(/'/g, "\\'")}')" title="Clic para agrandar foto">
+    <div class="product-card" onclick="openFullscreenLightbox('${prod.id}')" title="Haz clic para ver foto agrandada">
+        <div class="product-image-container">
             ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
             <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
             <div class="image-expand-hint">
@@ -551,8 +551,8 @@ function renderProductsGrid() {
             const loadingAttr = idx < 8 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
             const imgSrc = encodeURI(prod.image);
             html += `
-            <div class="product-list-item" onclick="openProductDetailModal('${prod.id}')" title="Haz clic para ver detalles y comprar">
-                <div class="list-thumb-box" onclick="event.stopPropagation(); openFullscreenLightbox('${imgSrc}', '${prod.name.replace(/'/g, "\\'")}')" title="Clic para agrandar foto">
+            <div class="product-list-item" onclick="openFullscreenLightbox('${prod.id}')" title="Haz clic para ver foto agrandada">
+                <div class="list-thumb-box">
                     ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
                     <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
                     <div class="thumb-zoom-overlay">
@@ -1157,23 +1157,80 @@ function openProductDetailModal(productId) {
     openModal('product-detail-modal');
 }
 
-function openFullscreenLightbox(imgSrc, title = '') {
+function openFullscreenLightbox(productOrId, optionalImgSrc) {
+    let prod = null;
+    if (typeof productOrId === 'object' && productOrId !== null) {
+        prod = productOrId;
+    } else if (typeof productOrId === 'string') {
+        prod = (typeof baseCatalogo !== 'undefined' ? baseCatalogo : []).find(p => p.id === productOrId || p.image === productOrId);
+        if (!prod && typeof catalogoProductos !== 'undefined') {
+            prod = catalogoProductos.find(p => p.id === productOrId || p.image === productOrId);
+        }
+    }
+
     const lightbox = document.getElementById('fullscreen-lightbox');
     const fullImg = document.getElementById('lightbox-full-img');
     const titleEl = document.getElementById('lightbox-title');
-    if (lightbox && fullImg) {
-        fullImg.src = imgSrc;
-        if (titleEl) {
-            titleEl.textContent = title;
+    const codeEl = document.getElementById('lightbox-code');
+    const catEl = document.getElementById('lightbox-cat');
+    const priceEl = document.getElementById('lightbox-price');
+    const sizeEl = document.getElementById('lightbox-size');
+    const btnCart = document.getElementById('lightbox-btn-cart');
+    const btnWa = document.getElementById('lightbox-btn-wa');
+
+    if (!lightbox || !fullImg) return;
+
+    let imgSrc = optionalImgSrc || (prod ? (prod.highResImage || prod.image) : (typeof productOrId === 'string' ? productOrId : ''));
+    fullImg.src = imgSrc;
+    fullImg.onerror = function() {
+        this.onerror = null;
+        this.src = (prod && prod.image) ? prod.image : 'logo_disfrazate_tech.jpg';
+    };
+
+    if (prod) {
+        if (titleEl) titleEl.textContent = prod.name;
+        if (codeEl) codeEl.textContent = `CÓD: ${prod.id}`;
+        if (catEl) catEl.textContent = prod.category;
+        if (priceEl) priceEl.textContent = `$${(prod.price || 0).toLocaleString('es-CL')}`;
+        const mainSize = (prod.sizes && prod.sizes.length > 0) ? prod.sizes[0] : 'Estándar';
+        if (sizeEl) sizeEl.textContent = `Talla ${mainSize}`;
+
+        if (btnCart) {
+            btnCart.onclick = (e) => {
+                e.stopPropagation();
+                if (typeof addToCart === 'function') {
+                    addToCart({
+                        id: prod.id,
+                        name: prod.name,
+                        price: prod.price,
+                        image: prod.image,
+                        category: prod.category,
+                        size: mainSize,
+                        qty: 1
+                    });
+                    closeFullscreenLightbox();
+                    if (typeof openModal === 'function') openModal('cart-modal');
+                }
+            };
         }
-        lightbox.classList.remove('hidden');
+
+        if (btnWa) {
+            const msg = encodeURIComponent(`Hola Disfrázate! Quisiera pedir el disfraz ${prod.name} (Código ${prod.id}) en Talla ${mainSize}.`);
+            btnWa.href = `https://wa.me/56989784973?text=${msg}`;
+        }
+    } else {
+        if (titleEl) titleEl.textContent = 'Disfraz en Pantalla Completa';
     }
+
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeFullscreenLightbox() {
     const lightbox = document.getElementById('fullscreen-lightbox');
     if (lightbox) {
         lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto';
     }
 }
 

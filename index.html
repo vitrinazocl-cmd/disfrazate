@@ -386,8 +386,8 @@
                 var isOffer = p.category === 'OFERTAS' || p.isOffer || p.price <= 5000;
                 var mainSize = (p.sizes && p.sizes.length > 0) ? p.sizes[0] : 'Estándar';
                 var imgSrc = encodeURI(p.image);
-                html += '<div class="product-card" onclick="if(window.openProductDetailModal) window.openProductDetailModal(\'' + p.id + '\')">' +
-                    '<div class="product-image-container" onclick="event.stopPropagation(); if(window.openFullscreenLightbox) window.openFullscreenLightbox(\'' + imgSrc + '\', \'' + p.name.replace(/'/g, "\\'") + '\')" title="Clic para agrandar foto">' +
+                html += '<div class="product-card" onclick="if(window.openFullscreenLightbox) window.openFullscreenLightbox(\'' + p.id + '\')" title="Haz clic para ver foto agrandada">' +
+                    '<div class="product-image-container">' +
                         (isOffer ? '<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>' : '') +
                         '<img src="' + imgSrc + '" alt="' + p.name + '" decoding="async" onerror="this.onerror=null; this.src=\'logo_disfrazate_tech.jpg\';">' +
                         '<div class="image-expand-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ver Foto Agrandada</div>' +
@@ -803,17 +803,34 @@
     <div id="fullscreen-lightbox" class="lightbox-overlay hidden" onclick="closeFullscreenLightbox()">
         <button class="lightbox-close" onclick="closeFullscreenLightbox()">&times;</button>
         <div class="lightbox-content" onclick="event.stopPropagation()">
-            <img id="lightbox-full-img" src="" alt="Disfraz en pantalla completa" onclick="closeFullscreenLightbox()">
-            <div id="lightbox-title-bar" class="lightbox-title-bar">
-                <span id="lightbox-title"></span>
-                <span class="lightbox-hint"><i class="fa-solid fa-compress"></i> Haz clic en cualquier lugar para cerrar</span>
+            <div class="lightbox-image-wrapper">
+                <img id="lightbox-full-img" src="" alt="Disfraz en pantalla completa" onclick="closeFullscreenLightbox()">
+            </div>
+            <div id="lightbox-info-card" class="lightbox-info-card">
+                <div class="lightbox-header">
+                    <span id="lightbox-code" class="lightbox-code-tag">DIS-0000</span>
+                    <h2 id="lightbox-title" class="lightbox-title">Nombre del Disfraz</h2>
+                    <span id="lightbox-cat" class="lightbox-cat-tag">MUJER</span>
+                </div>
+                <div class="lightbox-body">
+                    <div id="lightbox-price" class="lightbox-price">$10.000</div>
+                    <div id="lightbox-size" class="lightbox-size-tag">Talla L</div>
+                </div>
+                <div class="lightbox-actions">
+                    <button id="lightbox-btn-cart" type="button" class="btn-lightbox-cart">
+                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carro
+                    </button>
+                    <a id="lightbox-btn-wa" href="#" target="_blank" rel="noopener" class="btn-lightbox-wa">
+                        <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Script imports -->
-    <script src="catalogo.js?v=4.0"></script>
-    <script src="script.js?v=4.0"></script>
+    <script src="catalogo.js?v=5.0"></script>
+    <script src="script.js?v=5.0"></script>
     <script>
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
         window.addEventListener('load', () => {
