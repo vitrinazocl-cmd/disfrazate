@@ -405,17 +405,44 @@ function buildCompactCardHtml(prod, index = 0) {
     const mainSize = sizesList[0];
     const isPriority = index < 8;
     const loadingAttr = isPriority ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
-    const imgSrc = encodeURI(prod.image);
+    const hasDualImages = prod.images && Array.isArray(prod.images) && prod.images.length > 1;
 
-    return `
-    <div class="product-card" onclick="openFullscreenLightbox('${prod.id}')" title="Haz clic para ver foto agrandada">
+    let imageContainerHtml = '';
+    if (hasDualImages) {
+        const img1 = encodeURI(prod.images[0]);
+        const img2 = encodeURI(prod.images[1]);
+        imageContainerHtml = `
+        <div class="product-image-container dual-card-image-container">
+            ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
+            <div class="card-dual-images">
+                <div class="card-single-img-wrapper" title="1° Con Modelo (Haz clic para ampliar)" onclick="event.stopPropagation(); openFullscreenLightbox('${prod.id}', '${img1}')">
+                    <img src="${img1}" alt="${prod.name} con modelo" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+                    <span class="card-img-tag">1° Modelo</span>
+                </div>
+                <div class="card-single-img-wrapper" title="2° Solo Disfraz (Haz clic para ampliar)" onclick="event.stopPropagation(); openFullscreenLightbox('${prod.id}', '${img2}')">
+                    <img src="${img2}" alt="${prod.name} solo disfraz" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+                    <span class="card-img-tag">2° Disfraz</span>
+                </div>
+            </div>
+            <div class="image-expand-hint">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Fotos
+            </div>
+        </div>`;
+    } else {
+        const imgSrc = encodeURI(prod.image);
+        imageContainerHtml = `
         <div class="product-image-container">
             ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
             <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
             <div class="image-expand-hint">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Foto Agrandada
             </div>
-        </div>
+        </div>`;
+    }
+
+    return `
+    <div class="product-card" onclick="openFullscreenLightbox('${prod.id}')" title="Haz clic para ver fotos">
+        ${imageContainerHtml}
         
         <div class="product-card-body">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
@@ -570,16 +597,34 @@ function renderProductsGrid() {
             const priceFormatted = prod.price.toLocaleString('es-CL');
             const isOffer = prod.category === 'OFERTAS' || prod.isOffer || prod.price <= 5000;
             const loadingAttr = idx < 8 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
-            const imgSrc = encodeURI(prod.image);
-            html += `
-            <div class="product-list-item" onclick="openFullscreenLightbox('${prod.id}')" title="Haz clic para ver foto agrandada">
+            const hasDual = prod.images && Array.isArray(prod.images) && prod.images.length > 1;
+            let thumbHtml = '';
+            if (hasDual) {
+                thumbHtml = `
+                <div class="list-thumb-box dual-list-thumb">
+                    ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
+                    <div class="list-dual-wrapper">
+                        <img src="${encodeURI(prod.images[0])}" alt="${prod.name} modelo" title="1° Con Modelo" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+                        <img src="${encodeURI(prod.images[1])}" alt="${prod.name} solo disfraz" title="2° Solo Disfraz" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
+                    </div>
+                    <div class="thumb-zoom-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>`;
+            } else {
+                thumbHtml = `
                 <div class="list-thumb-box">
                     ${isOffer ? `<span class="list-offer-tag">OFERTA</span>` : ''}
                     <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
                     <div class="thumb-zoom-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </div>
-                </div>
+                </div>`;
+            }
+
+            html += `
+            <div class="product-list-item" onclick="openFullscreenLightbox('${prod.id}')" title="Haz clic para ver foto agrandada">
+                ${thumbHtml}
                 
                 <div class="list-item-info">
                     <div class="list-item-meta">
@@ -1185,6 +1230,47 @@ function openProductDetailModal(productId) {
         };
     }
 
+    // Render Dual Image Thumbnail Switcher if prod.images exists and has multiple images
+    let thumbsContainer = document.getElementById('modal-detail-thumbnails');
+    if (!thumbsContainer && imgBox) {
+        thumbsContainer = document.createElement('div');
+        thumbsContainer.id = 'modal-detail-thumbnails';
+        thumbsContainer.className = 'detail-thumbnails-container';
+        const zoomHint = imgBox.querySelector('.zoom-hint-banner');
+        if (zoomHint) {
+            imgBox.insertBefore(thumbsContainer, zoomHint);
+        } else {
+            imgBox.appendChild(thumbsContainer);
+        }
+    }
+
+    if (thumbsContainer) {
+        thumbsContainer.innerHTML = '';
+        const imagesList = (prod.images && prod.images.length > 0) ? prod.images : [prod.image];
+        if (imagesList.length > 1) {
+            thumbsContainer.style.display = 'flex';
+            imagesList.forEach((imgUrl, idx) => {
+                const btn = document.createElement('div');
+                btn.className = `detail-thumb-btn ${idx === 0 ? 'active' : ''}`;
+                btn.innerHTML = `
+                    <img src="${encodeURI(imgUrl)}" alt="Foto ${idx + 1}">
+                    <span>${idx === 0 ? '1° Con Modelo' : '2° Solo Disfraz'}</span>
+                `;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    thumbsContainer.querySelectorAll('.detail-thumb-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    if (modalImg) {
+                        modalImg.src = imgUrl;
+                    }
+                };
+                thumbsContainer.appendChild(btn);
+            });
+        } else {
+            thumbsContainer.style.display = 'none';
+        }
+    }
+
     // Set WhatsApp Order Link
     if (whatsappBtn) {
         const msg = encodeURIComponent(`Hola Disfrázate! Quisiera pedir el disfraz ${prod.name} (Código ${prod.id}) en Talla ${currentDetailSize || 'Estándar'}.`);
@@ -1199,9 +1285,9 @@ function openFullscreenLightbox(productOrId, optionalImgSrc) {
     if (typeof productOrId === 'object' && productOrId !== null) {
         prod = productOrId;
     } else if (typeof productOrId === 'string') {
-        prod = (typeof baseCatalogo !== 'undefined' ? baseCatalogo : []).find(p => p.id === productOrId || p.image === productOrId);
+        prod = (typeof baseCatalogo !== 'undefined' ? baseCatalogo : []).find(p => p.id === productOrId || p.image === productOrId || (p.images && p.images.includes(productOrId)));
         if (!prod && typeof catalogoProductos !== 'undefined') {
-            prod = catalogoProductos.find(p => p.id === productOrId || p.image === productOrId);
+            prod = catalogoProductos.find(p => p.id === productOrId || p.image === productOrId || (p.images && p.images.includes(productOrId)));
         }
     }
 
@@ -1257,6 +1343,39 @@ function openFullscreenLightbox(productOrId, optionalImgSrc) {
         }
     } else {
         if (titleEl) titleEl.textContent = 'Disfraz en Pantalla Completa';
+    }
+
+    // Dual Image Thumbnails inside Lightbox
+    const lightboxBody = lightbox.querySelector('.lightbox-body');
+    let lbThumbs = document.getElementById('lightbox-thumbnails');
+    if (!lbThumbs && lightboxBody) {
+        lbThumbs = document.createElement('div');
+        lbThumbs.id = 'lightbox-thumbnails';
+        lbThumbs.className = 'lightbox-thumbnails-container';
+        lightboxBody.appendChild(lbThumbs);
+    }
+
+    if (lbThumbs) {
+        lbThumbs.innerHTML = '';
+        const imagesList = (prod && prod.images && prod.images.length > 0) ? prod.images : (prod ? [prod.image] : []);
+        if (imagesList.length > 1) {
+            lbThumbs.style.display = 'flex';
+            imagesList.forEach((imgUrl, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `lightbox-thumb-btn ${imgUrl === imgSrc ? 'active' : ''}`;
+                btn.innerHTML = `<img src="${encodeURI(imgUrl)}" alt="Foto ${idx + 1}"> <span>${idx === 0 ? '1° Modelo' : '2° Disfraz'}</span>`;
+                btn.onclick = (e) => {
+                    e.stopPropagation();
+                    lbThumbs.querySelectorAll('.lightbox-thumb-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    fullImg.src = imgUrl;
+                };
+                lbThumbs.appendChild(btn);
+            });
+        } else {
+            lbThumbs.style.display = 'none';
+        }
     }
 
     lightbox.classList.remove('hidden');

@@ -4,574 +4,738 @@ const catalogoProductos = [
         "name": "China",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0001.jpg",
-        "highResImage": "catalogo 2/DIS-0001.jpg",
+        "image": "catalogo completo/DIS-0001.jpg",
+        "highResImage": "catalogo completo/DIS-0001.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0001.jpg",
+            "catalogo 2/DIS-0001.jpg"
+        ]
     },
     {
         "id": "DIS-0002",
         "name": "Elvis",
         "price": 10000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0002.jpg",
-        "highResImage": "catalogo 2/DIS-0002.jpg",
+        "image": "catalogo completo/DIS-0002.jpg",
+        "highResImage": "catalogo completo/DIS-0002.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0002.jpg",
+            "catalogo 2/DIS-0002.jpg"
+        ]
     },
     {
         "id": "DIS-0003",
         "name": "Starwars",
         "price": 10000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0003.jpg",
-        "highResImage": "catalogo 2/DIS-0003.jpg",
+        "image": "catalogo completo/DIS-0003.jpg",
+        "highResImage": "catalogo completo/DIS-0003.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0003.jpg",
+            "catalogo 2/DIS-0003.jpg"
+        ]
     },
     {
         "id": "DIS-0004",
         "name": "Peto Kpop",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0004.jpg",
-        "highResImage": "catalogo 2/DIS-0004.jpg",
+        "image": "catalogo completo/DIS-0004.jpg",
+        "highResImage": "catalogo completo/DIS-0004.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0004.jpg",
+            "catalogo 2/DIS-0004.jpg"
+        ]
     },
     {
         "id": "DIS-0005",
         "name": "Polera Pirata",
         "price": 7000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0005.jpg",
-        "highResImage": "catalogo 2/DIS-0005.jpg",
+        "image": "catalogo completo/DIS-0005.jpg",
+        "highResImage": "catalogo completo/DIS-0005.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0005.jpg",
+            "catalogo 2/DIS-0005.jpg"
+        ]
     },
     {
         "id": "DIS-0006",
         "name": "Pantalon Hipie",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0006.jpg",
-        "highResImage": "catalogo 2/DIS-0006.jpg",
+        "image": "catalogo completo/DIS-0006.jpg",
+        "highResImage": "catalogo completo/DIS-0006.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0006.jpg",
+            "catalogo 2/DIS-0006.jpg"
+        ]
     },
     {
         "id": "DIS-0007",
         "name": "Tutu Blanco",
         "price": 4000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0007.jpg",
-        "highResImage": "catalogo 2/DIS-0007.jpg",
+        "image": "catalogo completo/DIS-0007.jpg",
+        "highResImage": "catalogo completo/DIS-0007.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0007.jpg",
+            "catalogo 2/DIS-0007.jpg"
+        ]
     },
     {
         "id": "DIS-0008",
         "name": "Artemisia 300",
         "price": 10000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0008.jpg",
-        "highResImage": "catalogo 2/DIS-0008.jpg",
+        "image": "catalogo completo/DIS-0008.jpg",
+        "highResImage": "catalogo completo/DIS-0008.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0008.jpg",
+            "catalogo 2/DIS-0008.jpg"
+        ]
     },
     {
         "id": "DIS-0009",
         "name": "Alemana",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0009.jpg",
-        "highResImage": "catalogo 2/DIS-0009.jpg",
+        "image": "catalogo completo/DIS-0009.jpg",
+        "highResImage": "catalogo completo/DIS-0009.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0009.jpg",
+            "catalogo 2/DIS-0009.jpg"
+        ]
     },
     {
         "id": "DIS-0010",
         "name": "Princesa Rosado",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0010.jpg",
-        "highResImage": "catalogo 2/DIS-0010.jpg",
+        "image": "catalogo completo/DIS-0010.jpg",
+        "highResImage": "catalogo completo/DIS-0010.jpg",
         "sizes": [
             "12"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0010.jpg",
+            "catalogo 2/DIS-0010.jpg"
+        ]
     },
     {
         "id": "DIS-0011",
         "name": "Pirata",
         "price": 7000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0011.jpg",
-        "highResImage": "catalogo 2/DIS-0011.jpg",
+        "image": "catalogo completo/DIS-0011.jpg",
+        "highResImage": "catalogo completo/DIS-0011.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0011.jpg",
+            "catalogo 2/DIS-0011.jpg"
+        ]
     },
     {
         "id": "DIS-0012",
         "name": "Princesa Celeste",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0012.jpg",
-        "highResImage": "catalogo 2/DIS-0012.jpg",
+        "image": "catalogo completo/DIS-0012.jpg",
+        "highResImage": "catalogo completo/DIS-0012.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0012.jpg",
+            "catalogo 2/DIS-0012.jpg"
+        ]
     },
     {
         "id": "DIS-0013",
         "name": "Polera Pirata M",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0013.jpg",
-        "highResImage": "catalogo 2/DIS-0013.jpg",
+        "image": "catalogo completo/DIS-0013.jpg",
+        "highResImage": "catalogo completo/DIS-0013.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0013.jpg",
+            "catalogo 2/DIS-0013.jpg"
+        ]
     },
     {
         "id": "DIS-0014",
         "name": "Camisa Calaza",
         "price": 7000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0014.jpg",
-        "highResImage": "catalogo 2/DIS-0014.jpg",
+        "image": "catalogo completo/DIS-0014.jpg",
+        "highResImage": "catalogo completo/DIS-0014.jpg",
         "sizes": [
             "L"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0014.jpg",
+            "catalogo 2/DIS-0014.jpg"
+        ]
     },
     {
         "id": "DIS-0015",
         "name": "Falda Negra",
         "price": 4000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0015.jpg",
-        "highResImage": "catalogo 2/DIS-0015.jpg",
+        "image": "catalogo completo/DIS-0015.jpg",
+        "highResImage": "catalogo completo/DIS-0015.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0015.jpg",
+            "catalogo 2/DIS-0015.jpg"
+        ]
     },
     {
         "id": "DIS-0016",
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0016.jpg",
-        "highResImage": "catalogo 2/DIS-0016.jpg",
+        "image": "catalogo completo/DIS-0016.jpg",
+        "highResImage": "catalogo completo/DIS-0016.jpg",
         "sizes": [
             "6"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0016.jpg",
+            "catalogo 2/DIS-0016.jpg"
+        ]
     },
     {
         "id": "DIS-0017",
         "name": "Charleston",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0017.jpg",
-        "highResImage": "catalogo 2/DIS-0017.jpg",
+        "image": "catalogo completo/DIS-0017.jpg",
+        "highResImage": "catalogo completo/DIS-0017.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0017.jpg",
+            "catalogo 2/DIS-0017.jpg"
+        ]
     },
     {
         "id": "DIS-0018",
         "name": "Vestido Coco",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0018.jpg",
-        "highResImage": "catalogo 2/DIS-0018.jpg",
+        "image": "catalogo completo/DIS-0018.jpg",
+        "highResImage": "catalogo completo/DIS-0018.jpg",
         "sizes": [
             "10"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0018.jpg",
+            "catalogo 2/DIS-0018.jpg"
+        ]
     },
     {
         "id": "DIS-0019",
         "name": "Poncho",
         "price": 4000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0019.jpg",
-        "highResImage": "catalogo 2/DIS-0019.jpg",
+        "image": "catalogo completo/DIS-0019.jpg",
+        "highResImage": "catalogo completo/DIS-0019.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0019.jpg",
+            "catalogo 2/DIS-0019.jpg"
+        ]
     },
     {
         "id": "DIS-0020",
         "name": "Chaqueton Negro",
         "price": 7000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0020.jpg",
-        "highResImage": "catalogo 2/DIS-0020.jpg",
+        "image": "catalogo completo/DIS-0020.jpg",
+        "highResImage": "catalogo completo/DIS-0020.jpg",
         "sizes": [
             "L"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0020.jpg",
+            "catalogo 2/DIS-0020.jpg"
+        ]
     },
     {
         "id": "DIS-0021",
         "name": "Reclusa",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0021 - copia.jpg",
-        "highResImage": "catalogo 2/DIS-0021 - copia.jpg",
+        "image": "catalogo completo/DIS-0021.jpg",
+        "highResImage": "catalogo completo/DIS-0021.jpg",
         "sizes": [
             "L"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0021.jpg",
+            "catalogo 2/DIS-0021 - copia.jpg"
+        ]
     },
     {
         "id": "DIS-0022",
         "name": "Scary Movie",
         "price": 8000,
         "category": "HOMBRE",
-        "image": "catalogo 2/DIS-0022.jpg",
-        "highResImage": "catalogo 2/DIS-0022.jpg",
+        "image": "catalogo completo/DIS-0022.jpg",
+        "highResImage": "catalogo completo/DIS-0022.jpg",
         "sizes": [
             "S"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0022.jpg",
+            "catalogo 2/DIS-0022.jpg"
+        ]
     },
     {
         "id": "DIS-0023",
         "name": "Española",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0023.jpg",
-        "highResImage": "catalogo 2/DIS-0023.jpg",
+        "image": "catalogo completo/DIS-0023.jpg",
+        "highResImage": "catalogo completo/DIS-0023.jpg",
         "sizes": [
             "6"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0023.jpg",
+            "catalogo 2/DIS-0023.jpg"
+        ]
     },
     {
         "id": "DIS-0024",
         "name": "Bruja Malvada",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0024.jpg",
-        "highResImage": "catalogo 2/DIS-0024.jpg",
+        "image": "catalogo completo/DIS-0024.jpg",
+        "highResImage": "catalogo completo/DIS-0024.jpg",
         "sizes": [
             "S-M"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0024.jpg",
+            "catalogo 2/DIS-0024.jpg"
+        ]
     },
     {
         "id": "DIS-0025",
         "name": "Tutu Color",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0025.jpg",
-        "highResImage": "catalogo 2/DIS-0025.jpg",
+        "image": "catalogo completo/DIS-0025.jpg",
+        "highResImage": "catalogo completo/DIS-0025.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0025.jpg",
+            "catalogo 2/DIS-0025.jpg"
+        ]
     },
     {
         "id": "DIS-0026",
         "name": "Vestido Hipie",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0026.jpg",
-        "highResImage": "catalogo 2/DIS-0026.jpg",
+        "image": "catalogo completo/DIS-0026.jpg",
+        "highResImage": "catalogo completo/DIS-0026.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0026.jpg",
+            "catalogo 2/DIS-0026.jpg"
+        ]
     },
     {
         "id": "DIS-0027",
         "name": "Lady Bog",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0027.jpg",
-        "highResImage": "catalogo 2/DIS-0027.jpg",
+        "image": "catalogo completo/DIS-0027.jpg",
+        "highResImage": "catalogo completo/DIS-0027.jpg",
         "sizes": [
             "4"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0027.jpg",
+            "catalogo 2/DIS-0027.jpg"
+        ]
     },
     {
         "id": "DIS-0028",
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0028.jpg",
-        "highResImage": "catalogo 2/DIS-0028.jpg",
+        "image": "catalogo completo/DIS-0028.jpg",
+        "highResImage": "catalogo completo/DIS-0028.jpg",
         "sizes": [
             "12"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0028.jpg",
+            "catalogo 2/DIS-0028.jpg"
+        ]
     },
     {
         "id": "DIS-0029",
         "name": "Flamenco",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0029.jpg",
-        "highResImage": "catalogo 2/DIS-0029.jpg",
+        "image": "catalogo completo/DIS-0029.jpg",
+        "highResImage": "catalogo completo/DIS-0029.jpg",
         "sizes": [
             "4"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0029.jpg",
+            "catalogo 2/DIS-0029.jpg"
+        ]
     },
     {
         "id": "DIS-0030",
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0030.jpg",
-        "highResImage": "catalogo 2/DIS-0030.jpg",
+        "image": "catalogo completo/DIS-0030.jpg",
+        "highResImage": "catalogo completo/DIS-0030.jpg",
         "sizes": [
             "3"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0030.jpg",
+            "catalogo 2/DIS-0030.jpg"
+        ]
     },
     {
         "id": "DIS-0031",
         "name": "Vestido Maternal",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0031.jpg",
-        "highResImage": "catalogo 2/DIS-0031.jpg",
+        "image": "catalogo completo/DIS-0031.jpg",
+        "highResImage": "catalogo completo/DIS-0031.jpg",
         "sizes": [
             "XL"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0031.jpg",
+            "catalogo 2/DIS-0031.jpg"
+        ]
     },
     {
         "id": "DIS-0032",
         "name": "Malla Negra",
         "price": 7000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0032.jpg",
-        "highResImage": "catalogo 2/DIS-0032.jpg",
+        "image": "catalogo completo/DIS-0032.jpg",
+        "highResImage": "catalogo completo/DIS-0032.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0032.jpg",
+            "catalogo 2/DIS-0032.jpg"
+        ]
     },
     {
         "id": "DIS-0033",
         "name": "Tigresa",
         "price": 8000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0033.jpg",
-        "highResImage": "catalogo 2/DIS-0033.jpg",
+        "image": "catalogo completo/DIS-0033.jpg",
+        "highResImage": "catalogo completo/DIS-0033.jpg",
         "sizes": [
             "M"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0033.jpg",
+            "catalogo 2/DIS-0033.jpg"
+        ]
     },
     {
         "id": "DIS-0034",
         "name": "Polera Roja",
         "price": 5000,
         "category": "MUJER",
-        "image": "catalogo 2/DIS-0034.jpg",
-        "highResImage": "catalogo 2/DIS-0034.jpg",
+        "image": "catalogo completo/DIS-0034.jpg",
+        "highResImage": "catalogo completo/DIS-0034.jpg",
         "sizes": [
             "M-L"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0034.jpg",
+            "catalogo 2/DIS-0034.jpg"
+        ]
     },
     {
         "id": "DIS-0035",
         "name": "Peppa",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0035.jpg",
-        "highResImage": "catalogo 2/DIS-0035.jpg",
+        "image": "catalogo completo/DIS-0035.jpg",
+        "highResImage": "catalogo completo/DIS-0035.jpg",
         "sizes": [
             "2"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0035.jpg",
+            "catalogo 2/DIS-0035.jpg"
+        ]
     },
     {
         "id": "DIS-0036",
         "name": "Frutillita",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0036.jpg",
-        "highResImage": "catalogo 2/DIS-0036.jpg",
+        "image": "catalogo completo/DIS-0036.jpg",
+        "highResImage": "catalogo completo/DIS-0036.jpg",
         "sizes": [
             "2"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0036.jpg",
+            "catalogo 2/DIS-0036.jpg"
+        ]
     },
     {
         "id": "DIS-0037",
         "name": "Brujita",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0037.jpg",
-        "highResImage": "catalogo 2/DIS-0037.jpg",
+        "image": "catalogo completo/DIS-0037.jpg",
+        "highResImage": "catalogo completo/DIS-0037.jpg",
         "sizes": [
             "4"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0037.jpg",
+            "catalogo 2/DIS-0037.jpg"
+        ]
     },
     {
         "id": "DIS-0038",
         "name": "Elsa Frozen",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0038.jpg",
-        "highResImage": "catalogo 2/DIS-0038.jpg",
+        "image": "catalogo completo/DIS-0038.jpg",
+        "highResImage": "catalogo completo/DIS-0038.jpg",
         "sizes": [
             "6"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0038.jpg",
+            "catalogo 2/DIS-0038.jpg"
+        ]
     },
     {
         "id": "DIS-0039",
         "name": "Princesa Rosado",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0039.jpg",
-        "highResImage": "catalogo 2/DIS-0039.jpg",
+        "image": "catalogo completo/DIS-0039.jpg",
+        "highResImage": "catalogo completo/DIS-0039.jpg",
         "sizes": [
             "3"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0039.jpg",
+            "catalogo 2/DIS-0039.jpg"
+        ]
     },
     {
         "id": "DIS-0040",
         "name": "Cenicienta",
         "price": 5000,
         "category": "NIÑA",
-        "image": "catalogo 2/DIS-0040.jpg",
-        "highResImage": "catalogo 2/DIS-0040.jpg",
+        "image": "catalogo completo/DIS-0040.jpg",
+        "highResImage": "catalogo completo/DIS-0040.jpg",
         "sizes": [
             "6"
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0040.jpg",
+            "catalogo 2/DIS-0040.jpg"
+        ]
     },
     {
         "id": "DIS-0041",
         "name": "Transformers",
         "price": 7000,
         "category": "NIÑO",
-        "image": "catalogo 2/DIS-0041.jpg",
-        "highResImage": "catalogo 2/DIS-0041.jpg",
+        "image": "catalogo completo/DIS-0041.jpg",
+        "highResImage": "catalogo completo/DIS-0041.jpg",
         "sizes": [
             "6"
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "images": [
+            "catalogo completo/DIS-0041.jpg",
+            "catalogo 2/DIS-0041.jpg"
+        ]
     },
     {
         "id": "DIS-0042",
