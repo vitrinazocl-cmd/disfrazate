@@ -3238,4 +3238,126 @@ button, input, select, textarea {
     object-fit: contain;
 }
 
+/* ==========================================
+   SHIPPING METHOD SELECTOR & NOTICE BANNERS
+   ========================================== */
+.shipping-method-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    .shipping-method-selector {
+        grid-template-columns: 1fr;
+    }
+}
+
+.shipping-method-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.shipping-method-card input[type="radio"] {
+    margin-top: 4px;
+    accent-color: #00f0ff;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.method-card-body {
+    flex: 1;
+}
+
+.method-card-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.92rem;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.method-card-price {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #00f0ff;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.method-card-desc {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.shipping-method-card:hover {
+    border-color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.shipping-method-card.active {
+    border-color: #00f0ff;
+    background: rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+/* Dynamic Shipping Notice Banner */
+.shipping-notice-banner {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    line-height: 1.45;
+    transition: all 0.3s ease;
+}
+
+.shipping-notice-banner.warning-notice {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: #fca5a5;
+}
+
+.shipping-notice-banner.promo-notice {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    color: #fde047;
+}
+
+.shipping-notice-banner.success-notice {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #6ee7b7;
+}
+
+.shipping-notice-banner.info-notice {
+    background: rgba(0, 240, 255, 0.12);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    color: #7dd3fc;
+}
+
+/* Disabled State for Checkout Button on Minimum Purchase Violation */
+.btn-checkout.disabled-min-purchase {
+    background: linear-gradient(135deg, #475569, #334155) !important;
+    border-color: #64748b !important;
+    box-shadow: none !important;
+    opacity: 0.85;
+    cursor: not-allowed;
+}
+
+
 

@@ -403,13 +403,13 @@
             <i class="fa-solid fa-truck-fast"></i> DESPACHOS
         </div>
         <marquee scrollamount="6" class="delivery-marquee">
-            <span>🎉 ¡COMPRAS SOBRE $50.000 TIENEN DESPACHO GRATUITO EN TODO SANTIAGO! 🎉</span>
+            <span>🎉 ¡COMPRAS SOBRE $50.000 TIENEN DESPACHO GRATIS EN TODO SANTIAGO! 🎉</span>
             <span class="separator">|</span>
-            <span>📍 Zonas de Despacho Diario: Santiago Centro, Providencia, Las Condes, Vitacura, Ñuñoa, Maipú, La Florida ($3.500)</span>
+            <span>🚚 Delivery en todo Santiago por solo $3.000 (Compra mínima $20.000)</span>
             <span class="separator">|</span>
-            <span>🕒 Horario de Reparto Express: Recibe tus pedidos de 12:00 a 19:00 hrs.</span>
+            <span>🏪 Retiro en tienda/dirección GRATIS (Cualquier monto de compra)</span>
             <span class="separator">|</span>
-            <span>⚡ Recuerda: Las compras ingresadas antes de las 13:00 hrs se despachan el mismo día. ⚡</span>
+            <span>⚡ Recuerda: Las compras ingresadas antes de las 13:00 hrs se despachan el mismo día ⚡</span>
         </marquee>
     </div>
 
@@ -643,9 +643,41 @@
                     </div>
                 </div>
 
-                <!-- Checkout Form -->
+                <!-- Checkout Form & Shipping Configuration -->
                 <div class="checkout-form" id="checkout-form-container">
-                    <h3>Datos de Despacho</h3>
+                    <h3>Tipo de Entrega / Despacho</h3>
+                    
+                    <!-- Delivery vs Retiro Radio Cards Selector -->
+                    <div class="shipping-method-selector">
+                        <label class="shipping-method-card active" id="method-delivery-card">
+                            <input type="radio" name="shipping-method" id="method-delivery" value="delivery" checked>
+                            <div class="method-card-body">
+                                <div class="method-card-title">
+                                    <i class="fa-solid fa-truck-fast text-accent"></i>
+                                    <strong>Delivery a Domicilio</strong>
+                                </div>
+                                <span class="method-card-price" id="delivery-price-label">$3.000</span>
+                                <p class="method-card-desc">Todo Santiago &bull; Compra mín. $20.000 (Gratis sobre $50.000)</p>
+                            </div>
+                        </label>
+
+                        <label class="shipping-method-card" id="method-pickup-card">
+                            <input type="radio" name="shipping-method" id="method-pickup" value="pickup">
+                            <div class="method-card-body">
+                                <div class="method-card-title">
+                                    <i class="fa-solid fa-store text-success"></i>
+                                    <strong>Retiro en nuestra Dirección</strong>
+                                </div>
+                                <span class="method-card-price text-success">GRATIS</span>
+                                <p class="method-card-desc">Américo Vespucio 123, Santiago &bull; Sin mínimo de compra</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Dynamic Notice Banner for Minimum Purchase or Free Shipping Progress -->
+                    <div id="shipping-notice-banner" class="shipping-notice-banner"></div>
+
+                    <h3>Datos del Cliente</h3>
                     
                     <div class="form-group">
                         <label for="customer-name">Nombre Completo *</label>
@@ -663,23 +695,52 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="customer-commune">Comuna de Despacho *</label>
+                    <div class="form-group" id="commune-group">
+                        <label for="customer-commune" id="commune-label">Comuna de Despacho (Todo Santiago) *</label>
                         <select id="customer-commune" required>
                             <option value="">-- Selecciona Comuna --</option>
-                            <option value="Santiago" data-cost="3500">Santiago Centro ($3.500)</option>
-                            <option value="Providencia" data-cost="3500">Providencia ($3.500)</option>
-                            <option value="Las Condes" data-cost="3500">Las Condes ($3.500)</option>
-                            <option value="Vitacura" data-cost="3500">Vitacura ($3.500)</option>
-                            <option value="Ñuñoa" data-cost="3500">Ñuñoa ($3.500)</option>
-                            <option value="Maipu" data-cost="4000">Maipú ($4.000)</option>
-                            <option value="La Florida" data-cost="4000">La Florida ($4.000)</option>
-                            <option value="Otra" data-cost="5500">Otra Comuna RM ($5.500)</option>
+                            <option value="Santiago Centro" data-cost="3000">Santiago Centro</option>
+                            <option value="Providencia" data-cost="3000">Providencia</option>
+                            <option value="Las Condes" data-cost="3000">Las Condes</option>
+                            <option value="Vitacura" data-cost="3000">Vitacura</option>
+                            <option value="Ñuñoa" data-cost="3000">Ñuñoa</option>
+                            <option value="Maipú" data-cost="3000">Maipú</option>
+                            <option value="La Florida" data-cost="3000">La Florida</option>
+                            <option value="Peñalolén" data-cost="3000">Peñalolén</option>
+                            <option value="La Reina" data-cost="3000">La Reina</option>
+                            <option value="Macul" data-cost="3000">Macul</option>
+                            <option value="San Miguel" data-cost="3000">San Miguel</option>
+                            <option value="Quilicura" data-cost="3000">Quilicura</option>
+                            <option value="Pudahuel" data-cost="3000">Pudahuel</option>
+                            <option value="Puente Alto" data-cost="3000">Puente Alto</option>
+                            <option value="Renca" data-cost="3000">Renca</option>
+                            <option value="Cerrillos" data-cost="3000">Cerrillos</option>
+                            <option value="Estación Central" data-cost="3000">Estación Central</option>
+                            <option value="Huechuraba" data-cost="3000">Huechuraba</option>
+                            <option value="Independencia" data-cost="3000">Independencia</option>
+                            <option value="Recoleta" data-cost="3000">Recoleta</option>
+                            <option value="San Joaquín" data-cost="3000">San Joaquín</option>
+                            <option value="Pedro Aguirre Cerda" data-cost="3000">Pedro Aguirre Cerda</option>
+                            <option value="Quinta Normal" data-cost="3000">Quinta Normal</option>
+                            <option value="Lo Barnechea" data-cost="3000">Lo Barnechea</option>
+                            <option value="Conchalí" data-cost="3000">Conchalí</option>
+                            <option value="El Bosque" data-cost="3000">El Bosque</option>
+                            <option value="La Cisterna" data-cost="3000">La Cisterna</option>
+                            <option value="La Granja" data-cost="3000">La Granja</option>
+                            <option value="Lo Espejo" data-cost="3000">Lo Espejo</option>
+                            <option value="Lo Prado" data-cost="3000">Lo Prado</option>
+                            <option value="San Ramón" data-cost="3000">San Ramón</option>
+                            <option value="San Bernardo" data-cost="3000">San Bernardo</option>
+                            <option value="Padre Hurtado" data-cost="3000">Padre Hurtado</option>
+                            <option value="Peñaflor" data-cost="3000">Peñaflor</option>
+                            <option value="Talagante" data-cost="3000">Talagante</option>
+                            <option value="Colina" data-cost="3000">Colina</option>
+                            <option value="Otra Comuna Santiago" data-cost="3000">Otra Comuna (Todo Santiago)</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="customer-address">Dirección Exacta (Calle, N°, Dpto) *</label>
+                    <div class="form-group" id="address-group">
+                        <label for="customer-address" id="address-label">Dirección Exacta (Calle, N°, Dpto) *</label>
                         <input type="text" id="customer-address" placeholder="Ej: Av. Providencia 1240, Dpto 42" required>
                     </div>
 

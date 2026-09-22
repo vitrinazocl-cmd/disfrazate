@@ -236,6 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    initShippingMethodListeners();
+
 
     // --- 5. CHECKOUT INTEGRATION (SIMULATED WEBPAY) ---
     const checkoutBtn = document.getElementById('checkout-btn');
@@ -825,29 +827,138 @@ function renderCartList() {
     renderCartTotals();
 }
 
+function initShippingMethodListeners() {
+    const radioDelivery = document.getElementById('method-delivery');
+    const radioPickup = document.getElementById('method-pickup');
+    const cardDelivery = document.getElementById('method-delivery-card');
+    const cardPickup = document.getElementById('method-pickup-card');
+    const communeSelect = document.getElementById('customer-commune');
+    const addressInput = document.getElementById('customer-address');
+    const communeGroup = document.getElementById('commune-group');
+    const addressLabel = document.getElementById('address-label');
+
+    function updateShippingMethodUI() {
+        const isPickup = radioPickup && radioPickup.checked;
+        if (cardDelivery && cardPickup) {
+            cardDelivery.classList.toggle('active', !isPickup);
+            cardPickup.classList.toggle('active', isPickup);
+        }
+
+        if (isPickup) {
+            if (communeGroup) communeGroup.style.display = 'none';
+            if (communeSelect) {
+                communeSelect.removeAttribute('required');
+            }
+            if (addressLabel) addressLabel.textContent = "Observaciones de Retiro (Opcional)";
+            if (addressInput) {
+                addressInput.placeholder = "Ej: Retira Juan Pérez a las 16:00 hrs (Opcional)";
+                addressInput.removeAttribute('required');
+            }
+        } else {
+            if (communeGroup) communeGroup.style.display = 'block';
+            if (communeSelect) {
+                communeSelect.setAttribute('required', 'required');
+            }
+            if (addressLabel) addressLabel.textContent = "Dirección Exacta (Calle, N°, Dpto) *";
+            if (addressInput) {
+                addressInput.placeholder = "Ej: Av. Providencia 1240, Dpto 42";
+                addressInput.setAttribute('required', 'required');
+            }
+        }
+
+        renderCartTotals();
+    }
+
+    if (radioDelivery) radioDelivery.addEventListener('change', updateShippingMethodUI);
+    if (radioPickup) radioPickup.addEventListener('change', updateShippingMethodUI);
+}
+
 function renderCartTotals() {
     const subtotalPrice = document.getElementById('cart-subtotal-price');
     const shippingPrice = document.getElementById('cart-shipping-price');
     const totalPrice = document.getElementById('cart-total-price');
-    const communeSelect = document.getElementById('customer-commune');
+    const radioPickup = document.getElementById('method-pickup');
+    const noticeBanner = document.getElementById('shipping-notice-banner');
+    const checkoutBtn = document.getElementById('checkout-btn');
 
     if (!subtotalPrice || !totalPrice) return;
 
     const subtotal = carrito.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     subtotalPrice.textContent = `$${subtotal.toLocaleString('es-CL')}`;
 
+    const isPickup = radioPickup && radioPickup.checked;
     let shippingCost = 0;
-    if (communeSelect && communeSelect.value) {
-        const option = communeSelect.options[communeSelect.selectedIndex];
-        shippingCost = parseInt(option.getAttribute('data-cost')) || 0;
-    }
 
-    // Apply Free Shipping Rule
-    if (subtotal >= 50000 && subtotal > 0) {
+    if (isPickup) {
+        // Retiro en Tienda: GRATIS, sin monto mínimo
         shippingCost = 0;
-        if (shippingPrice) shippingPrice.innerHTML = `<span style="color: var(--success); font-weight: bold;">GRATIS</span>`;
+        if (shippingPrice) shippingPrice.innerHTML = `<span style="color: var(--success); font-weight: bold;">GRATIS (Retiro)</span>`;
+        if (noticeBanner) {
+            noticeBanner.className = 'shipping-notice-banner info-notice';
+            noticeBanner.innerHTML = `<i class="fa-solid fa-store"></i> <strong>Retiro en nuestra Dirección:</strong> Américo Vespucio 123, Santiago. Gratis en cualquier monto de compra.`;
+            noticeBanner.style.display = 'block';
+        }
+        if (checkoutBtn) {
+            checkoutBtn.classList.remove('disabled-min-purchase');
+            const btnSpan = checkoutBtn.querySelector('span');
+            if (btnSpan) btnSpan.textContent = "PAGAR CON WEBPAY PLUS";
+        }
     } else {
-        if (shippingPrice) shippingPrice.textContent = `$${shippingCost.toLocaleString('es-CL')}`;
+        // Delivery a Domicilio en todo Santiago
+        if (subtotal === 0) {
+            shippingCost = 3000;
+            if (shippingPrice) shippingPrice.textContent = `$3.000`;
+            if (noticeBanner) noticeBanner.style.display = 'none';
+            if (checkoutBtn) {
+                checkoutBtn.classList.remove('disabled-min-purchase');
+                const btnSpan = checkoutBtn.querySelector('span');
+                if (btnSpan) btnSpan.textContent = "PAGAR CON WEBPAY PLUS";
+            }
+        } else if (subtotal < 20000) {
+            // Under minimum purchase for delivery ($20.000)
+            shippingCost = 3000;
+            const diff = 20000 - subtotal;
+            if (shippingPrice) shippingPrice.textContent = `$3.000`;
+            if (noticeBanner) {
+                noticeBanner.className = 'shipping-notice-banner warning-notice';
+                noticeBanner.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> <strong>Compra mínima para Delivery: $20.000</strong><br>Te faltan <strong>$${diff.toLocaleString('es-CL')}</strong> para completar el mínimo. Puedes agregar más productos o seleccionar <em>Retiro en Tienda</em> (Gratis sin mínimo).`;
+                noticeBanner.style.display = 'block';
+            }
+            if (checkoutBtn) {
+                checkoutBtn.classList.add('disabled-min-purchase');
+                const btnSpan = checkoutBtn.querySelector('span');
+                if (btnSpan) btnSpan.textContent = `COMPRA MÍNIMA $20.000 PARA DELIVERY`;
+            }
+        } else if (subtotal >= 20000 && subtotal < 50000) {
+            // $20.000 to $49.999 -> Delivery cost $3.000
+            shippingCost = 3000;
+            const diffFree = 50000 - subtotal;
+            if (shippingPrice) shippingPrice.textContent = `$3.000`;
+            if (noticeBanner) {
+                noticeBanner.className = 'shipping-notice-banner promo-notice';
+                noticeBanner.innerHTML = `<i class="fa-solid fa-truck-fast"></i> Delivery en todo Santiago por $3.000.<br>¡Agrega <strong>$${diffFree.toLocaleString('es-CL')}</strong> más a tu carro para obtener <strong>DESPACHO GRATIS</strong>!`;
+                noticeBanner.style.display = 'block';
+            }
+            if (checkoutBtn) {
+                checkoutBtn.classList.remove('disabled-min-purchase');
+                const btnSpan = checkoutBtn.querySelector('span');
+                if (btnSpan) btnSpan.textContent = "PAGAR CON WEBPAY PLUS";
+            }
+        } else {
+            // $50.000 or more -> Delivery GRATIS
+            shippingCost = 0;
+            if (shippingPrice) shippingPrice.innerHTML = `<span style="color: var(--success); font-weight: bold;">GRATIS</span>`;
+            if (noticeBanner) {
+                noticeBanner.className = 'shipping-notice-banner success-notice';
+                noticeBanner.innerHTML = `<i class="fa-solid fa-circle-check"></i> <strong>¡DESPACHO GRATIS CONSEGUIDO!</strong> Tu pedido califica para despacho gratuito a todo Santiago.`;
+                noticeBanner.style.display = 'block';
+            }
+            if (checkoutBtn) {
+                checkoutBtn.classList.remove('disabled-min-purchase');
+                const btnSpan = checkoutBtn.querySelector('span');
+                if (btnSpan) btnSpan.textContent = "PAGAR CON WEBPAY PLUS";
+            }
+        }
     }
 
     const finalTotal = subtotal + shippingCost;
@@ -955,15 +1066,34 @@ async function submitOrderCheckout() {
         return;
     }
 
+    const subtotal = carrito.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const radioPickup = document.getElementById('method-pickup');
+    const isPickup = radioPickup && radioPickup.checked;
+
+    // Check minimum purchase rule for Delivery ($20.000)
+    if (!isPickup && subtotal < 20000) {
+        const diff = 20000 - subtotal;
+        alert(`La compra mínima para Delivery a Domicilio en todo Santiago es de $20.000.\n\nActualmente tienes $${subtotal.toLocaleString('es-CL')} en tu carro. Te faltan $${diff.toLocaleString('es-CL')} para completar el mínimo.\n\nTambién puedes elegir la opción 'Retiro en nuestra Dirección' (Gratis y sin monto mínimo).`);
+        return;
+    }
+
     const name = document.getElementById('customer-name').value.trim();
     const rut = document.getElementById('customer-rut').value.trim();
     const phone = document.getElementById('customer-phone').value.trim();
     const communeSelect = document.getElementById('customer-commune');
-    const address = document.getElementById('customer-address').value.trim();
+    const addressInput = document.getElementById('customer-address');
     const legalCheckbox = document.getElementById('legal-checkbox');
 
-    if (!name || !rut || !phone || !communeSelect.value || !address) {
-        alert('Por favor complete todos los datos obligatorios (*) del formulario de despacho.');
+    let communeVal = isPickup ? "Retiro en Casa Matriz (Santiago)" : (communeSelect ? communeSelect.value : "");
+    let addressVal = isPickup ? (addressInput.value.trim() || "Retiro en Casa Matriz - Américo Vespucio 123, Santiago") : addressInput.value.trim();
+
+    if (!name || !rut || !phone) {
+        alert('Por favor complete todos los datos obligatorios (*) del cliente.');
+        return;
+    }
+
+    if (!isPickup && (!communeVal || !addressVal)) {
+        alert('Por favor seleccione la comuna y escriba la dirección de despacho.');
         return;
     }
 
@@ -972,10 +1102,10 @@ async function submitOrderCheckout() {
         return;
     }
 
-    const subtotal = carrito.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-    const selectedOption = communeSelect.options[communeSelect.selectedIndex];
-    let shippingCost = parseInt(selectedOption.getAttribute('data-cost')) || 0;
-    if (subtotal >= 50000) shippingCost = 0; // Free shipping rule
+    let shippingCost = 0;
+    if (!isPickup) {
+        shippingCost = subtotal >= 50000 ? 0 : 3000;
+    }
 
     const finalTotal = subtotal + shippingCost;
     const orderId = "ORDEN-" + Math.floor(10000 + Math.random() * 90000);
@@ -987,10 +1117,12 @@ async function submitOrderCheckout() {
         customerName: name,
         customerRut: rut,
         customerPhone: phone,
-        customerCommune: communeSelect.value,
-        customerAddress: address,
+        customerCommune: communeVal,
+        customerAddress: addressVal,
         items: carrito,
-        total: finalTotal
+        total: finalTotal,
+        shippingType: isPickup ? 'Retiro en Tienda' : 'Delivery Santiago',
+        shippingCost: shippingCost
     };
 
     // Disable checkout button
@@ -1011,7 +1143,7 @@ async function submitOrderCheckout() {
         
         if (data.success) {
             // Save temporary customer context to retrieve on success landing page
-            localStorage.setItem('clienteTemporal', JSON.stringify({ nombre: name, direccion: address }));
+            localStorage.setItem('clienteTemporal', JSON.stringify({ nombre: name, direccion: addressVal }));
             
             // Redirect simulating Webpay successful authorization loop callback
             setTimeout(() => {
@@ -1026,7 +1158,7 @@ async function submitOrderCheckout() {
         console.error("Error conectando con backend:", err);
         // Fallback: simulated payment loop directly client-side if server is not active
         alert('Servidor desconectado. Simulando pago directo cliente-servidor...');
-        localStorage.setItem('clienteTemporal', JSON.stringify({ nombre: name, direccion: address }));
+        localStorage.setItem('clienteTemporal', JSON.stringify({ nombre: name, direccion: addressVal }));
         
         // Simular pedidosPendientes local storage fallback for client demonstration
         let localPedidos = JSON.parse(localStorage.getItem('pedidosPendientes')) || [];
@@ -1049,12 +1181,15 @@ function checkPaymentReturnParams() {
         const clientInfo = JSON.parse(localStorage.getItem('clienteTemporal')) || { nombre: 'Cliente Valioso', direccion: 'Dirección Registrada' };
         
         // Success notification modal trigger or message
-        alert(`¡PAGO AUTORIZADO EXITOSAMENTE!\n\nTu número de orden es: ${orderId}\nDespacharemos tu disfraz a: ${clientInfo.direccion}\n\n¡Gracias por preferir Disfrazate.cl! 🎭`);
+        alert(`¡PAGO AUTORIZADO EXITOSAMENTE!\n\nTu número de orden es: ${orderId}\nEntrega / Despacho a: ${clientInfo.direccion}\n\n¡Gracias por preferir Disfrazate.cl! 🎭`);
         
         // Save the successful transaction immediately to sales history local cache (as backup)
         if (isFallback) {
             let localSales = JSON.parse(localStorage.getItem('ventasLocales')) || [];
             const subtotal = carrito.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            const radioPickup = document.getElementById('method-pickup');
+            const isPickup = radioPickup && radioPickup.checked;
+            const shipCost = isPickup ? 0 : (subtotal >= 50000 ? 0 : 3000);
             localSales.push({
                 id: orderId,
                 date: new Date().toLocaleString('es-CL'),
@@ -1062,7 +1197,7 @@ function checkPaymentReturnParams() {
                 customerName: clientInfo.nombre,
                 customerAddress: clientInfo.direccion,
                 items: [...carrito],
-                total: subtotal + 3500
+                total: subtotal + shipCost
             });
             localStorage.setItem('ventasLocales', JSON.stringify(localSales));
         }
