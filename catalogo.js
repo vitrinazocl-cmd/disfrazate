@@ -3592,5 +3592,901 @@ const catalogoProductos = [
         "isOffer": false,
         "isNew": true,
         "isBestseller": false
+    },
+    {
+        "id": "DIS-0246",
+        "name": "Bruja",
+        "price": 5000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0246_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0246_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": true,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0247",
+        "name": "Starwars",
+        "price": 8000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0247_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0247_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0248",
+        "name": "Onda Disco",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0248_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0248_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0249",
+        "name": "Naruto Uzumaki",
+        "price": 8000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0249_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0249_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0250",
+        "name": "Reina Roja",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0250_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0250_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0251",
+        "name": "Kim Posible",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0251_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0251_catalog.jpg",
+        "sizes": [
+            "L"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0252",
+        "name": "Bailarina",
+        "price": 6000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0252_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0252_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0253",
+        "name": "Huesitos Verde",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 3_procesadas/DIS-0253_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0253_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0254",
+        "name": "Bruja Malvada",
+        "price": 5000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0254_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0254_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": true,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0255",
+        "name": "Sirenita",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0255_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0255_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0256",
+        "name": "Moster High",
+        "price": 6000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0256_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0256_catalog.jpg",
+        "sizes": [
+            "5"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0257",
+        "name": "Porrista Zombie",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0257_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0257_catalog.jpg",
+        "sizes": [
+            "14"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0258",
+        "name": "Diabla",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0258_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0258_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0259",
+        "name": "Sirenita",
+        "price": 5000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0259_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0259_catalog.jpg",
+        "sizes": [
+            "4"
+        ],
+        "isOffer": true,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0260",
+        "name": "Campanita",
+        "price": 6000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0260_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0260_catalog.jpg",
+        "sizes": [
+            "3"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0261",
+        "name": "Starwars",
+        "price": 6000,
+        "category": "NIÑO",
+        "image": "catalogo 3_procesadas/DIS-0261_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0261_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0262",
+        "name": "Campanita",
+        "price": 5000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0262_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0262_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": true,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0263",
+        "name": "Flamenco",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0263_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0263_catalog.jpg",
+        "sizes": [
+            "L"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0264",
+        "name": "Spiderman Rosado",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0264_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0264_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0265",
+        "name": "Heroes Pijama",
+        "price": 8000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0265_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0265_catalog.jpg",
+        "sizes": [
+            "L"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0266",
+        "name": "Esqueleto",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0266_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0266_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0267",
+        "name": "Payasa It",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0267_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0267_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0268",
+        "name": "Militar",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0268_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0268_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0269",
+        "name": "Bruja",
+        "price": 7000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0269_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0269_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0270",
+        "name": "Hada",
+        "price": 5000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0270_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0270_catalog.jpg",
+        "sizes": [
+            "12"
+        ],
+        "isOffer": true,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0271",
+        "name": "Vampira",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0271_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0271_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0272",
+        "name": "Barbie",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0272_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0272_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0273",
+        "name": "Tunica Huesito",
+        "price": 8000,
+        "category": "NIÑO",
+        "image": "catalogo 3_procesadas/DIS-0273_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0273_catalog.jpg",
+        "sizes": [
+            "14"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0274",
+        "name": "Kick Buttowski",
+        "price": 8000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0274_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0274_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0275",
+        "name": "Vaquera",
+        "price": 6000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0275_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0275_catalog.jpg",
+        "sizes": [
+            "4"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0276",
+        "name": "Tunica Negra",
+        "price": 8000,
+        "category": "NIÑO",
+        "image": "catalogo 3_procesadas/DIS-0276_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0276_catalog.jpg",
+        "sizes": [
+            "16"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0277",
+        "name": "Pirata",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0277_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0277_catalog.jpg",
+        "sizes": [
+            "L"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0278",
+        "name": "Tunca",
+        "price": 10000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0278_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0278_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0279",
+        "name": "Pirata",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0279_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0279_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0280",
+        "name": "Ant-Man",
+        "price": 10000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0280_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0280_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0281",
+        "name": "Bruja",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0281_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0281_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0282",
+        "name": "Bruja Verde",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0282_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0282_catalog.jpg",
+        "sizes": [
+            "L"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0283",
+        "name": "Esqueleto",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0283_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0283_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0284",
+        "name": "Conejita",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0284_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0284_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0285",
+        "name": "Novia Cementerio",
+        "price": 8000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0285_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0285_catalog.jpg",
+        "sizes": [
+            "14"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0286",
+        "name": "Morticia",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0286_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0286_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0287",
+        "name": "Pirata",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0287_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0287_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0288",
+        "name": "Vampira",
+        "price": 10000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0288_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0288_catalog.jpg",
+        "sizes": [
+            "14"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0289",
+        "name": "Policia",
+        "price": 8000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0289_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0289_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0290",
+        "name": "Sirenita",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0290_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0290_catalog.jpg",
+        "sizes": [
+            "L"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0291",
+        "name": "Morgana Dress",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0291_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0291_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0292",
+        "name": "Tunica Negra",
+        "price": 10000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0292_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0292_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0293",
+        "name": "Tunica Negra",
+        "price": 8000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0293_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0293_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0294",
+        "name": "Superman",
+        "price": 10000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0294_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0294_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0295",
+        "name": "Payaso",
+        "price": 10000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0295_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0295_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0296",
+        "name": "Demorgogon",
+        "price": 10000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0296_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0296_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0297",
+        "name": "Sarah Sanderson",
+        "price": 15000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0297_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0297_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0298",
+        "name": "Capa Negra",
+        "price": 8000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0298_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0298_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0299",
+        "name": "Tunica Negra",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 3_procesadas/DIS-0299_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0299_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0300",
+        "name": "Sirenita",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0300_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0300_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0301",
+        "name": "Tigresa",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0301_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0301_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0302",
+        "name": "U.S.A",
+        "price": 7000,
+        "category": "ADULTO",
+        "image": "catalogo 3_procesadas/DIS-0302_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0302_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0303",
+        "name": "Merlina",
+        "price": 10000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0303_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0303_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0304",
+        "name": "Bruja",
+        "price": 8000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0304_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0304_catalog.jpg",
+        "sizes": [
+            "4"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0305",
+        "name": "Catrina",
+        "price": 10000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0305_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0305_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0306",
+        "name": "Mortal Comball",
+        "price": 7000,
+        "category": "HOMBRE",
+        "image": "catalogo 3_procesadas/DIS-0306_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0306_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0307",
+        "name": "Tunica Negra",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 3_procesadas/DIS-0307_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0307_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0308",
+        "name": "Zebra",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 3_procesadas/DIS-0308_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0308_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0309",
+        "name": "Alicia",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 3_procesadas/DIS-0309_catalog.jpg",
+        "highResImage": "catalogo 3_procesadas/DIS-0309_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
     }
 ];
