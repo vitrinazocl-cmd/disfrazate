@@ -3,7 +3,7 @@ const CACHE_NAME = 'disfrazate-cache-v17';
 const PRECACHE_ASSETS = [
     './',
     './index.html',
-    './catalogo.js?v=13.0',
+    './catalogo.js?v=14.0',
     './script.js?v=12.0',
     './style.css',
     './logo_disfrazate_tech.jpg'

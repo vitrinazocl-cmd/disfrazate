@@ -4488,5 +4488,271 @@ const catalogoProductos = [
         "isOffer": false,
         "isNew": true,
         "isBestseller": false
+    },
+    {
+        "id": "DIS-0310",
+        "name": "LUIGI",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0310_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0310_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0311",
+        "name": "MORTAL COMBALL",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0311_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0311_catalog.jpg",
+        "sizes": [
+            "4"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0312",
+        "name": "NINJA",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0312_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0312_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0313",
+        "name": "BRUJA",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 4_procesadas/DIS-0313_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0313_catalog.jpg",
+        "sizes": [
+            "12"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0314",
+        "name": "FORNITE AMARILLO",
+        "price": 7000,
+        "category": "HOMBRE",
+        "image": "catalogo 4_procesadas/DIS-0314_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0314_catalog.jpg",
+        "sizes": [
+            "S"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0315",
+        "name": "LOS INCREIBLES",
+        "price": 7000,
+        "category": "NIÑA",
+        "image": "catalogo 4_procesadas/DIS-0315_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0315_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0316",
+        "name": "EL EXTRAÑO MUNDO DE JACK",
+        "price": 8000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0316_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0316_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0317",
+        "name": "DINOSAURIO",
+        "price": 5000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0317_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0317_catalog.jpg",
+        "sizes": [
+            "4"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0318",
+        "name": "PIKACHU",
+        "price": 5000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0318_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0318_catalog.jpg",
+        "sizes": [
+            "10"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0319",
+        "name": "SPIDERMAN",
+        "price": 6000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0319_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0319_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0320",
+        "name": "SONIC AMARILLO",
+        "price": 5000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0320_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0320_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0321",
+        "name": "BEETLEJUICE",
+        "price": 10000,
+        "category": "MUJER",
+        "image": "catalogo 4_procesadas/DIS-0321_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0321_catalog.jpg",
+        "sizes": [
+            "XL"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0322",
+        "name": "MAGO",
+        "price": 5000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0322_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0322_catalog.jpg",
+        "sizes": [
+            "6"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0323",
+        "name": "STARWARS",
+        "price": 6000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0323_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0323_catalog.jpg",
+        "sizes": [
+            "4"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0324",
+        "name": "PAW CONTROL",
+        "price": 5000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0324_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0324_catalog.jpg",
+        "sizes": [
+            "3"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0325",
+        "name": "TRAJE NEGRO",
+        "price": 7000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0325_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0325_catalog.jpg",
+        "sizes": [
+            "8"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0326",
+        "name": "PONCHO",
+        "price": 7000,
+        "category": "MUJER",
+        "image": "catalogo 4_procesadas/DIS-0326_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0326_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0327",
+        "name": "DINOSAURIO",
+        "price": 6000,
+        "category": "NIÑO",
+        "image": "catalogo 4_procesadas/DIS-0327_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0327_catalog.jpg",
+        "sizes": [
+            "2"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
+    },
+    {
+        "id": "DIS-0328",
+        "name": "CAPA NEGRA",
+        "price": 7000,
+        "category": "HOMBRE",
+        "image": "catalogo 4_procesadas/DIS-0328_catalog.jpg",
+        "highResImage": "catalogo 4_procesadas/DIS-0328_catalog.jpg",
+        "sizes": [
+            "M"
+        ],
+        "isOffer": false,
+        "isNew": true,
+        "isBestseller": false
     }
 ];

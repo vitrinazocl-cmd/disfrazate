@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Local Stylesheet & Catalog Data -->
     <link rel="stylesheet" href="style.css?v=20260914_opt">
-    <script src="catalogo.js?v=13.0"></script>
+    <script src="catalogo.js?v=14.0"></script>
     <script>
     window.openFullscreenLightbox = function(productOrId, optionalImgSrc) {
         var prod = null;
@@ -366,17 +366,6 @@
                     </div>
                     <span class="action-text">Carro</span>
                 </div>
-
-                <div class="admin-links">
-                    <a href="#" id="admin-login-btn" class="admin-btn" title="Ver Pedidos Pendientes">
-                        <i class="fa-solid fa-clipboard-list"></i>
-                        <span>Pedidos</span>
-                    </a>
-                    <a href="#" id="ventas-login-btn" class="admin-btn sales-btn" title="Ver Historial de Ventas">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <span>Ventas</span>
-                    </a>
-                </div>
             </div>
         </div>
     </header>
@@ -570,8 +559,8 @@
                             <li><a href="#" id="footer-catalog-btn"><span class="list-icon-box red-box"></span> Catálogo PDF</a></li>
                             <li><a href="#" onclick="alert('Medios de Pago: Transferencia Bancaria Directa, WebPay Plus, Débito y Crédito.')">Medios de Pago</a></li>
                             <li><a href="#" onclick="alert('Despachos a todo Santiago (mismo día comprando antes de las 13:00) y Envíos a Regiones.')">Zonas de Despacho</a></li>
-                            <li><a href="#" id="footer-admin-btn">Acceso Ejecutivo (Admin)</a></li>
-                            <li><a href="#" id="footer-ventas-btn" class="highlight-red"><span class="list-icon-box chart-box">📊</span> Ventas y Pedidos</a></li>
+                            <li><a href="#" id="footer-admin-btn">Admin</a></li>
+
                         </ul>
                     </div>
 
@@ -773,11 +762,11 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="login-user">Usuario</label>
-                    <input type="text" id="login-user" placeholder="Nombre de usuario" value="admin">
+                    <input type="text" id="login-user" placeholder="Nombre de usuario" >
                 </div>
                 <div class="form-group">
                     <label for="login-pass">Contraseña</label>
-                    <input type="password" id="login-pass" placeholder="Ingresa contraseña" value="disfrazate123">
+                    <input type="password" id="login-pass" placeholder="Ingresa contraseña" >
                 </div>
                 
                 <button type="button" id="submit-login-btn" class="btn-primary" style="width:100%;">
@@ -786,7 +775,7 @@
                 
                 <p id="login-error" class="login-error-msg" style="display: none;">Credenciales incorrectas. Intenta de nuevo.</p>
                 <div style="font-size:12px; color:#888; text-align:center; margin-top:15px;">
-                    Demo Credentials: User: <code>admin</code> | Pass: <code>disfrazate123</code>
+                    Credenciales seguras requeridas.
                 </div>
             </div>
         </div>
@@ -1004,7 +993,7 @@
         }, true);
     })();
     </script>
-    <script src="catalogo.js?v=13.0"></script>
+    <script src="catalogo.js?v=14.0"></script>
     <script src="script.js?v=12.0"></script>
     <script>
     if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
@@ -1015,3 +1004,4 @@
     </script>
 </body>
 </html>
+

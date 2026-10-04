@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footerAdminBtn) {
         footerAdminBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            redirectDashboardUrl = 'pedidos.html';
+            redirectDashboardUrl = 'admin.html';
             openModal('login-modal');
         });
     }
@@ -301,17 +301,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnCloseLogin) btnCloseLogin.addEventListener('click', () => closeModal('login-modal'));
 
     if (submitLoginBtn) {
-        submitLoginBtn.addEventListener('click', () => {
+        submitLoginBtn.addEventListener('click', async () => {
             const user = document.getElementById('login-user').value.trim();
             const pass = loginPass.value.trim();
             const errorMsg = document.getElementById('login-error');
 
+            // Legacy local login
             if (user === 'admin' && pass === 'disfrazate123') {
                 errorMsg.style.display = 'none';
                 closeModal('login-modal');
-                // Redirect user to admin page
                 window.location.href = redirectDashboardUrl;
-            } else {
+                return;
+            }
+
+            // New Admin Login using API
+            try {
+                const res = await fetch('/api/admin/stats', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: user, password: pass })
+                });
+                const data = await res.json();
+                
+                if (data.success) {
+                    errorMsg.style.display = 'none';
+                    closeModal('login-modal');
+                    sessionStorage.setItem('adminData', JSON.stringify(data));
+                    window.location.href = redirectDashboardUrl === 'admin.html' ? 'admin.html' : redirectDashboardUrl;
+                } else {
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                console.error(err);
                 errorMsg.style.display = 'block';
             }
         });

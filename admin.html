@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Disfrazate</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --surface-color: #1a1a24;
+            --accent-cyan: #00f0ff;
+            --accent-purple: #9d4edd;
+            --text-color: #e0e0e0;
+        }
+        body {
+            font-family: "Outfit", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px; }
+        h1 { color: var(--accent-cyan); margin: 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background-color: var(--surface-color); padding: 20px; border-radius: 12px; border: 1px solid #333; text-align: center; }
+        .stat-card h3 { color: var(--accent-purple); margin-top: 0; }
+        .stat-card .value { font-size: 2rem; font-weight: bold; color: var(--text-color); }
+        .section { background-color: var(--surface-color); padding: 20px; border-radius: 12px; border: 1px solid #333; margin-bottom: 30px; }
+        .section h2 { margin-top: 0; color: var(--accent-cyan); border-bottom: 1px solid #333; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #333; }
+        th { color: var(--accent-purple); font-weight: 600; }
+        .btn { background: var(--accent-cyan); color: #000; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .btn:hover { background: #00c8d4; }
+    </style>
+</head>
+<body>
+    <div class="container" id="admin-content" style="display: none;">
+        <div class="header">
+            <h1><i class="fa-solid fa-chart-line"></i> Panel Administrativo</h1>
+            <button class="btn" onclick="logout()">Cerrar Sesión</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Visitas</h3>
+                <div class="value" id="val-visitas">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Ventas (CLP)</h3>
+                <div class="value" id="val-ventas">$0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pedidos Generados</h3>
+                <div class="value" id="val-pedidos">0</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fa-solid fa-users"></i> Historial de Visitas Recientes</h2>
+            <div style="overflow-x:auto; max-height: 400px; overflow-y: auto;">
+                <table id="table-visitas">
+                    <thead>
+                        <tr>
+                            <th>Fecha/Hora</th>
+                            <th>IP</th>
+                            <th>Navegador / User-Agent</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fa-solid fa-bag-shopping"></i> Últimos Pedidos</h2>
+            <div style="overflow-x:auto; max-height: 400px; overflow-y: auto;">
+                <table id="table-pedidos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Estado</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; justify-content: center; padding: 20px 0; border-top: 1px solid #333; margin-top: 20px;">
+            <a href="pedidos.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); color: #d946ef; padding: 12px 24px; border-radius: 30px; font-size: 1rem; font-weight: 800; text-transform: uppercase; text-decoration: none;">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>PEDIDOS</span>
+            </a>
+            <a href="ventas.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: #00f0ff; padding: 12px 24px; border-radius: 30px; font-size: 1rem; font-weight: 800; text-transform: uppercase; text-decoration: none;">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>VENTAS</span>
+            </a>
+        </div>
+    </div>
+    
+    <div id="login-required" style="text-align:center; padding: 50px;">
+        <h2 style="color:red;">Acceso Denegado</h2>
+        <p>Inicia sesión desde la página principal para acceder al panel.</p>
+        <a href="index.html" class="btn" style="text-decoration:none; display:inline-block; margin-top:20px;">Ir a Inicio</a>
+    </div>
+
+    <script>
+        const adminDataStr = sessionStorage.getItem("adminData");
+        if (adminDataStr) {
+            document.getElementById("login-required").style.display = "none";
+            document.getElementById("admin-content").style.display = "block";
+            
+            const data = JSON.parse(adminDataStr);
+            
+            // Stats
+            document.getElementById("val-visitas").textContent = data.visitas.count;
+            document.getElementById("val-pedidos").textContent = data.pedidos.length;
+            
+            let totalVentas = 0;
+            data.ventas.forEach(v => {
+                const num = parseInt(v.total.replace(/[^0-9]/g, ""));
+                if(!isNaN(num)) totalVentas += num;
+            });
+            document.getElementById("val-ventas").textContent = "$" + totalVentas.toLocaleString("es-CL");
+            
+            // Visitas table
+            const tbodyVisitas = document.querySelector("#table-visitas tbody");
+            if (data.visitas.history && data.visitas.history.length > 0) {
+                data.visitas.history.forEach(v => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td>${new Date(v.date).toLocaleString()}</td>
+                        <td>${v.ip}</td>
+                        <td style="font-size:0.85em; color:#aaa;">${v.userAgent}</td>
+                    `;
+                    tbodyVisitas.appendChild(tr);
+                });
+            } else {
+                tbodyVisitas.innerHTML = "<tr><td colspan=\"3\">No hay historial de visitas registrado.</td></tr>";
+            }
+            
+            // Pedidos table
+            const tbodyPedidos = document.querySelector("#table-pedidos tbody");
+            if (data.pedidos && data.pedidos.length > 0) {
+                data.pedidos.slice().reverse().forEach(p => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td>${p.id}</td>
+                        <td>${p.customer ? p.customer.nombre : "N/A"}</td>
+                        <td>${p.status || "Nuevo"}</td>
+                        <td>$${(p.total || 0).toLocaleString("es-CL")}</td>
+                    `;
+                    tbodyPedidos.appendChild(tr);
+                });
+            } else {
+                tbodyPedidos.innerHTML = "<tr><td colspan=\"4\">No hay pedidos.</td></tr>";
+            }
+        }
+        
+        function logout() {
+            sessionStorage.removeItem("adminData");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
