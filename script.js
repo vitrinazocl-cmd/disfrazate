@@ -431,12 +431,14 @@ function buildCompactCardHtml(prod, index = 0) {
     const hasDualImages = prod.images && Array.isArray(prod.images) && prod.images.length > 1;
 
     let imageContainerHtml = '';
+    const isSoldOut = !!prod.isSoldOut;
+    let badgeHtml = isSoldOut ? `<span class="card-oferta-badge" style="background:#555; color:#fff;"><i class="fa-solid fa-ban"></i> Agotado</span>` : (isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : '');
     if (hasDualImages) {
         const img1 = encodeURI(prod.images[0]);
         const img2 = encodeURI(prod.images[1]);
         imageContainerHtml = `
-        <div class="product-image-container dual-card-image-container">
-            ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
+        <div class="product-image-container dual-card-image-container" style="${isSoldOut ? 'opacity:0.6; filter:grayscale(100%);' : ''}">
+            ${badgeHtml}
             <div class="card-dual-images">
                 <div class="card-single-img-wrapper" title="1° Con Modelo (Haz clic para ampliar)" onclick="event.stopPropagation(); openFullscreenLightbox('${prod.id}', '${img1}')">
                     <img src="${img1}" alt="${prod.name} con modelo" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
@@ -454,8 +456,8 @@ function buildCompactCardHtml(prod, index = 0) {
     } else {
         const imgSrc = encodeURI(prod.image);
         imageContainerHtml = `
-        <div class="product-image-container">
-            ${isOffer ? `<span class="card-oferta-badge"><i class="fa-solid fa-fire"></i> Oferta</span>` : ''}
+        <div class="product-image-container" style="${isSoldOut ? 'opacity:0.6; filter:grayscale(100%);' : ''}">
+            ${badgeHtml}
             <img src="${imgSrc}" alt="${prod.name}" ${loadingAttr} decoding="async" onerror="this.onerror=null; this.src='logo_disfrazate_tech.jpg';">
             <div class="image-expand-hint">
                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ver Foto Agrandada
@@ -480,9 +482,15 @@ function buildCompactCardHtml(prod, index = 0) {
             
             <div class="card-price-display">$${priceFormatted}</div>
             
+            ${prod.isSoldOut ? `
+            <button type="button" class="btn-card-buy-purple" style="background: #333; border-color: #333; color: #888; cursor: not-allowed;" onclick="event.stopPropagation();">
+                <i class="fa-solid fa-ban"></i> Agotado
+            </button>
+            ` : `
             <button type="button" class="btn-card-buy-purple" onclick="event.stopPropagation(); addItemWithDetailsFromCard('${prod.id}', this)">
                 <i class="fa-solid fa-cart-plus"></i> Agregar al Carro
             </button>
+            `}
         </div>
     </div>`;
 }
@@ -587,18 +595,11 @@ function renderProductsGrid() {
     if ((!baseCatalogo || baseCatalogo.length === 0) && typeof catalogoProductos !== 'undefined') {
         baseCatalogo = [...catalogoProductos];
     }
-    if ((!currentProducts || currentProducts.length === 0) && activeCategory === 'TODOS') {
-        currentProducts = [...baseCatalogo];
-    }
+
     const grid = document.getElementById('products-grid');
     if (!grid) return;
 
-    const searchInput = document.getElementById('search-input');
-    const isSearching = searchInput && searchInput.value.trim().length > 0;
 
-    if (activeCategory === 'TODOS' && !isSearching) {
-        currentProducts = [...baseCatalogo];
-    }
 
     grid.className = (currentViewMode === 'list') ? 'products-list-view' : 'products-grid';
 
@@ -1332,6 +1333,7 @@ function openProductDetailModal(productId) {
     const qtyInput = document.getElementById('detail-qty-input');
     const whatsappBtn = document.getElementById('btn-whatsapp-detail');
     const badge = document.getElementById('modal-detail-badge');
+    const btnAddToCart = document.getElementById('btn-add-detail-cart');
 
     if (qtyInput) qtyInput.value = 1;
 
@@ -1347,8 +1349,35 @@ function openProductDetailModal(productId) {
     if (modalTitle) modalTitle.textContent = prod.name;
     if (modalPrice) modalPrice.innerHTML = `$${prod.price.toLocaleString('es-CL')}`;
     if (modalOldPriceLine) modalOldPriceLine.style.display = 'none';
-    const isProdOffer = prod.isOffer || prod.category === 'OFERTAS' || prod.price <= 5000;
-    if (badge) badge.style.display = isProdOffer ? 'inline-block' : 'none';
+
+    if (prod.isSoldOut) {
+        if (btnAddToCart) {
+            btnAddToCart.disabled = true;
+            btnAddToCart.style.background = '#333';
+            btnAddToCart.style.borderColor = '#333';
+            btnAddToCart.style.color = '#888';
+            btnAddToCart.innerHTML = '<i class="fa-solid fa-ban"></i> AGOTADO';
+        }
+        if (badge) {
+            badge.style.display = 'inline-block';
+            badge.style.background = '#555';
+            badge.innerHTML = '<i class="fa-solid fa-ban"></i> Agotado';
+        }
+    } else {
+        if (btnAddToCart) {
+            btnAddToCart.disabled = false;
+            btnAddToCart.style.background = '';
+            btnAddToCart.style.borderColor = '';
+            btnAddToCart.style.color = '';
+            btnAddToCart.innerHTML = '<i class="fa-solid fa-cart-plus"></i> AGREGAR AL CARRO';
+        }
+        const isProdOffer = prod.isOffer || prod.category === 'OFERTAS' || prod.price <= 5000;
+        if (badge) {
+            badge.style.display = isProdOffer ? 'inline-block' : 'none';
+            badge.style.background = 'var(--accent-pink)';
+            badge.innerHTML = '<i class="fa-solid fa-fire"></i> Oferta';
+        }
+    }
 
     // Populate Size Buttons
     if (modalSizes) {
@@ -1586,3 +1615,4 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal('cart-modal');
     });
 });
+

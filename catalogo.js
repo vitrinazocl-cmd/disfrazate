@@ -15,7 +15,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0001.jpg",
             "catalogo 2/DIS-0001.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0002",
@@ -33,7 +34,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0002.jpg",
             "catalogo 2/DIS-0002.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0003",
@@ -51,7 +53,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0003.jpg",
             "catalogo 2/DIS-0003.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0004",
@@ -69,7 +72,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0004.jpg",
             "catalogo 2/DIS-0004.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0005",
@@ -87,7 +91,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0005.jpg",
             "catalogo 2/DIS-0005.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0006",
@@ -105,7 +110,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0006.jpg",
             "catalogo 2/DIS-0006.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0007",
@@ -123,7 +129,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0007.jpg",
             "catalogo 2/DIS-0007.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0008",
@@ -141,7 +148,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0008.jpg",
             "catalogo 2/DIS-0008.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0009",
@@ -159,7 +167,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0009.jpg",
             "catalogo 2/DIS-0009.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0010",
@@ -177,7 +186,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0010.jpg",
             "catalogo 2/DIS-0010.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0011",
@@ -195,7 +205,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0011.jpg",
             "catalogo 2/DIS-0011.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0012",
@@ -213,7 +224,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0012.jpg",
             "catalogo 2/DIS-0012.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0013",
@@ -231,7 +243,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0013.jpg",
             "catalogo 2/DIS-0013.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0014",
@@ -249,7 +262,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0014.jpg",
             "catalogo 2/DIS-0014.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0015",
@@ -267,7 +281,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0015.jpg",
             "catalogo 2/DIS-0015.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0016",
@@ -285,7 +300,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0016.jpg",
             "catalogo 2/DIS-0016.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0017",
@@ -303,7 +319,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0017.jpg",
             "catalogo 2/DIS-0017.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0018",
@@ -321,7 +338,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0018.jpg",
             "catalogo 2/DIS-0018.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0019",
@@ -339,7 +357,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0019.jpg",
             "catalogo 2/DIS-0019.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0020",
@@ -357,7 +376,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0020.jpg",
             "catalogo 2/DIS-0020.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0021",
@@ -375,7 +395,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0021.jpg",
             "catalogo 2/DIS-0021 - copia.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0022",
@@ -393,7 +414,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0022.jpg",
             "catalogo 2/DIS-0022.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0023",
@@ -411,7 +433,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0023.jpg",
             "catalogo 2/DIS-0023.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0024",
@@ -429,7 +452,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0024.jpg",
             "catalogo 2/DIS-0024.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0025",
@@ -447,7 +471,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0025.jpg",
             "catalogo 2/DIS-0025.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0026",
@@ -465,7 +490,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0026.jpg",
             "catalogo 2/DIS-0026.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0027",
@@ -483,7 +509,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0027.jpg",
             "catalogo 2/DIS-0027.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0028",
@@ -501,7 +528,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0028.jpg",
             "catalogo 2/DIS-0028.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0029",
@@ -519,7 +547,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0029.jpg",
             "catalogo 2/DIS-0029.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0030",
@@ -537,7 +566,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0030.jpg",
             "catalogo 2/DIS-0030.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0031",
@@ -555,7 +585,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0031.jpg",
             "catalogo 2/DIS-0031.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0032",
@@ -573,7 +604,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0032.jpg",
             "catalogo 2/DIS-0032.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0033",
@@ -591,7 +623,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0033.jpg",
             "catalogo 2/DIS-0033.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0034",
@@ -609,7 +642,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0034.jpg",
             "catalogo 2/DIS-0034.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0035",
@@ -627,7 +661,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0035.jpg",
             "catalogo 2/DIS-0035.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0036",
@@ -645,7 +680,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0036.jpg",
             "catalogo 2/DIS-0036.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0037",
@@ -663,7 +699,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0037.jpg",
             "catalogo 2/DIS-0037.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0038",
@@ -681,7 +718,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0038.jpg",
             "catalogo 2/DIS-0038.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0039",
@@ -699,7 +737,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0039.jpg",
             "catalogo 2/DIS-0039.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0040",
@@ -717,7 +756,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0040.jpg",
             "catalogo 2/DIS-0040.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0041",
@@ -735,7 +775,8 @@ const catalogoProductos = [
         "images": [
             "catalogo completo/DIS-0041.jpg",
             "catalogo 2/DIS-0041.jpg"
-        ]
+        ],
+        "isSoldOut": false
     },
     {
         "id": "DIS-0042",
@@ -749,7 +790,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0043",
@@ -763,7 +805,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0044",
@@ -777,7 +820,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0045",
@@ -791,7 +835,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0046",
@@ -805,7 +850,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0047",
@@ -819,7 +865,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0048",
@@ -833,7 +880,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0049",
@@ -847,7 +895,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0050",
@@ -861,7 +910,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0051",
@@ -875,7 +925,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0052",
@@ -889,7 +940,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0053",
@@ -903,7 +955,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0054",
@@ -917,7 +970,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0055",
@@ -931,7 +985,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0056",
@@ -945,7 +1000,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0057",
@@ -959,7 +1015,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0058",
@@ -973,7 +1030,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0059",
@@ -987,7 +1045,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0060",
@@ -1001,7 +1060,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0061",
@@ -1015,7 +1075,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0062",
@@ -1029,7 +1090,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0063",
@@ -1043,7 +1105,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0064",
@@ -1057,7 +1120,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0065",
@@ -1071,7 +1135,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0066",
@@ -1085,7 +1150,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0067",
@@ -1099,7 +1165,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0068",
@@ -1113,7 +1180,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0069",
@@ -1127,7 +1195,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0070",
@@ -1141,7 +1210,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0071",
@@ -1155,7 +1225,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0072",
@@ -1169,7 +1240,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0073",
@@ -1183,7 +1255,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0074",
@@ -1197,7 +1270,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0075",
@@ -1211,7 +1285,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0076",
@@ -1225,7 +1300,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0077",
@@ -1239,7 +1315,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0078",
@@ -1253,7 +1330,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0079",
@@ -1267,7 +1345,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0080",
@@ -1281,7 +1360,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0081",
@@ -1295,7 +1375,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0082",
@@ -1309,7 +1390,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0083",
@@ -1323,7 +1405,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0084",
@@ -1337,7 +1420,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0085",
@@ -1351,7 +1435,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0086",
@@ -1365,7 +1450,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0087",
@@ -1379,7 +1465,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0088",
@@ -1393,7 +1480,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0089",
@@ -1407,7 +1495,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0090",
@@ -1421,7 +1510,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0091",
@@ -1435,7 +1525,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0092",
@@ -1449,7 +1540,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0093",
@@ -1463,7 +1555,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0094",
@@ -1477,7 +1570,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0095",
@@ -1491,7 +1585,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0096",
@@ -1505,7 +1600,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0097",
@@ -1519,7 +1615,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0098",
@@ -1533,7 +1630,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0099",
@@ -1547,7 +1645,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0100",
@@ -1561,7 +1660,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0101",
@@ -1575,7 +1675,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0102",
@@ -1589,7 +1690,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0103",
@@ -1603,7 +1705,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0104",
@@ -1617,7 +1720,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0105",
@@ -1631,7 +1735,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0106",
@@ -1645,7 +1750,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0107",
@@ -1659,7 +1765,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0108",
@@ -1673,7 +1780,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0109",
@@ -1687,7 +1795,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0110",
@@ -1701,7 +1810,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0111",
@@ -1715,7 +1825,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0112",
@@ -1729,7 +1840,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0113",
@@ -1743,7 +1855,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0114",
@@ -1757,7 +1870,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0115",
@@ -1771,7 +1885,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0116",
@@ -1785,7 +1900,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0117",
@@ -1799,7 +1915,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0118",
@@ -1813,7 +1930,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0119",
@@ -1827,7 +1945,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0120",
@@ -1841,7 +1960,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0121",
@@ -1855,7 +1975,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0122",
@@ -1869,7 +1990,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0123",
@@ -1883,7 +2005,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0124",
@@ -1897,7 +2020,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0125",
@@ -1911,7 +2035,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0126",
@@ -1925,7 +2050,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0127",
@@ -1939,7 +2065,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0128",
@@ -1953,7 +2080,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0129",
@@ -1967,7 +2095,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0130",
@@ -1981,7 +2110,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0131",
@@ -1995,7 +2125,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0132",
@@ -2009,7 +2140,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0133",
@@ -2023,7 +2155,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0134",
@@ -2037,7 +2170,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0135",
@@ -2051,7 +2185,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0136",
@@ -2065,7 +2200,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0137",
@@ -2079,7 +2215,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0138",
@@ -2093,7 +2230,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0139",
@@ -2107,7 +2245,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0140",
@@ -2121,7 +2260,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0141",
@@ -2135,7 +2275,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0142",
@@ -2149,7 +2290,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0143",
@@ -2163,7 +2305,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0144",
@@ -2177,7 +2320,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0145",
@@ -2191,7 +2335,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0146",
@@ -2205,7 +2350,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0147",
@@ -2219,7 +2365,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0148",
@@ -2233,7 +2380,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0149",
@@ -2247,7 +2395,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0150",
@@ -2261,7 +2410,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0151",
@@ -2275,7 +2425,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0152",
@@ -2289,7 +2440,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0153",
@@ -2303,7 +2455,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0154",
@@ -2317,7 +2470,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0155",
@@ -2331,7 +2485,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0156",
@@ -2345,7 +2500,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0157",
@@ -2359,7 +2515,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0158",
@@ -2373,7 +2530,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0159",
@@ -2387,7 +2545,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0160",
@@ -2401,7 +2560,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0161",
@@ -2415,7 +2575,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0162",
@@ -2429,7 +2590,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0163",
@@ -2443,7 +2605,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0164",
@@ -2457,7 +2620,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0165",
@@ -2471,7 +2635,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0166",
@@ -2485,7 +2650,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0167",
@@ -2499,7 +2665,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0168",
@@ -2513,7 +2680,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0169",
@@ -2527,7 +2695,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0170",
@@ -2541,7 +2710,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0171",
@@ -2555,7 +2725,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0172",
@@ -2569,7 +2740,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0173",
@@ -2583,7 +2755,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0174",
@@ -2597,7 +2770,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0175",
@@ -2611,7 +2785,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0176",
@@ -2625,7 +2800,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0177",
@@ -2639,7 +2815,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0178",
@@ -2653,7 +2830,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0179",
@@ -2667,7 +2845,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0180",
@@ -2681,7 +2860,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0181",
@@ -2695,7 +2875,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0182",
@@ -2709,7 +2890,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0183",
@@ -2723,7 +2905,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0184",
@@ -2737,7 +2920,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0185",
@@ -2751,7 +2935,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": false,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0186",
@@ -2765,7 +2950,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0187",
@@ -2779,7 +2965,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0188",
@@ -2793,7 +2980,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0189",
@@ -2807,7 +2995,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0190",
@@ -2821,7 +3010,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0191",
@@ -2835,7 +3025,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0192",
@@ -2849,7 +3040,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0193",
@@ -2863,7 +3055,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0194",
@@ -2877,7 +3070,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0195",
@@ -2891,7 +3085,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0196",
@@ -2905,7 +3100,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0197",
@@ -2919,7 +3115,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0198",
@@ -2933,7 +3130,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0199",
@@ -2947,7 +3145,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0200",
@@ -2961,7 +3160,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0201",
@@ -2975,7 +3175,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0202",
@@ -2989,7 +3190,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0203",
@@ -3003,7 +3205,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0204",
@@ -3017,7 +3220,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0205",
@@ -3031,7 +3235,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0206",
@@ -3045,7 +3250,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0207",
@@ -3059,7 +3265,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0208",
@@ -3073,7 +3280,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0209",
@@ -3087,7 +3295,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0210",
@@ -3101,7 +3310,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0211",
@@ -3115,7 +3325,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0212",
@@ -3129,7 +3340,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0213",
@@ -3143,7 +3355,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0214",
@@ -3157,7 +3370,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0215",
@@ -3171,7 +3385,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0216",
@@ -3185,7 +3400,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0217",
@@ -3199,7 +3415,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0218",
@@ -3213,7 +3430,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0219",
@@ -3227,7 +3445,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0220",
@@ -3241,7 +3460,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0221",
@@ -3255,7 +3475,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0222",
@@ -3269,7 +3490,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0223",
@@ -3283,7 +3505,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0224",
@@ -3297,7 +3520,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0225",
@@ -3311,7 +3535,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0226",
@@ -3325,7 +3550,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0227",
@@ -3339,7 +3565,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0228",
@@ -3353,7 +3580,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0229",
@@ -3367,7 +3595,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0230",
@@ -3381,7 +3610,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0231",
@@ -3395,7 +3625,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0232",
@@ -3409,7 +3640,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0233",
@@ -3423,7 +3655,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0234",
@@ -3437,7 +3670,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0235",
@@ -3451,7 +3685,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0236",
@@ -3465,7 +3700,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0237",
@@ -3479,7 +3715,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0238",
@@ -3493,7 +3730,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0239",
@@ -3507,7 +3745,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0240",
@@ -3521,7 +3760,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0241",
@@ -3535,7 +3775,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0242",
@@ -3549,7 +3790,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0243",
@@ -3563,7 +3805,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0244",
@@ -3577,7 +3820,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0245",
@@ -3591,7 +3835,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0246",
@@ -3605,7 +3850,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0247",
@@ -3619,7 +3865,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0248",
@@ -3633,7 +3880,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0249",
@@ -3647,7 +3895,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0250",
@@ -3661,7 +3910,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0251",
@@ -3675,7 +3925,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0252",
@@ -3689,7 +3940,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0253",
@@ -3703,7 +3955,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0254",
@@ -3717,7 +3970,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0255",
@@ -3731,7 +3985,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0256",
@@ -3745,7 +4000,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0257",
@@ -3759,7 +4015,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0258",
@@ -3773,7 +4030,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0259",
@@ -3787,7 +4045,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0260",
@@ -3801,7 +4060,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0261",
@@ -3815,7 +4075,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0262",
@@ -3829,7 +4090,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0263",
@@ -3843,7 +4105,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0264",
@@ -3857,7 +4120,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0265",
@@ -3871,7 +4135,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0266",
@@ -3885,7 +4150,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0267",
@@ -3899,7 +4165,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0268",
@@ -3913,7 +4180,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0269",
@@ -3927,7 +4195,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0270",
@@ -3941,7 +4210,8 @@ const catalogoProductos = [
         ],
         "isOffer": true,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0271",
@@ -3955,7 +4225,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0272",
@@ -3969,7 +4240,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0273",
@@ -3983,7 +4255,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0274",
@@ -3997,7 +4270,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0275",
@@ -4011,7 +4285,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0276",
@@ -4025,7 +4300,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0277",
@@ -4039,7 +4315,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0278",
@@ -4053,7 +4330,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0279",
@@ -4067,7 +4345,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0280",
@@ -4081,7 +4360,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0281",
@@ -4095,7 +4375,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0282",
@@ -4109,7 +4390,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0283",
@@ -4123,7 +4405,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0284",
@@ -4137,7 +4420,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0285",
@@ -4151,7 +4435,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0286",
@@ -4165,7 +4450,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0287",
@@ -4179,7 +4465,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0288",
@@ -4193,7 +4480,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0289",
@@ -4207,7 +4495,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0290",
@@ -4221,7 +4510,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0291",
@@ -4235,7 +4525,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0292",
@@ -4249,7 +4540,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0293",
@@ -4263,7 +4555,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0294",
@@ -4277,7 +4570,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0295",
@@ -4291,7 +4585,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0296",
@@ -4305,7 +4600,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0297",
@@ -4319,7 +4615,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0298",
@@ -4333,7 +4630,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0299",
@@ -4347,7 +4645,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0300",
@@ -4361,7 +4660,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0301",
@@ -4375,7 +4675,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0302",
@@ -4389,7 +4690,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0303",
@@ -4403,7 +4705,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0304",
@@ -4417,7 +4720,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0305",
@@ -4431,7 +4735,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0306",
@@ -4445,7 +4750,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0307",
@@ -4459,7 +4765,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0308",
@@ -4473,7 +4780,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0309",
@@ -4487,7 +4795,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0310",
@@ -4501,7 +4810,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0311",
@@ -4515,7 +4825,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0312",
@@ -4529,7 +4840,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0313",
@@ -4543,7 +4855,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0314",
@@ -4557,7 +4870,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0315",
@@ -4571,7 +4885,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0316",
@@ -4585,7 +4900,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0317",
@@ -4599,7 +4915,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0318",
@@ -4613,7 +4930,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0319",
@@ -4627,7 +4945,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": true
     },
     {
         "id": "DIS-0320",
@@ -4641,7 +4960,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0321",
@@ -4655,7 +4975,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0322",
@@ -4669,7 +4990,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0323",
@@ -4683,7 +5005,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0324",
@@ -4697,7 +5020,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0325",
@@ -4711,7 +5035,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0326",
@@ -4725,7 +5050,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0327",
@@ -4739,7 +5065,8 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     },
     {
         "id": "DIS-0328",
@@ -4753,6 +5080,7 @@ const catalogoProductos = [
         ],
         "isOffer": false,
         "isNew": true,
-        "isBestseller": false
+        "isBestseller": false,
+        "isSoldOut": false
     }
 ];
